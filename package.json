@@ -14,7 +14,7 @@
     "serve:dev": "python3 -m http.server 8000",
     "serve:prod": "python3 -m http.server 8001",
     "clean": "rm -rf dist/",
-    "copy": "mkdir -p dist && cp index.html dist/ && cp -r assets/ dist/",
+    "copy": "mkdir -p dist && cp index.html dist/",
     "deploy": "npm run clean && npm run build:prod && npm run copy",
     "lint": "eslint src/js/**/*.js",
     "test": "echo 'No tests specified'",
