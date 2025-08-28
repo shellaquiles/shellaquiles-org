@@ -1,0 +1,41 @@
+{
+  "name": "shellaquiles-web",
+  "version": "1.0.0",
+  "description": "Landing page con estilo terminal para shellaquiles.org - Comunidad de Comunidades",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "python3 -m http.server 8000",
+    "serve": "npx serve .",
+    "serve:prod": "npx serve dist",
+    "build": "npm run clean && npm run copy && npm run minify",
+    "build:dev": "npm run clean && npm run copy",
+    "clean": "rm -rf dist",
+    "copy": "mkdir -p dist && cp -r src dist/ && cp index.html dist/",
+    "minify": "echo 'Minification would go here in production'",
+    "deploy": "npm run build && echo 'Deploy dist/ folder to your hosting service'",
+    "lint": "echo 'Linting would go here'",
+    "test": "echo 'Testing would go here'"
+  },
+  "keywords": [
+    "shellaquiles",
+    "terminal",
+    "landing-page",
+    "mexico",
+    "tech-community",
+    "comunidad-de-comunidades"
+  ],
+  "author": "Shellaquiles Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/shellaquiles-org.git"
+  },
+  "homepage": "https://shellaquiles.org",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
