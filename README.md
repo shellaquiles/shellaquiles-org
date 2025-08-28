@@ -2,11 +2,18 @@
 
 ## ¿Qué es Shellaquiles?
 
-Somos una comunidad de comunidades que mezcla tecnología, cultura libre y creatividad. Aquí no buscamos startups ni unicornios: buscamos personas que quieran aprender, compartir y crear juntas.
+Somos una **comunidad de comunidades** que mezcla tecnología, cultura libre y creatividad. Aquí no buscamos startups ni unicornios: buscamos personas que quieran aprender, compartir y crear juntas.
 
-Nacimos de la idea de sintetizar lo mejor de espacios y comunidades que han marcado el ecosistema tech mexicano, tomando inspiración de proyectos que han logrado conectar personas, conocimiento y creatividad de manera auténtica.
+Nacimos de la idea de **integrar y conectar** todos los espacios y comunidades que han marcado el ecosistema tech mexicano. No queremos reemplazarlos, sino crear **"La Red de Redes"** donde cada uno mantiene su identidad pero se conecta con los demás.
 
-**No somos una incubadora, no somos un coworking, no somos un evento más.** Somos el espacio donde las comunidades se encuentran para crear, aprender y transformar. Donde el desarrollador que quiere hacer arte digital encuentra al artista que quiere aprender a programar. Donde el maker que construye robots encuentra al músico que quiere experimentar con sonidos electrónicos.
+**No somos una incubadora, no somos un coworking, no somos un evento más.** Somos el **nodo de conexión** donde las comunidades se encuentran para crear, aprender y transformar. Donde el desarrollador que quiere hacer arte digital encuentra al artista que quiere aprender a programar. Donde el maker que construye robots encuentra al músico que quiere experimentar con sonidos electrónicos.
+
+**Somos la integración de:**
+- Espacios de hackers y makers
+- Comunidades de desarrolladores
+- Centros de innovación y academia
+- Eventos de hacking social y cultura digital
+- Y todos los proyectos que se sumen a esta red
 
 Shellaquiles es:
 
@@ -16,18 +23,24 @@ Shellaquiles es:
 
 ## Nuestra visión
 
-Queremos ser el **punto de encuentro abierto** que México necesita:
+Queremos ser **"La Red de Redes"** que México necesita: el ecosistema tech más grande e integrado del país.
 
-* **Un espacio físico y digital** donde la programación conviva con el arte digital, la ciencia ciudadana y la cultura popular
+* **Un nodo de conexión** donde cada comunidad mantiene su identidad pero se conecta con las demás
 * **Un laboratorio de experimentación** donde cualquier persona pueda proponer, experimentar y equivocarse sin miedo
-* **Un nodo de conexión** donde las comunidades se encuentren y colaboren para crear algo nuevo
 * **Un catalizador de cambio** que impulse la transformación social a través de la tecnología y la creatividad
+* **Un modelo replicable** que otros países puedan adoptar para unir sus ecosistemas tech
 
 **Imagina un lugar donde:**
 - Un grupo de estudiantes de medicina hackean un respirador con Arduino
 - Una banda de música tradicional experimenta con sintetizadores digitales
 - Un colectivo de artistas crea instalaciones interactivas con IA
 - Un grupo de abuelos aprende a usar la tecnología para conectar con sus nietos
+
+**Imagina un ecosistema donde:**
+- Los hackers colaboran con los makers
+- Los desarrolladores se conectan en redes distribuidas
+- Los espacios corporativos se abren a la contracultura
+- Los eventos underground se mezclan con la academia
 
 ## Nuestros principios
 
@@ -37,11 +50,37 @@ Queremos ser el **punto de encuentro abierto** que México necesita:
 * **Mezclar, no encasillar** - caben el software libre, la electrónica, la IA, el arte, la cultura popular y lo inesperado
 * **Aprender del pasado** - construimos sobre experiencias que han funcionado, pero no nos quedamos atrapados en ellas
 * **Crear algo nuevo** - no replicamos, sino que innovamos desde lo aprendido. Cada proyecto es único
+* **Integrar, no absorber** - cada comunidad mantiene su identidad mientras se conecta con las demás
+* **Distribuir, no centralizar** - el poder y los recursos se comparten entre todos los nodos
 
 **En la práctica esto significa:**
 - Talleres donde se mezclan disciplinas (arte + tecnología + cultura)
 - Eventos donde la gente no solo escucha, sino que construye
 - Espacios donde la experimentación es la norma, no la excepción
+- Proyectos que cruzan fronteras entre comunidades y especialidades
+
+## Nuestra estrategia de integración
+
+**"La Red de Redes"** se construye en capas, respetando la autonomía de cada comunidad:
+
+**Capa 1: Nodos Especializados**
+Cada proyecto mantiene su identidad pero se convierte en un nodo especializado:
+- **Activismo Digital & Contracultura**
+- **Hardware & Maker Culture**
+- **Desarrollo & Open Source**
+- **Innovación Corporativa & Academia**
+- **Hacking Social & Cultura Digital**
+
+**Capa 2: Proyectos Transversales**
+- **"La Caravana Shellaquiles"** - Tour rotativo por todos los espacios
+- **"Semillas de Cambio"** - Hackathons que combinan especialidades
+- **"Misiones Compartidas"** - Retos comunitarios entre nodos
+
+**Capa 3: Infraestructura Compartida**
+- Sistema de membresía compartida
+- Calendario unificado de eventos
+- Base de conocimiento colaborativa
+- Recursos que rotan entre espacios
 
 ## Cómo participar
 
@@ -82,4 +121,6 @@ Aunque no tenemos un lugar fijo, buscamos **aliados que abran sus puertas**: emp
 
 ---
 
-**Shellaquiles no es un club ni una incubadora: es un movimiento abierto, un shell listo para ejecutar ideas que transformen y una mesa servida donde la comunidad es el ingrediente principal.**
+**Shellaquiles no es un club ni una incubadora: es "La Red de Redes", un movimiento abierto que integra todas las comunidades tech de México, un shell listo para ejecutar ideas que transformen y una mesa servida donde la diversidad y la colaboración son los ingredientes principales.**
+
+**Juntos creamos el ecosistema tech más grande e integrado del país.**
