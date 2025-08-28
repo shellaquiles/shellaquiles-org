@@ -1,165 +1,110 @@
-# 🚀 shellaquiles.org
+# Shellaquiles.org
 
-**Comunidad de Comunidades** - Landing page con estilo terminal para conectar ecosistemas tech en México.
+**Comunidad de Comunidades tech en México**
 
-## ✨ Características
+## 🚀 **¿Qué es?**
 
-- **Diseño Terminal** - Interfaz inspirada en terminales de comandos
-- **Logo HTML** - Logo personalizado renderizado nativamente
-- **Responsive** - Optimizado para todos los dispositivos
-- **Sin Dependencias** - HTML, CSS y JavaScript puro
-- **Estilo Auténtico** - Sin emojis, solo texto y símbolos ASCII
+Comunidad de comunidades tech en México que ejecuta ideas colectivas mezclando tecnología, cultura libre y creatividad.
 
-## 🏗️ Estructura del Proyecto
+## 🏗️ **Arquitectura del Proyecto**
 
+### **Estructura Modular**
 ```
-shellaquiles-org/
-├── 📁 src/                    # Código fuente
-│   ├── 📁 css/               # Estilos
-│   │   └── styles.css        # Tema terminal principal
-│   ├── 📁 js/                # JavaScript
-│   │   └── script.js         # Funcionalidad interactiva
-│   └── 📁 images/            # Imágenes y assets
-│       └── logo_shellaquiles.svg
-├── 📁 docs/                   # Documentación
-│   ├── web-README.md         # Guía técnica de la web
-│   └── MANIFIESTO-COMPACTO.md # Versión ultra-compacta
-├── 📁 dist/                   # Build de producción
-├── 📄 index.html              # Página principal
-├── 📄 package.json            # Configuración del proyecto
-├── 📄 project.config.js       # Configuración de build
-├── 📄 .gitignore             # Archivos ignorados por Git
-└── 📄 README.md               # Este archivo
+src/
+├── css/                    # Módulos CSS
+│   ├── modules/           # Componentes específicos
+│   ├── utils/             # Variables y estilos base
+│   └── main.css           # Punto de entrada CSS
+├── js/                     # Módulos JavaScript
+│   ├── modules/            # Funcionalidades principales
+│   ├── utils/              # Utilidades y helpers
+│   └── main.js             # Punto de entrada JS
+└── assets/                 # Recursos estáticos
 ```
 
-## 🚀 Inicio Rápido
+### **Sistema de Build**
+- **PostCSS**: Procesamiento y bundling de CSS
+- **Webpack**: Bundling y transpilación de JavaScript
+- **Babel**: Transpilación de ES6+ a JavaScript compatible
 
-### Desarrollo Local
+## 🛠️ **Instalación y Desarrollo**
+
+### **Requisitos**
+- Node.js >= 16.0.0
+- NPM >= 8.0.0
+
+### **Instalación**
 ```bash
-# Clonar el repositorio
+# Clonar repositorio
 git clone <repository-url>
 cd shellaquiles-org
 
-# Instalar dependencias (opcional)
+# Instalar dependencias
 npm install
+```
 
-# Iniciar servidor de desarrollo
+### **Comandos de Desarrollo**
+```bash
+# Desarrollo completo (CSS + JS + servidor)
 npm run dev
-# o
-python3 -m http.server 8000
+
+# Solo build de CSS
+npm run build:css:dev
+
+# Solo build de JavaScript
+npm run build:js:dev
+
+# Build de producción
+npm run build:prod
+
+# Servidor de desarrollo
+npm run serve:dev
+
+# Limpiar build
+npm run clean
+
+# Deploy completo
+npm run deploy
 ```
 
-### Build de Producción
-```bash
-# Construir para producción
-npm run build
+## 🎨 **Características**
 
-# Servir build de producción
-npm run serve:prod
-```
+- **Terminal UI**: Interfaz estilo línea de comandos
+- **Responsive Design**: Adaptable a todos los dispositivos
+- **Modular**: Arquitectura escalable y mantenible
+- **Moderno**: ES6+, CSS Variables, PostCSS
+- **Performance**: Bundling optimizado para producción
 
-## 🎨 Componentes
+## 🌐 **Cómo Funciona**
 
-### Logo HTML
-- **Fondo oscuro** con esquinas redondeadas
-- **Texto "{{ shellaquiles.org }}"** con colores diferenciados
-- **Kaomoji "¯\_(ツ)_/¯"** en naranja
-- **Flechas "»»»"** con glow verde
+1. **CSS Modular**: Variables centralizadas, componentes reutilizables
+2. **JavaScript Modular**: Clases ES6, manejo de eventos, animaciones
+3. **Build Automatizado**: PostCSS + Webpack para archivos optimizados
+4. **Desarrollo Local**: Servidor HTTP para testing
 
-### Manifiesto
-- **Versión ultra-compacta** del manifiesto
-- **Preguntas en negrita** para mejor legibilidad
-- **Formato terminal** auténtico
+## 📁 **Archivos de Build**
 
-### Nodos y Proyectos
-- **Grid responsive** de tipos de comunidades
-- **Proyectos propios** de Shellaquiles
-- **Contenido honesto** sobre el estado actual
+Los archivos finales se generan en `dist/`:
+- `dist/css/styles.css` - CSS combinado y optimizado
+- `dist/js/script.js` - JavaScript transpilado y optimizado
 
-## 🛠️ Scripts Disponibles
+## 🤝 **Contribuir**
 
-```bash
-npm run dev          # Servidor de desarrollo
-npm run build        # Build completo para producción
-npm run build:dev    # Build sin minificación
-npm run serve        # Servir archivos de desarrollo
-npm run serve:prod   # Servir build de producción
-npm run clean        # Limpiar directorio dist
-npm run deploy       # Build y preparar para despliegue
-```
+1. Fork del repositorio
+2. Crear rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Commit de tus cambios (`git commit -am 'Agregar nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Crear Pull Request
 
-## 🌐 Despliegue
+## 📄 **Licencia**
 
-### GitHub Pages
-1. Subir a repositorio GitHub
-2. Activar GitHub Pages en Settings
-3. Configurar source como `/docs` o `/root`
+MIT License - ver [LICENSE](LICENSE) para detalles.
 
-### Servidor Web
-- Subir contenido de `/dist` a cualquier hosting
-- Compatible con Apache, Nginx, etc.
-
-### Netlify/Vercel
-- Conectar repositorio
-- Build command: `npm run build`
-- Publish directory: `dist`
-
-## 🎯 Tecnologías
-
-- **HTML5** - Estructura semántica
-- **CSS3** - Variables CSS, Grid, Flexbox, Animaciones
-- **JavaScript ES6+** - Clases, Módulos, ES6 Features
-- **Responsive Design** - Mobile-first approach
-- **Terminal Theme** - Colores y tipografía auténtica
-
-## 📱 Responsive
-
-- **Desktop**: Grid de 3+ columnas
-- **Tablet**: Grid de 2 columnas
-- **Mobile**: Grid de 1 columna, botones full-width
-
-## 🔧 Personalización
-
-### Colores
-Modificar en `src/css/styles.css`:
-```css
-:root {
-    --terminal-green: #00ff00;
-    --terminal-red: #ff0000;
-    --terminal-white: #ffffff;
-    --terminal-black: #0a0a0a;
-}
-```
-
-### Contenido
-- **Nodos**: `index.html` sección `.nodos-grid`
-- **Proyectos**: `index.html` sección `.proyecto`
-- **Email**: `index.html` clase `.email`
-
-## 📊 Performance
-
-- **CSS y JS separados** para mejor caching
-- **Animaciones optimizadas** con transform/opacity
-- **Lazy loading** de efectos visuales
-- **Sin dependencias externas** para mejor velocidad
-
-## 🤝 Contribuir
-
-1. Fork el proyecto
-2. Crear rama para feature (`git checkout -b feature/AmazingFeature`)
-3. Commit cambios (`git commit -m 'Add AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abrir Pull Request
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
-
-## 📞 Contacto
+## 📞 **Contacto**
 
 - **Email**: comunidad@shellaquiles.org
-- **Proyecto**: [GitHub Issues](https://github.com/username/shellaquiles-org/issues)
+- **Sitio**: [shellaquiles.org](https://shellaquiles.org)
 
 ---
 
-**¡Juntos creamos el ecosistema tech más grande e integrado del país!** 🚀🇲🇽
+**¡Solos llegamos lejos, pero unidos transformamos todo!** 🚀
