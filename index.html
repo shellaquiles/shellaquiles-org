@@ -3,122 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shellaquiles.org - Comunidad de Comunidades</title>
-    <link rel="stylesheet" href="src/css/styles.css">
+    <title>Shellaquiles.org - Comunidad de Comunidades</title>
+    <meta name="description" content="Comunidad de comunidades tech en México. Nodos locales + proyectos compartidos + festivales de creación.">
+    <link rel="stylesheet" href="dist/css/styles.css">
 </head>
 <body>
     <div class="terminal">
-        <!-- Terminal Header -->
+        <!-- Header del Terminal -->
         <div class="terminal-header">
             <div class="logo-container">
                 <div class="logo">
                     <div class="logo-card">
-                        <div class="logo-arrows">«««</div>
+                        <div class="logo-arrows">>></div>
                         <div class="logo-text">
-                            <span class="logo-brace">{{</span>
-                            <span class="logo-shell">shell</span><span class="logo-aquiles">aquiles</span><span class="logo-tld">.org</span>
-                            <span class="logo-brace">}}</span>
+                            <span class="logo-brace">{</span>
+                            <span class="logo-shell">shell</span>
+                            <span class="logo-aquiles">aquiles</span>
+                            <span class="logo-tld">.org</span>
+                            <span class="logo-brace">}</span>
                         </div>
-
-                        <div class="logo-arrows">»»»</div>
+                        <div class="logo-shrug">¯\_(ツ)_/¯</div>
                     </div>
                 </div>
             </div>
-
-            <div class="terminal-subtitle">Comunidad de Comunidades</div>
+            <h1 class="terminal-title">
+                <span style="color: #22C55E;">shell</span><span style="color: #E5E7EB;">aquiles</span><span style="color: #F43F5E;">.org</span>
+            </h1>
+            <p class="terminal-subtitle">Comunidad de Comunidades tech en México</p>
         </div>
 
-        <!-- Manifiesto -->
+        <!-- Comando 1: Qué es -->
         <div class="prompt">
             <span class="cursor">$</span>
             <span class="command-text">cat manifiesto.txt</span>
         </div>
-                <div class="output">
-{{ <span class="logo-shell">shell</span><span class="logo-aquiles">aquiles</span><span class="logo-tld">.org</span> }} = Comunidad de Comunidades
+        <div class="output">
+            <strong>¿Qué es?</strong>
+            Comunidad de comunidades tech en México.
 
-<strong>¿Qué es?</strong> Comunidad de comunidades tech en México.
-<strong>¿Cómo funciona?</strong> Nodos locales + proyectos compartidos + festivales de creación.
-<strong>¿Por qué existe?</strong> Porque solos llegamos lejos, pero unidos transformamos todo.
-<strong>Objetivo:</strong> Ejecutar ideas colectivas que mezclen tecnología, cultura libre y creatividad.
+            <strong>¿Cómo funciona?</strong>
+            Nodos locales + proyectos compartidos + festivales de creación.
+
+            <strong>¿Por qué existe?</strong>
+            Porque solos llegamos lejos, pero unidos transformamos todo.
+
+            <strong>¿Cuál es el objetivo?</strong>
+            Ejecutar ideas colectivas que mezclen tecnología, cultura libre y creatividad.
         </div>
 
-        <!-- Nodos -->
+        <!-- Comando 2: Nodos -->
         <div class="prompt">
             <span class="cursor">$</span>
             <span class="command-text">ls nodos/</span>
         </div>
         <div class="output">
-Tipos de comunidades que queremos conectar:
-        </div>
-        <div class="nodos-grid">
-            <div class="nodo">Espacios Maker</div>
-            <div class="nodo">Comunidades Dev</div>
-            <div class="nodo">Hackerspaces</div>
-            <div class="nodo">Labs Creativos</div>
-            <div class="nodo">Open Source</div>
-            <div class="nodo">Cultura Digital</div>
-        </div>
-        <div class="output" style="margin-top: 20px; text-align: center; font-style: italic;">
-            <span style="color: #ffffff;">¡Estamos abiertos a conectar con tu comunidad!</span>
+            <div class="nodos-grid">
+                <div class="nodo">
+                    <h3>Espacios Maker</h3>
+                    <p>Comunidades de fabricación digital</p>
+                </div>
+                <div class="nodo">
+                    <h3>Comunidades Dev</h3>
+                    <p>Grupos de desarrollo de software</p>
+                </div>
+                <div class="nodo">
+                    <h3>Arte Digital</h3>
+                    <p>Colectivos de arte y tecnología</p>
+                </div>
+                <div class="nodo">
+                    <h3>Educación Libre</h3>
+                    <p>Iniciativas de educación abierta</p>
+                </div>
+            </div>
         </div>
 
-        <!-- Proyectos -->
+        <!-- Comando 3: Proyectos -->
         <div class="prompt">
             <span class="cursor">$</span>
             <span class="command-text">ls proyectos/</span>
         </div>
         <div class="output">
-Proyectos que queremos desarrollar:
-        </div>
-        <div class="proyecto">
-            <strong>La Caravana <span class="logo-shell">shell</span><span class="logo-aquiles">aquiles</span><span class="logo-tld">.org</span></strong> - Tour rotativo por espacios tech
-        </div>
-        <div class="proyecto">
-            <strong>Semillas de Cambio</strong> - Hackathons colaborativos
-        </div>
-        <div class="proyecto">
-            <strong>Misiones Compartidas</strong> - Retos comunitarios
-        </div>
-        <div class="output" style="margin-top: 20px; text-align: center; font-style: italic;">
-            <span style="color: #ffffff;">¡Estamos abiertos a tus ideas y propuestas!</span>
+            <div class="proyecto">
+                <strong>Caravana Digital</strong> - Festival itinerante de tecnología y creatividad
+            </div>
+            <div class="proyecto">
+                <strong>Misiones Compartidas</strong> - Colaboraciones entre comunidades
+            </div>
+            <div class="proyecto">
+                <strong>Semillas de Cambio</strong> - Incubadora de proyectos comunitarios
+            </div>
         </div>
 
-        <!-- Participación -->
+        <!-- Comando 4: Participar -->
         <div class="prompt">
             <span class="cursor">$</span>
             <span class="command-text">./participar.sh</span>
         </div>
         <div class="output">
-¿Cómo participar?
-        </div>
-        <div class="section">
-            <a href="#proponer" class="btn">Proponer taller</a>
-            <a href="#espacio" class="btn">Abrir espacio</a>
-            <a href="#voluntario" class="btn">Unirme como voluntario</a>
+            <a href="#" class="btn">Proponer Taller</a>
+            <a href="#" class="btn">Abrir Espacio</a>
+            <a href="#" class="btn">Unirme como Voluntario</a>
         </div>
 
         <!-- CTA Final -->
         <div class="cta">
-            <div class="prompt">
-                <span class="cursor">$</span>
-                <span class="command-text">./ejecutar.sh</span>
-            </div>
-            <div class="output">
-                <strong>Ejecutemos juntos:</strong>
-                <div class="email">comunidad@shellaquiles.org</div>
-                <div style="margin-top: 20px; color: #ffffff;">
-                    <span class="cursor">$</span> cat README.md
-                </div>
-            </div>
-        </div>
-
-        <!-- Exit -->
-        <div class="prompt">
-            <span class="cursor">$</span>
-            <span class="command-text">exit</span>
+            <h2>Ejecutemos juntos</h2>
+            <p>¿Tienes una idea? ¿Quieres colaborar? ¿Buscas comunidad?</p>
+            <div class="email">comunidad@shellaquiles.org</div>
+            <a href="#" class="btn">¡Conectemos!</a>
         </div>
     </div>
 
-    <script src="src/js/script.js"></script>
+    <script src="dist/js/script.js"></script>
 </body>
 </html>
