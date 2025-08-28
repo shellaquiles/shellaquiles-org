@@ -80,6 +80,11 @@ export class EventManager {
      */
     setupButtonInteractions() {
         document.querySelectorAll('.btn').forEach(btn => {
+            // Skip external links (Telegram, GitHub, etc.)
+            if (btn.href && (btn.href.startsWith('http://') || btn.href.startsWith('https://'))) {
+                return; // Don't intercept external links
+            }
+
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 this.handleButtonClick(btn);
