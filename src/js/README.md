@@ -1,145 +1,308 @@
-# JavaScript Modular Architecture
+# JavaScript Architecture - Shellaquiles Terminal Theme
+
+## 🏗️ **Arquitectura Modular JavaScript**
+
+Sistema JavaScript modular y escalable usando **Webpack** para bundling automático y **Babel** para transpilación ES6+.
 
 ## 📁 **Estructura de Módulos**
 
 ```
 src/js/
-├── modules/           # Módulos principales
-│   ├── Terminal.js          # Clase principal del terminal
-│   ├── AnimationManager.js  # Manejo de animaciones
-│   ├── EventManager.js      # Gestión de eventos
+├── main.js                  # Punto de entrada principal
+├── modules/                 # Funcionalidades principales
+│   ├── Terminal.js         # Clase principal del terminal
+│   ├── AnimationManager.js # Gestor de animaciones
+│   ├── EventManager.js     # Gestor de eventos
 │   ├── NotificationSystem.js # Sistema de notificaciones
-│   └── KonamiCode.js        # Easter egg
-├── utils/            # Utilidades
-│   ├── DOMUtils.js          # Utilidades del DOM
-│   └── AnimationUtils.js    # Utilidades de animación
-├── main.js           # Punto de entrada principal
-└── README.md         # Esta documentación
+│   └── KonamiCode.js       # Easter egg del Konami Code
+└── utils/                   # Utilidades y helpers
+    ├── DOMUtils.js         # Utilidades para manipulación del DOM
+    └── AnimationUtils.js   # Utilidades para animaciones
 ```
 
-## 🚀 **Módulos Principales**
+## 🚀 **Sistema de Build**
 
-### **Terminal.js**
-- **Responsabilidad**: Clase principal que orquesta todos los módulos
-- **Funciones**: Inicialización, gestión de comandos, cleanup
-- **Dependencias**: Todos los otros módulos
+### **Webpack Pipeline**
+```bash
+# Desarrollo
+npm run build:js:dev
 
-### **AnimationManager.js**
-- **Responsabilidad**: Todas las animaciones y efectos visuales
-- **Funciones**: Typing effects, scroll effects, hover effects
-- **Características**: Gestión de intervalos, cleanup automático
-
-### **EventManager.js**
-- **Responsabilidad**: Todos los event listeners y interacciones
-- **Funciones**: Scroll suave, clicks, hover, input del terminal
-- **Características**: Delegación de eventos, manejo centralizado
-
-### **NotificationSystem.js**
-- **Responsabilidad**: Sistema de notificaciones y feedback
-- **Funciones**: Notificaciones toast, diferentes tipos, animaciones
-- **Características**: Gestión de múltiples notificaciones, cleanup
-
-### **KonamiCode.js**
-- **Responsabilidad**: Easter egg del Konami Code
-- **Funciones**: Detección de secuencia, efectos especiales
-- **Características**: Prevención de múltiples activaciones
-
-## 🛠️ **Utilidades**
-
-### **DOMUtils.js**
-- **Funciones**: Manipulación del DOM, queries seguros, creación de elementos
-- **Características**: Error handling, fallbacks para navegadores antiguos
-
-### **AnimationUtils.js**
-- **Funciones**: Efectos CSS, transiciones, utilidades de animación
-- **Características**: Debounce, throttle, efectos reutilizables
-
-## 🔧 **Uso de ES6 Modules**
-
-### **Import/Export**
-```javascript
-// Importar módulo completo
-import { Terminal } from './modules/Terminal.js';
-
-// Importar funciones específicas
-import { addCSSAnimations, fadeIn } from './utils/AnimationUtils.js';
-
-// Exportar clase
-export class AnimationManager { ... }
-
-// Exportar funciones
-export function smoothScrollTo(element) { ... }
+# Producción
+npm run build:js:prod
 ```
 
-### **Inicialización**
+### **Configuración Webpack**
+- **Entry Point**: `src/js/main.js`
+- **Output**: `dist/js/script.js` (desarrollo) o `script.min.js` (producción)
+- **Babel Loader**: Transpilación ES6+ a JavaScript compatible
+- **CSS Loader**: Soporte para importar CSS en JS
+
+## 🔧 **Módulos Principales**
+
+### **`main.js` - Punto de Entrada**
 ```javascript
-// En main.js
 import { Terminal } from './modules/Terminal.js';
 
+// Inicializar terminal cuando DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     const terminal = new Terminal();
+    terminal.init();
 });
 ```
 
-## 📱 **Compatibilidad**
+### **`Terminal.js` - Clase Principal**
+```javascript
+export class Terminal {
+    constructor() {
+        this.animationManager = new AnimationManager();
+        this.eventManager = new EventManager();
+        this.notificationSystem = new NotificationSystem();
+        this.konamiCode = new KonamiCode();
+    }
 
-- **ES6 Modules**: Requiere navegadores modernos
-- **Fallback**: Para navegadores antiguos, usar bundler (Webpack/Vite)
-- **Node.js**: Compatible con Node.js 14+
+    init() {
+        this.animationManager.init();
+        this.eventManager.init();
+        this.notificationSystem.init();
+        this.konamiCode.init();
+    }
+}
+```
 
-## 🚀 **Scripts Disponibles**
+### **`AnimationManager.js` - Gestor de Animaciones**
+```javascript
+export class AnimationManager {
+    init() {
+        this.setupScrollAnimations();
+        this.setupHoverEffects();
+        this.setupTerminalEffects();
+    }
+
+    setupScrollAnimations() {
+        // Animaciones basadas en scroll
+    }
+}
+```
+
+### **`EventManager.js` - Gestor de Eventos**
+```javascript
+export class EventManager {
+    init() {
+        this.setupButtonEvents();
+        this.setupNodoEvents();
+        this.setupKeyboardEvents();
+    }
+}
+```
+
+## 🎯 **Características ES6+**
+
+### **Import/Export de Módulos**
+```javascript
+// Exportar clase
+export class Terminal {
+    // ...
+}
+
+// Importar módulo
+import { Terminal } from './modules/Terminal.js';
+```
+
+### **Clases ES6**
+```javascript
+export class AnimationManager {
+    constructor() {
+        this.animations = new Map();
+    }
+
+    addAnimation(name, config) {
+        this.animations.set(name, config);
+    }
+}
+```
+
+### **Arrow Functions**
+```javascript
+this.setupButtonEvents = () => {
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            this.handleButtonClick(e);
+        });
+    });
+};
+```
+
+### **Template Literals**
+```javascript
+showNotification(message, type = 'info') {
+    const notification = `
+        <div class="notification notification-${type}">
+            <span>${message}</span>
+            <button class="close-btn">×</button>
+        </div>
+    `;
+    this.container.insertAdjacentHTML('beforeend', notification);
+}
+```
+
+## 🎭 **Sistema de Animaciones**
+
+### **Animaciones CSS + JavaScript**
+```javascript
+class AnimationManager {
+    setupScrollAnimations() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        });
+
+        document.querySelectorAll('.nodo, .proyecto').forEach(el => {
+            observer.observe(el);
+        });
+    }
+}
+```
+
+### **Efectos Hover**
+```javascript
+setupHoverEffects() {
+    document.querySelectorAll('.nodo').forEach(nodo => {
+        nodo.addEventListener('mouseenter', () => {
+            this.addHoverEffect(nodo);
+        });
+    });
+}
+```
+
+## 🎮 **Easter Eggs y Funcionalidades**
+
+### **Konami Code**
+```javascript
+export class KonamiCode {
+    constructor() {
+        this.sequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+        this.currentIndex = 0;
+    }
+
+    init() {
+        document.addEventListener('keydown', (e) => {
+            this.handleKeyPress(e);
+        });
+    }
+
+    handleKeyPress(e) {
+        if (e.code === this.sequence[this.currentIndex]) {
+            this.currentIndex++;
+            if (this.currentIndex === this.sequence.length) {
+                this.activateEasterEgg();
+                this.currentIndex = 0;
+            }
+        } else {
+            this.currentIndex = 0;
+        }
+    }
+}
+```
+
+## 📱 **Responsive y Accesibilidad**
+
+### **Eventos Touch**
+```javascript
+setupTouchEvents() {
+    if ('ontouchstart' in window) {
+        document.querySelectorAll('.nodo').forEach(nodo => {
+            nodo.addEventListener('touchstart', (e) => {
+                this.handleTouchStart(e);
+            });
+        });
+    }
+}
+```
+
+### **Navegación por Teclado**
+```javascript
+setupKeyboardEvents() {
+    document.addEventListener('keydown', (e) => {
+        switch(e.key) {
+            case 'Tab':
+                this.handleTabNavigation(e);
+                break;
+            case 'Enter':
+                this.handleEnterKey(e);
+                break;
+        }
+    });
+}
+```
+
+## 🚀 **Comandos de Desarrollo**
 
 ```bash
-# Verificar módulos
-npm run modules:check
+# Build JavaScript en modo desarrollo
+npm run build:js:dev
 
-# Build de desarrollo
+# Build JavaScript para producción
+npm run build:js:prod
+
+# Build completo del proyecto
 npm run build:dev
 
-# Build completo
-npm run build
-
-# Servir archivos
-npm run serve
+# Servidor de desarrollo con watch
+npm run dev
 ```
 
-## 🔍 **Debugging**
+## 📊 **Output del Build**
 
-### **Consola del Navegador**
+### **Desarrollo**
+- `dist/js/script.js` - JavaScript legible y comentado
+- Tamaño: ~99KB
+- Líneas: ~146
+- Source maps habilitados
+
+### **Producción**
+- `dist/js/script.min.js` - JavaScript minificado
+- Tamaño: ~45KB (optimizado)
+- Sin comentarios, listo para producción
+
+## 🔍 **Debugging y Desarrollo**
+
+### **Console Logs**
 ```javascript
-// Acceder al terminal
-window.shellaquilesTerminal
-
-// Comandos disponibles
-console.shellaquiles()
-console.help()
-
-// API del terminal
-window.shellaquilesTerminal.getCommands()
-window.shellaquilesTerminal.simulateCommand()
+// Agregar logs para debugging
+console.log('Terminal initialized:', this);
+console.log('Animation config:', animationConfig);
 ```
 
-### **Inspección de Módulos**
-```javascript
-// Verificar que los módulos se cargan
-import('./modules/Terminal.js').then(module => {
-    console.log('Terminal module loaded:', module);
-});
+### **Source Maps**
+Webpack genera source maps en desarrollo para debugging fácil:
+- Mapea código compilado al código fuente original
+- Permite debugging en DevTools del navegador
+
+### **Hot Reload (Desarrollo)**
+```bash
+npm run build:js:dev
+# Webpack watch mode - recompila automáticamente
 ```
 
-## 🎯 **Ventajas de la Modularización**
+## 🎯 **Mejores Prácticas**
 
-1. **Mantenibilidad**: Código organizado y fácil de mantener
-2. **Reutilización**: Módulos que se pueden usar en otros proyectos
-3. **Testing**: Módulos individuales son más fáciles de testear
-4. **Escalabilidad**: Fácil agregar nuevas funcionalidades
-5. **Colaboración**: Diferentes desarrolladores pueden trabajar en módulos separados
-6. **Performance**: Carga lazy y tree-shaking posibles
+1. **Usar ES6 Modules** para organización del código
+2. **Mantener clases pequeñas** y con responsabilidad única
+3. **Usar variables CSS** para valores de animación
+4. **Implementar error handling** en métodos críticos
+5. **Documentar métodos públicos** con JSDoc
 
 ## 🔮 **Próximos Pasos**
 
-- [ ] Implementar bundler (Webpack/Vite) para producción
-- [ ] Agregar tests unitarios para cada módulo
-- [ ] Implementar lazy loading de módulos
-- [ ] Agregar TypeScript para mejor tipado
-- [ ] Implementar sistema de plugins
+- [ ] Implementar TypeScript para mejor tipado
+- [ ] Agregar tests unitarios con Jest
+- [ ] Implementar lazy loading para módulos
+- [ ] Agregar PWA capabilities
+- [ ] Implementar service worker para offline
+
+---
+
+**¡JavaScript modular y escalable con ES6+ y Webpack!** 🚀✨

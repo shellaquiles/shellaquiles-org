@@ -1,65 +1,43 @@
-# CSS Modular Architecture
+# CSS Architecture - Shellaquiles Terminal Theme
 
-## 📁 **Estructura de Módulos CSS**
+## 🏗️ **Arquitectura Modular CSS**
+
+Sistema CSS modular y escalable usando **PostCSS** para bundling automático.
+
+## 📁 **Estructura de Módulos**
 
 ```
 src/css/
-├── modules/           # Módulos de estilos específicos
-│   ├── _terminal.css      # Estilos base del terminal
-│   ├── _logo.css          # Estilos del logo HTML
-│   ├── _components.css    # Componentes reutilizables
-│   ├── _animations.css    # Animaciones y keyframes
-│   └── _responsive.css    # Media queries y responsive
-├── utils/            # Utilidades CSS
-│   ├── _variables.css     # Variables CSS (custom properties)
-│   ├── _base.css          # Reset y estilos base
-│   └── README.md          # Esta documentación
-├── main.css          # Archivo principal que importa todo
-└── README.md         # Esta documentación
+├── main.css                 # Punto de entrada principal
+├── modules/                 # Componentes específicos
+│   ├── _terminal.css       # Estilos del terminal principal
+│   ├── _logo.css           # Estilos del logo HTML
+│   ├── _components.css     # Componentes reutilizables
+│   ├── _animations.css     # Animaciones y keyframes
+│   └── _responsive.css     # Media queries y responsive
+└── utils/                   # Utilidades y base
+    ├── _variables.css      # Variables CSS centralizadas
+    └── _base.css           # Reset y estilos base
 ```
 
-## 🚀 **Módulos CSS**
+## 🚀 **Sistema de Build**
 
-### **Utils (Utilidades)**
+### **PostCSS Pipeline**
+```bash
+# Desarrollo
+npm run build:css:dev
 
-#### **`_variables.css`**
-- **Responsabilidad**: Definir todas las variables CSS (design tokens)
-- **Contenido**: Colores, espaciados, tipografía, sombras, transiciones
-- **Uso**: Referenciadas en todos los otros módulos
+# Producción
+npm run build:css:prod
+```
 
-#### **`_base.css`**
-- **Responsabilidad**: Reset CSS y estilos base de elementos HTML
-- **Contenido**: Reset, tipografía base, enlaces, formularios, scrollbar
-- **Uso**: Estilos fundamentales que se aplican a toda la página
+### **Plugins Utilizados**
+- **postcss-import**: Resuelve `@import` automáticamente
+- **postcss-nested**: Soporte para anidamiento CSS
+- **autoprefixer**: Agrega prefijos de navegador automáticamente
+- **cssnano**: Minificación para producción
 
-### **Modules (Módulos)**
-
-#### **`_terminal.css`**
-- **Responsabilidad**: Estilos base del terminal y layout principal
-- **Contenido**: Container del terminal, header, prompts, outputs, secciones
-- **Características**: Layout principal y estructura del terminal
-
-#### **`_logo.css`**
-- **Responsabilidad**: Estilos del logo HTML personalizado
-- **Contenido**: Logo container, card, arrows, text, shrug, efectos hover
-- **Características**: Logo completamente en HTML/CSS con animaciones
-
-#### **`_components.css`**
-- **Responsabilidad**: Componentes reutilizables de la UI
-- **Contenido**: Grid de nodos, proyectos, botones, CTA, email
-- **Características**: Componentes modulares y reutilizables
-
-#### **`_animations.css`**
-- **Responsabilidad**: Todas las animaciones y keyframes
-- **Contenido**: Cursor blink, typewriter, fadeIn, slideIn, rotate, rainbow
-- **Características**: Animaciones centralizadas y reutilizables
-
-#### **`_responsive.css`**
-- **Responsabilidad**: Diseño responsive y media queries
-- **Contenido**: Breakpoints para tablet, mobile, extra small, print
-- **Características**: Mobile-first approach con breakpoints específicos
-
-## 🔧 **Sistema de Variables CSS**
+## 🎨 **Variables CSS (Design Tokens)**
 
 ### **Colores del Terminal**
 ```css
@@ -69,7 +47,6 @@ src/css/
     --terminal-white: #ffffff;
     --terminal-black: #0a0a0a;
     --terminal-dark: #1a1a1a;
-    --terminal-gray: #666666;
 }
 ```
 
@@ -81,11 +58,10 @@ src/css/
     --logo-shell: #22C55E;
     --logo-aquiles: #E5E7EB;
     --logo-tld: #F43F5E;
-    --logo-shrug: #F59E0B;
 }
 ```
 
-### **Sistema de Espaciado**
+### **Espaciado y Tipografía**
 ```css
 :root {
     --spacing-xs: 5px;
@@ -93,97 +69,135 @@ src/css/
     --spacing-md: 15px;
     --spacing-lg: 20px;
     --spacing-xl: 30px;
-    --spacing-xxl: 40px;
-    --spacing-xxxl: 50px;
+
+    --font-family-mono: 'Courier New', 'Monaco', 'Menlo', monospace;
+    --font-family-logo: "JetBrains Mono", "Fira Code", monospace;
 }
 ```
 
-### **Breakpoints Responsive**
+## 🔧 **Cómo Funciona**
+
+### **1. Importación Modular**
 ```css
-:root {
-    --breakpoint-sm: 480px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 1024px;
-    --breakpoint-xl: 1200px;
-}
+/* main.css */
+@import "utils/variables.css";
+@import "utils/base.css";
+@import "modules/terminal.css";
+@import "modules/logo.css";
+@import "modules/components.css";
+@import "modules/animations.css";
+@import "modules/responsive.css";
 ```
+
+### **2. PostCSS Procesa**
+- Resuelve todos los `@import`
+- Combina en un solo archivo
+- Aplica plugins de optimización
+- Genera `dist/css/styles.css`
+
+### **3. Resultado Final**
+- ✅ **Un solo archivo CSS** funcional
+- ✅ **Sin duplicación** de código
+- ✅ **Optimizado** para producción
+- ✅ **Compatible** con todos los navegadores
 
 ## 📱 **Sistema Responsive**
 
-### **Mobile-First Approach**
-- **Base**: Estilos para dispositivos móviles
-- **Tablet**: `@media (max-width: 768px)`
-- **Desktop**: `@media (max-width: 1024px)`
-- **Extra Small**: `@media (max-width: 360px)`
+### **Breakpoints**
+```css
+/* Mobile First */
+@media (min-width: 480px) { /* Small devices */ }
+@media (min-width: 768px) { /* Medium devices */ }
+@media (min-width: 1024px) { /* Large devices */ }
+@media (min-width: 1200px) { /* Extra large devices */ }
+```
 
-### **Breakpoints Principales**
-- **480px**: Mobile portrait
-- **768px**: Mobile landscape y tablets
-- **1024px**: Tablets y desktop pequeño
-- **1200px**: Desktop completo
+### **Grid Adaptativo**
+```css
+.nodos-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 columna */
+}
 
-## 🎨 **Sistema de Animaciones**
+@media (min-width: 768px) {
+    .nodos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+```
 
-### **Keyframes Disponibles**
-- `blink`: Parpadeo del cursor
-- `fadeIn`: Aparecer con fade
-- `slideIn`: Deslizar desde la izquierda
-- `rotate`: Rotación para efectos CTA
-- `rainbow`: Efecto arcoíris para Konami Code
+## 🎭 **Animaciones y Efectos**
 
-### **Clases de Animación**
-- `.fade-in`: Aplicar fadeIn
-- `.slide-in-left`: Aplicar slideIn
-- `.revealed`: Para efectos de scroll
+### **Transiciones**
+```css
+.nodo {
+    transition: all var(--transition-normal);
+}
 
-## 🔄 **Orden de Importación**
+:root {
+    --transition-normal: 0.3s ease;
+}
+```
 
-El archivo `main.css` importa los módulos en este orden específico:
+### **Keyframes**
+```css
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+```
 
-1. **Variables** - Define design tokens
-2. **Base** - Reset y estilos fundamentales
-3. **Terminal** - Layout principal
-4. **Logo** - Componente del logo
-5. **Components** - Componentes UI
-6. **Animations** - Efectos y keyframes
-7. **Responsive** - Media queries
+## 🚀 **Comandos de Desarrollo**
 
-Este orden asegura:
-- Variables disponibles para todos los módulos
-- Reset aplicado antes de estilos específicos
-- Responsive design sobrescriba estilos base
+```bash
+# Build CSS en modo desarrollo (con watch)
+npm run build:css:dev
 
-## 🛠️ **Uso y Mantenimiento**
+# Build CSS para producción (minificado)
+npm run build:css:prod
 
-### **Agregar Nuevos Estilos**
-1. Identificar el módulo apropiado
-2. Agregar estilos usando variables CSS
-3. Seguir la convención de nomenclatura
+# Build completo del proyecto
+npm run build:dev
+```
 
-### **Modificar Variables**
-1. Editar `_variables.css`
-2. Los cambios se propagan automáticamente
-3. Mantener consistencia en todo el proyecto
+## 📊 **Output del Build**
 
-### **Agregar Nuevos Módulos**
-1. Crear archivo `_nuevo-modulo.css`
-2. Agregar `@import` en `main.css`
-3. Documentar en este README
+### **Desarrollo**
+- `dist/css/styles.css` - CSS legible y comentado
+- Tamaño: ~16KB
+- Líneas: ~872
 
-## 🎯 **Ventajas de la Modularización CSS**
+### **Producción**
+- `dist/css/styles.min.css` - CSS minificado
+- Tamaño: ~12KB (optimizado)
+- Sin comentarios, listo para producción
 
-1. **Organización**: Cada componente tiene sus estilos separados
-2. **Mantenibilidad**: Fácil encontrar y modificar estilos específicos
-3. **Reutilización**: Módulos que se pueden usar en otros proyectos
-4. **Colaboración**: Diferentes desarrolladores pueden trabajar en estilos separados
-5. **Performance**: Posibilidad de cargar solo los estilos necesarios
-6. **Consistencia**: Variables CSS centralizadas para diseño coherente
+## 🔍 **Debugging y Desarrollo**
 
-## 🔮 **Próximos Pasos**
+### **Inspeccionar Variables**
+```css
+/* Agregar temporalmente para debug */
+.debug {
+    border: 2px solid var(--terminal-red);
+    background: rgba(255, 0, 0, 0.1);
+}
+```
 
-- [ ] Implementar CSS Modules con PostCSS
-- [ ] Agregar sistema de temas (dark/light mode)
-- [ ] Implementar CSS-in-JS para componentes dinámicos
-- [ ] Agregar sistema de grid CSS personalizado
-- [ ] Implementar sistema de iconos SVG
-- [ ] Agregar animaciones CSS más avanzadas
+### **Logs del Build**
+```bash
+npm run build:css:dev
+# PostCSS procesará y mostrará:
+# ✓ src/css/main.css → dist/css/styles.css
+```
+
+## 🎯 **Mejores Prácticas**
+
+1. **Usar variables CSS** para valores reutilizables
+2. **Mantener módulos pequeños** y enfocados
+3. **Seguir convención de nombres** con guiones bajos
+4. **Documentar variables** en `_variables.css`
+5. **Usar PostCSS** para bundling automático
+
+---
+
+**¡CSS modular y escalable sin duplicación!** 🎨✨
