@@ -1,110 +1,126 @@
-# Shellaquiles.org
+# Manifiesto <span style="color: #00ff00;">shell</span><span style="color: #ffffff;">aquiles</span><span style="color: #ff0000;">.org</span>
 
-**Comunidad de Comunidades tech en México**
+## ¿Qué es Shellaquiles?
 
-## 🚀 **¿Qué es?**
+Somos una **comunidad de comunidades** que mezcla tecnología, cultura libre y creatividad. Aquí no buscamos startups ni unicornios: buscamos personas que quieran aprender, compartir y crear juntas.
 
-Comunidad de comunidades tech en México que ejecuta ideas colectivas mezclando tecnología, cultura libre y creatividad.
+Nacimos de la idea de **integrar y conectar** todos los espacios y comunidades que han marcado el ecosistema tech mexicano. No queremos reemplazarlos, sino crear **"La Red de Redes"** donde cada uno mantiene su identidad pero se conecta con los demás.
 
-## 🏗️ **Arquitectura del Proyecto**
+**No somos una incubadora, no somos un coworking, no somos un evento más.** Somos el **nodo de conexión** donde las comunidades se encuentran para crear, aprender y transformar. Donde el desarrollador que quiere hacer arte digital encuentra al artista que quiere aprender a programar. Donde el maker que construye robots encuentra al músico que quiere experimentar con sonidos electrónicos.
 
-### **Estructura Modular**
-```
-src/
-├── css/                    # Módulos CSS
-│   ├── modules/           # Componentes específicos
-│   ├── utils/             # Variables y estilos base
-│   └── main.css           # Punto de entrada CSS
-├── js/                     # Módulos JavaScript
-│   ├── modules/            # Funcionalidades principales
-│   ├── utils/              # Utilidades y helpers
-│   └── main.js             # Punto de entrada JS
-└── assets/                 # Recursos estáticos
-```
+**Somos la integración de:**
+- Espacios de hackers y makers
+- Comunidades de desarrolladores
+- Centros de innovación y academia
+- Eventos de hacking social y cultura digital
+- Y todos los proyectos que se sumen a esta red
 
-### **Sistema de Build**
-- **PostCSS**: Procesamiento y bundling de CSS
-- **Webpack**: Bundling y transpilación de JavaScript
-- **Babel**: Transpilación de ES6+ a JavaScript compatible
+Shellaquiles es:
 
-## 🛠️ **Instalación y Desarrollo**
+* **Shell** - el espacio donde se ejecutan ideas
+* **Aquiles** - la fuerza colectiva que nace al colaborar
+* **Chilaquiles** - lo cultural y cercano, lo que sabe mejor cuando se comparte
 
-### **Requisitos**
-- Node.js >= 16.0.0
-- NPM >= 8.0.0
+## Nuestra visión
 
-### **Instalación**
-```bash
-# Clonar repositorio
-git clone <repository-url>
-cd shellaquiles-org
+Queremos ser **"La Red de Redes"** que México necesita: el ecosistema tech más grande e integrado del país.
 
-# Instalar dependencias
-npm install
-```
+* **Un nodo de conexión** donde cada comunidad mantiene su identidad pero se conecta con las demás
+* **Un laboratorio de experimentación** donde cualquier persona pueda proponer, experimentar y equivocarse sin miedo
+* **Un catalizador de cambio** que impulse la transformación social a través de la tecnología y la creatividad
+* **Un modelo replicable** que otros países puedan adoptar para unir sus ecosistemas tech
 
-### **Comandos de Desarrollo**
-```bash
-# Desarrollo completo (CSS + JS + servidor)
-npm run dev
+**Imagina un lugar donde:**
+- Un grupo de estudiantes de medicina hackean un respirador con Arduino
+- Una banda de música tradicional experimenta con sintetizadores digitales
+- Un colectivo de artistas crea instalaciones interactivas con IA
+- Un grupo de abuelos aprende a usar la tecnología para conectar con sus nietos
 
-# Solo build de CSS
-npm run build:css:dev
+**Imagina un ecosistema donde:**
+- Los hackers colaboran con los makers
+- Los desarrolladores se conectan en redes distribuidas
+- Los espacios corporativos se abren a la contracultura
+- Los eventos underground se mezclan con la academia
 
-# Solo build de JavaScript
-npm run build:js:dev
+## Nuestros principios
 
-# Build de producción
-npm run build:prod
+* **Abrir, no cerrar** - el conocimiento y la experiencia se comparten. No hay secretos, no hay jerarquías, no hay exclusividad
+* **Hacer, no solo hablar** - cada encuentro es una oportunidad para crear algo tangible. Salimos con proyectos, no solo con ideas
+* **Conectar, no competir** - la diversidad enriquece, la colaboración potencia. Buscamos sinergias, no rivalidades
+* **Mezclar, no encasillar** - caben el software libre, la electrónica, la IA, el arte, la cultura popular y lo inesperado
+* **Aprender del pasado** - construimos sobre experiencias que han funcionado, pero no nos quedamos atrapados en ellas
+* **Crear algo nuevo** - no replicamos, sino que innovamos desde lo aprendido. Cada proyecto es único
+* **Integrar, no absorber** - cada comunidad mantiene su identidad mientras se conecta con las demás
+* **Distribuir, no centralizar** - el poder y los recursos se comparten entre todos los nodos
 
-# Servidor de desarrollo
-npm run serve:dev
+**En la práctica esto significa:**
+- Talleres donde se mezclan disciplinas (arte + tecnología + cultura)
+- Eventos donde la gente no solo escucha, sino que construye
+- Espacios donde la experimentación es la norma, no la excepción
+- Proyectos que cruzan fronteras entre comunidades y especialidades
 
-# Limpiar build
-npm run clean
+## Nuestra estrategia de integración
 
-# Deploy completo
-npm run deploy
-```
+**"La Red de Redes"** se construye en capas, respetando la autonomía de cada comunidad:
 
-## 🎨 **Características**
+**Capa 1: Nodos Especializados**
+Cada proyecto mantiene su identidad pero se convierte en un nodo especializado:
+- **Activismo Digital & Contracultura**
+- **Hardware & Maker Culture**
+- **Desarrollo & Open Source**
+- **Innovación Corporativa & Academia**
+- **Hacking Social & Cultura Digital**
 
-- **Terminal UI**: Interfaz estilo línea de comandos
-- **Responsive Design**: Adaptable a todos los dispositivos
-- **Modular**: Arquitectura escalable y mantenible
-- **Moderno**: ES6+, CSS Variables, PostCSS
-- **Performance**: Bundling optimizado para producción
+**Capa 2: Proyectos Transversales**
+- **"La Caravana Shellaquiles"** - Tour rotativo por todos los espacios
+- **"Semillas de Cambio"** - Hackathons que combinan especialidades
+- **"Misiones Compartidas"** - Retos comunitarios entre nodos
 
-## 🌐 **Cómo Funciona**
+**Capa 3: Infraestructura Compartida**
+- Sistema de membresía compartida
+- Calendario unificado de eventos
+- Base de conocimiento colaborativa
+- Recursos que rotan entre espacios
 
-1. **CSS Modular**: Variables centralizadas, componentes reutilizables
-2. **JavaScript Modular**: Clases ES6, manejo de eventos, animaciones
-3. **Build Automatizado**: PostCSS + Webpack para archivos optimizados
-4. **Desarrollo Local**: Servidor HTTP para testing
+## Cómo participar
 
-## 📁 **Archivos de Build**
+En Shellaquiles no hay asistentes ni clientes: **todxs somos cómplices**. No venimos a consumir, venimos a crear juntos.
 
-Los archivos finales se generan en `dist/`:
-- `dist/css/styles.css` - CSS combinado y optimizado
-- `dist/js/script.js` - JavaScript transpilado y optimizado
+**Puedes:**
 
-## 🤝 **Contribuir**
+* **Proponer** un taller, charla o proyecto - no importa si eres experto o principiante
+* **Colaborar** en la organización de eventos - desde buscar el café hasta coordinar el streaming
+* **Compartir conocimiento** con la comunidad - tu experiencia es valiosa, sin importar el nivel
+* **Apoyar en especie** - equipo, café, stickers, energía, o simplemente tu presencia
+* **Aliarte** abriendo tu espacio o empresa a la comunidad
 
-1. Fork del repositorio
-2. Crear rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit de tus cambios (`git commit -am 'Agregar nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Crear Pull Request
+**Ejemplos de participación real:**
+- Un desarrollador que enseña Python a artistas visuales
+- Una diseñadora que ayuda a crear la identidad visual de la comunidad
+- Un músico que comparte su conocimiento de síntesis de audio
+- Una empresa que presta su espacio para un hackathon
+- Un estudiante que organiza su primer meetup sobre blockchain
 
-## 📄 **Licencia**
+## Nuestro llamado
 
-MIT License - ver [LICENSE](LICENSE) para detalles.
+Aunque no tenemos un lugar fijo, buscamos **aliados que abran sus puertas**: empresas, colectivos e instituciones que quieran crecer junto con la comunidad.
 
-## 📞 **Contacto**
+**¿Qué buscamos?**
+- Espacios físicos para eventos y talleres
+- Equipo y tecnología para experimentar
+- Recursos para proyectos comunitarios
+- Conexiones con otras comunidades y organizaciones
 
-- **Email**: comunidad@shellaquiles.org
-- **Sitio**: [shellaquiles.org](https://shellaquiles.org)
+**¿Qué ofrecemos a cambio?**
+- **Visibilidad** como impulsores de la cultura colaborativa
+- **Conexión directa** con talento creativo y técnico
+- **Reputación** como aliados de la innovación abierta
+- **Participación** en proyectos que pueden transformar comunidades
+
+**No es caridad, es colaboración.** Juntos creamos un ecosistema donde todos ganamos: la comunidad crece, los aliados se conectan con talento real, y México se beneficia de la innovación colaborativa.
 
 ---
 
-**¡Solos llegamos lejos, pero unidos transformamos todo!** 🚀
+**Shellaquiles no es un club ni una incubadora: es "La Red de Redes", un movimiento abierto que integra todas las comunidades tech de México, un shell listo para ejecutar ideas que transformen y una mesa servida donde la diversidad y la colaboración son los ingredientes principales.**
+
+**Juntos creamos el ecosistema tech más grande e integrado del país.**
