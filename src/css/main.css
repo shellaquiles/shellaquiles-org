@@ -1,0 +1,30 @@
+/**
+ * Main CSS File - Shellaquiles Terminal Theme
+ * Imports all CSS modules in the correct order
+ */
+
+/* Import utilities first (variables and base) */
+@import url('./utils/_variables.css');
+@import url('./utils/_base.css');
+
+/* Import modules */
+@import url('./modules/_terminal.css');
+@import url('./modules/_logo.css');
+@import url('./modules/_components.css');
+@import url('./modules/_animations.css');
+
+/* Import responsive design last */
+@import url('./modules/_responsive.css');
+
+/*
+ * CSS Module Loading Order:
+ * 1. Variables - Define all design tokens
+ * 2. Base - Reset and basic styles
+ * 3. Terminal - Main terminal layout
+ * 4. Logo - Logo component styles
+ * 5. Components - Reusable UI components
+ * 6. Animations - Keyframes and effects
+ * 7. Responsive - Media queries and mobile
+ *
+ * This order ensures proper cascade and specificity
+ */

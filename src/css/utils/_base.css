@@ -1,0 +1,105 @@
+/**
+ * Base CSS - Reset and basic element styles
+ */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base HTML elements */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--terminal-black);
+    color: var(--terminal-green);
+    font-family: var(--font-family-mono);
+    line-height: var(--line-height-normal);
+    overflow-x: hidden;
+    font-size: var(--font-size-base);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--spacing-md);
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Links */
+a {
+    color: var(--terminal-green);
+    text-decoration: none;
+    transition: color var(--transition-normal);
+}
+
+a:hover {
+    color: var(--terminal-white);
+}
+
+/* Lists */
+ul, ol {
+    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-xl);
+}
+
+li {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Form elements */
+button, input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Focus states */
+:focus {
+    outline: 2px solid var(--terminal-green);
+    outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+    background: var(--terminal-green);
+    color: var(--terminal-black);
+}
+
+::-moz-selection {
+    background: var(--terminal-green);
+    color: var(--terminal-black);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--terminal-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--terminal-green);
+    border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+}

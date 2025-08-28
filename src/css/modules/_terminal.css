@@ -1,0 +1,90 @@
+/**
+ * Terminal Base Styles
+ * Main terminal container and layout
+ */
+
+.terminal {
+    padding: var(--spacing-lg);
+    max-width: var(--breakpoint-xl);
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Terminal Header */
+.terminal-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xxl);
+    padding: var(--spacing-lg);
+    border-bottom: 2px solid var(--terminal-green);
+}
+
+.terminal-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: var(--spacing-sm);
+}
+
+.terminal-subtitle {
+    color: var(--terminal-white);
+    font-size: 1.2em;
+}
+
+/* Command Prompts */
+.prompt {
+    color: var(--terminal-green);
+    margin-bottom: var(--spacing-sm);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.prompt .cursor {
+    margin-right: var(--spacing-sm);
+    color: var(--terminal-green);
+}
+
+.prompt .command-text {
+    color: var(--terminal-white);
+    margin-left: var(--spacing-sm);
+}
+
+/* Command Output */
+.output {
+    color: var(--terminal-green);
+    margin-bottom: var(--spacing-xl);
+    white-space: pre-line;
+    animation: fadeIn 1s ease-in;
+    padding-left: var(--spacing-lg);
+    border-left: 2px solid var(--terminal-green);
+    margin-left: var(--spacing-lg);
+}
+
+.highlight {
+    color: var(--terminal-red);
+    font-weight: bold;
+}
+
+/* Sections */
+.section {
+    margin: var(--spacing-xxl) 0;
+    padding: var(--spacing-lg);
+    border-left: 3px solid var(--terminal-green);
+    background: rgba(0, 255, 0, 0.05);
+    border-radius: var(--radius-md);
+}
+
+/* Terminal Effects */
+.terminal::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(0, 255, 0, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 0, 0, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}

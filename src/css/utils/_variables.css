@@ -1,0 +1,85 @@
+/**
+ * CSS Variables for Shellaquiles Terminal Theme
+ * Centralized color scheme and design tokens
+ */
+
+:root {
+    /* Terminal Colors */
+    --terminal-green: #00ff00;
+    --terminal-red: #ff0000;
+    --terminal-white: #ffffff;
+    --terminal-black: #0a0a0a;
+    --terminal-dark: #1a1a1a;
+    --terminal-gray: #666666;
+
+    /* Logo Colors */
+    --logo-bg: #0F1217;
+    --logo-arrows: #19F38E;
+    --logo-brace: #9CA3AF;
+    --logo-shell: #22C55E;
+    --logo-aquiles: #E5E7EB;
+    --logo-tld: #F43F5E;
+    --logo-shrug: #F59E0B;
+
+    /* Spacing */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
+    --spacing-xxl: 40px;
+    --spacing-xxxl: 50px;
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 10px;
+    --radius-xl: 32px;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 20px rgba(0, 255, 0, 0.6);
+
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Z-Index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+
+    /* Typography */
+    --font-family-mono: 'Courier New', 'Monaco', 'Menlo', monospace;
+    --font-family-logo: "JetBrains Mono", "Fira Code", "Cascadia Code", "Consolas", "Menlo", "DejaVu Sans Mono", monospace;
+
+    /* Font Sizes */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 24px;
+    --font-size-3xl: 28px;
+    --font-size-4xl: 32px;
+    --font-size-5xl: 48px;
+    --font-size-6xl: 72px;
+
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.6;
+    --line-height-relaxed: 1.8;
+
+    /* Breakpoints */
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1200px;
+}
