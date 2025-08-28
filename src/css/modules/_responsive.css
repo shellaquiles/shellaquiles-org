@@ -1,0 +1,185 @@
+/**
+ * Responsive Design
+ * Media queries and mobile-first approach
+ */
+
+/* Tablet and smaller desktop */
+@media (max-width: 1024px) {
+    .terminal {
+        padding: var(--spacing-md);
+        max-width: 100%;
+    }
+
+    .nodos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: var(--spacing-md);
+    }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+    .terminal {
+        padding: var(--spacing-md);
+    }
+
+    .terminal-title {
+        font-size: 2em;
+    }
+
+    .terminal-header {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .nodos-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        margin: var(--spacing-sm) 0;
+        text-align: center;
+    }
+
+    .cta {
+        padding: var(--spacing-xl) var(--spacing-md);
+        margin: var(--spacing-xl) 0;
+    }
+
+    .email {
+        font-size: 1.2em;
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logo-text {
+        font-size: var(--font-size-xl);
+    }
+
+    .logo-shrug {
+        font-size: var(--font-size-5xl);
+    }
+
+    .logo-arrows {
+        font-size: var(--font-size-xl);
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    .terminal {
+        padding: var(--spacing-sm);
+    }
+
+    .terminal-title {
+        font-size: 1.5em;
+    }
+
+    .terminal-header {
+        padding: var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .output {
+        padding-left: var(--spacing-sm);
+        margin-left: var(--spacing-sm);
+    }
+
+    .section {
+        padding: var(--spacing-md);
+        margin: var(--spacing-lg) 0;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo-text {
+        font-size: var(--font-size-base);
+    }
+
+    .logo-shrug {
+        font-size: var(--font-size-4xl);
+    }
+
+    .logo-arrows {
+        font-size: var(--font-size-base);
+    }
+
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-sm);
+    }
+
+    .cta {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .email {
+        font-size: 1.1em;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .terminal {
+        padding: var(--spacing-xs);
+    }
+
+    .terminal-title {
+        font-size: 1.3em;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo-text {
+        font-size: var(--font-size-sm);
+    }
+
+    .logo-shrug {
+        font-size: var(--font-size-3xl);
+    }
+
+    .btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo-text {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Print styles */
+@media print {
+    .terminal::before,
+    .btn::before,
+    .nodo::before,
+    .cta::before {
+        display: none;
+    }
+
+    .terminal {
+        background: white;
+        color: black;
+    }
+
+    .btn {
+        background: #ccc;
+        color: black;
+        border: 1px solid #999;
+    }
+}

@@ -1,0 +1,148 @@
+/**
+ * Components Styles
+ * Reusable UI components
+ */
+
+/* Nodos Grid */
+.nodos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+}
+
+.nodo {
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid var(--terminal-green);
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: all var(--transition-normal);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.nodo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.2), transparent);
+    transition: left var(--transition-slow);
+}
+
+.nodo:hover::before {
+    left: 100%;
+}
+
+.nodo:hover {
+    background: rgba(0, 255, 0, 0.2);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.nodo:active {
+    transform: translateY(-1px);
+}
+
+/* Proyectos */
+.proyecto {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--terminal-white);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.proyecto:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.proyecto strong {
+    color: var(--terminal-white);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--terminal-green);
+    color: var(--terminal-black);
+    padding: var(--spacing-md) var(--spacing-xl);
+    text-decoration: none;
+    border: none;
+    margin: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) 0;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    border-radius: var(--radius-md);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: all var(--transition-normal);
+    transform: translate(-50%, -50%);
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    background: #00cc00;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.4);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    margin: var(--spacing-xxxl) 0;
+    padding: var(--spacing-xxl);
+    background: rgba(0, 255, 0, 0.1);
+    border: 3px solid var(--terminal-green);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+    animation: rotate 10s linear infinite;
+}
+
+.email {
+    color: var(--terminal-green);
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: var(--spacing-lg) 0;
+    text-shadow: 0 0 10px var(--terminal-green);
+}

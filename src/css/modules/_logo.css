@@ -1,0 +1,92 @@
+/**
+ * Logo Styles
+ * HTML-based logo component styling
+ */
+
+.logo-container {
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    transition: all var(--transition-normal);
+    box-sizing: border-box;
+}
+
+.logo-card {
+    width: 100% !important;
+    height: 100% !important;
+    background: var(--logo-bg) !important;
+    border-radius: var(--radius-xl) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: var(--spacing-lg) !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.logo-arrows {
+    color: var(--logo-arrows);
+    font-weight: 800;
+    font-size: var(--font-size-3xl);
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(25, 243, 142, 0.6);
+    margin: var(--spacing-xs) 0;
+}
+
+.logo-text {
+    font-family: var(--font-family-logo);
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin: var(--spacing-sm) 0;
+    line-height: var(--line-height-tight);
+}
+
+.logo-brace {
+    color: var(--logo-brace);
+    font-weight: 700;
+}
+
+.logo-shell {
+    color: var(--logo-shell);
+    font-weight: 800;
+}
+
+.logo-aquiles {
+    color: var(--logo-aquiles);
+    font-weight: 800;
+}
+
+.logo-tld {
+    color: var(--logo-tld);
+    font-weight: 800;
+}
+
+.logo-shrug {
+    color: var(--logo-shrug);
+    font-weight: 800;
+    font-size: var(--font-size-6xl);
+    margin: var(--spacing-sm) 0;
+    line-height: var(--line-height-tight);
+}
+
+/* Logo Hover Effects */
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo:hover .logo-arrows {
+    text-shadow: 0 0 15px rgba(25, 243, 142, 0.8);
+}
+
+.logo:hover .logo-card {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}

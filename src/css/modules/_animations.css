@@ -1,0 +1,96 @@
+/**
+ * Animations and Keyframes
+ * All CSS animations and effects
+ */
+
+/* Cursor Animation */
+.cursor {
+    animation: blink 1s infinite;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Typewriter Effect */
+@keyframes typewriter {
+    from {
+        width: 0;
+        overflow: hidden;
+    }
+    to {
+        width: 100%;
+        overflow: visible;
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Rotate Animation for CTA */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Rainbow Effect for Konami Code */
+@keyframes rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* Reveal Animation for Scroll Effects */
+.revealed {
+    animation: slideIn 0.6s ease-out forwards;
+}
+
+/* Animation Classes for JavaScript */
+.fade-in {
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+.slide-in-left {
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Animation States */
+.nodo, .proyecto, .section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.prompt {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.6s ease;
+}
+
+.output {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
