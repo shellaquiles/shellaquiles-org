@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="1024" height="1024">
+  <title>shellaquiles .org — joined text</title>
+  <defs>
+    <filter id="glowGreen" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style><![CDATA[
+      .card-bg { fill: #0F1217; }
+      .corner { rx: 32; ry: 32; }
+      .mono { font-family: "JetBrains Mono","Fira Code","Cascadia Code","Consolas","Menlo","DejaVu Sans Mono",monospace, "Noto Color Emoji"; }
+      .chev { fill: #19F38E; font-weight: 800; font-size: 28px; letter-spacing: 2px; }
+      .brace { fill: #9CA3AF; font-weight: 700; font-size: 28px; }
+      .shell { fill: #22C55E; font-weight: 800; font-size: 28px; }
+      .aquiles { fill: #E5E7EB; font-weight: 800; font-size: 28px; }
+      .tld { fill: #F43F5E; font-weight: 800; font-size: 28px; }
+      .shrug { fill: #F59E0B; font-weight: 800; font-size: 72px; }
+    ]]></style>
+  </defs>
+
+  <rect x="10" y="10" width="580" height="580" class="card-bg corner" />
+
+  <text x="300" y="110" text-anchor="middle" class="mono chev" filter="url(#glowGreen)">»»»</text>
+
+  <text x="300" y="210" text-anchor="middle" class="mono">
+    <tspan class="brace">&#123;&#123; </tspan>
+    <tspan class="shell">shell</tspan><tspan class="aquiles">aquiles</tspan><tspan class="tld">.org</tspan>
+    <tspan class="brace"> &#125;&#125;</tspan>
+  </text>
+
+  <text x="300" y="360" text-anchor="middle" class="mono shrug">¯\_(ツ)_/¯</text>
+
+  <text x="300" y="490" text-anchor="middle" class="mono chev" filter="url(#glowGreen)">»»»</text>
+</svg>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shellaquiles.org - Comunidad de Comunidades</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+    <div class="terminal">
+        <!-- Terminal Header -->
+        <div class="terminal-header">
+            <div class="logo-container">
+                <div class="logo">
+                    <div class="logo-card">
+                        <div class="logo-arrows">«««</div>
+                        <div class="logo-text">
+                            <span class="logo-brace">{{</span>
+                            <span class="logo-shell">shell</span><span class="logo-aquiles">aquiles</span><span class="logo-tld">.org</span>
+                            <span class="logo-brace">}}</span>
+                        </div>
+
+                        <div class="logo-arrows">»»»</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="terminal-subtitle">Comunidad de Comunidades</div>
+        </div>
+
+        <!-- Manifiesto -->
+        <div class="prompt">
+            <span class="cursor">$</span>
+            <span class="command-text">cat manifiesto.txt</span>
+        </div>
+                <div class="output">
+{{ <span class="logo-shell">shell</span><span class="logo-aquiles">aquiles</span><span class="logo-tld">.org</span> }} = Comunidad de Comunidades
+
+<strong>¿Qué es?</strong> Comunidad de comunidades tech en México.
+<strong>¿Cómo funciona?</strong> Nodos locales + proyectos compartidos + festivales de creación.
+<strong>¿Por qué existe?</strong> Porque solos llegamos lejos, pero unidos transformamos todo.
+<strong>Objetivo:</strong> Ejecutar ideas colectivas que mezclen tecnología, cultura libre y creatividad.
+        </div>
+
+        <!-- Nodos -->
+        <div class="prompt">
+            <span class="cursor">$</span>
+            <span class="command-text">ls nodos/</span>
+        </div>
+        <div class="output">
+Tipos de comunidades que queremos conectar:
+        </div>
+        <div class="nodos-grid">
+            <div class="nodo">Espacios Maker</div>
+            <div class="nodo">Comunidades Dev</div>
+            <div class="nodo">Hackerspaces</div>
+            <div class="nodo">Labs Creativos</div>
+            <div class="nodo">Open Source</div>
+            <div class="nodo">Cultura Digital</div>
+        </div>
+        <div class="output" style="margin-top: 20px; text-align: center; font-style: italic;">
+            <span style="color: #ffffff;">¡Estamos abiertos a conectar con tu comunidad!</span>
+        </div>
+
+        <!-- Proyectos -->
+        <div class="prompt">
+            <span class="cursor">$</span>
+            <span class="command-text">ls proyectos/</span>
+        </div>
+        <div class="output">
+Proyectos que queremos desarrollar:
+        </div>
+        <div class="proyecto">
+            <strong>La Caravana <span class="logo-shell">shell</span><span class="logo-aquiles">aquiles</span><span class="logo-tld">.org</span></strong> - Tour rotativo por espacios tech
+        </div>
+        <div class="proyecto">
+            <strong>Semillas de Cambio</strong> - Hackathons colaborativos
+        </div>
+        <div class="proyecto">
+            <strong>Misiones Compartidas</strong> - Retos comunitarios
+        </div>
+        <div class="output" style="margin-top: 20px; text-align: center; font-style: italic;">
+            <span style="color: #ffffff;">¡Estamos abiertos a tus ideas y propuestas!</span>
+        </div>
+
+        <!-- Participación -->
+        <div class="prompt">
+            <span class="cursor">$</span>
+            <span class="command-text">./participar.sh</span>
+        </div>
+        <div class="output">
+¿Cómo participar?
+        </div>
+        <div class="section">
+            <a href="#proponer" class="btn">Proponer taller</a>
+            <a href="#espacio" class="btn">Abrir espacio</a>
+            <a href="#voluntario" class="btn">Unirme como voluntario</a>
+        </div>
+
+        <!-- CTA Final -->
+        <div class="cta">
+            <div class="prompt">
+                <span class="cursor">$</span>
+                <span class="command-text">./ejecutar.sh</span>
+            </div>
+            <div class="output">
+                <strong>Ejecutemos juntos:</strong>
+                <div class="email">comunidad@shellaquiles.org</div>
+                <div style="margin-top: 20px; color: #ffffff;">
+                    <span class="cursor">$</span> cat README.md
+                </div>
+            </div>
+        </div>
+
+        <!-- Exit -->
+        <div class="prompt">
+            <span class="cursor">$</span>
+            <span class="command-text">exit</span>
+        </div>
+    </div>
+
+    <script src="src/js/script.js"></script>
+</body>
+</html>
