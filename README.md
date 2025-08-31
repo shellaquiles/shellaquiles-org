@@ -2,125 +2,141 @@
 
 ## ¿Qué es Shellaquiles?
 
-Somos una **comunidad de comunidades** que mezcla tecnología, cultura libre y creatividad. Aquí no buscamos startups ni unicornios: buscamos personas que quieran aprender, compartir y crear juntas.
+Shellaquiles es **la comunidad tech abierta de México, para todos los lenguajes y todas las tecnologías**.
 
-Nacimos de la idea de **integrar y conectar** todos los espacios y comunidades que han marcado el ecosistema tech mexicano. No queremos reemplazarlos, sino crear **"La Red de Redes"** donde cada uno mantiene su identidad pero se conecta con los demás.
-
-**No somos una incubadora, no somos un coworking, no somos un evento más.** Somos el **nodo de conexión** donde las comunidades se encuentran para crear, aprender y transformar. Donde el desarrollador que quiere hacer arte digital encuentra al artista que quiere aprender a programar. Donde el maker que construye robots encuentra al músico que quiere experimentar con sonidos electrónicos.
-
-**Somos la integración de:**
-- Espacios de hackers y makers
-- Comunidades de desarrolladores
-- Centros de innovación y academia
-- Eventos de hacking social y cultura digital
-- Y todos los proyectos que se sumen a esta red
-
-Shellaquiles es:
-
-* **Shell** - el espacio donde se ejecutan ideas
-* **Aquiles** - la fuerza colectiva que nace al colaborar
-* **Chilaquiles** - lo cultural y cercano, lo que sabe mejor cuando se comparte
-
-## Nuestra visión
-
-Queremos ser **"La Red de Redes"** que México necesita: el ecosistema tech más grande e integrado del país.
-
-* **Un nodo de conexión** donde cada comunidad mantiene su identidad pero se conecta con las demás
-* **Un laboratorio de experimentación** donde cualquier persona pueda proponer, experimentar y equivocarse sin miedo
-* **Un catalizador de cambio** que impulse la transformación social a través de la tecnología y la creatividad
-* **Un modelo replicable** que otros países puedan adoptar para unir sus ecosistemas tech
-
-**Imagina un lugar donde:**
-- Un grupo de estudiantes de medicina hackean un respirador con Arduino
-- Una banda de música tradicional experimenta con sintetizadores digitales
-- Un colectivo de artistas crea instalaciones interactivas con IA
-- Un grupo de abuelos aprende a usar la tecnología para conectar con sus nietos
-
-**Imagina un ecosistema donde:**
-- Los hackers colaboran con los makers
-- Los desarrolladores se conectan en redes distribuidas
-- Los espacios corporativos se abren a la contracultura
-- Los eventos underground se mezclan con la academia
-
-## Nuestros principios
-
-* **Abrir, no cerrar** - el conocimiento y la experiencia se comparten. No hay secretos, no hay jerarquías, no hay exclusividad
-* **Hacer, no solo hablar** - cada encuentro es una oportunidad para crear algo tangible. Salimos con proyectos, no solo con ideas
-* **Conectar, no competir** - la diversidad enriquece, la colaboración potencia. Buscamos sinergias, no rivalidades
-* **Mezclar, no encasillar** - caben el software libre, la electrónica, la IA, el arte, la cultura popular y lo inesperado
-* **Aprender del pasado** - construimos sobre experiencias que han funcionado, pero no nos quedamos atrapados en ellas
-* **Crear algo nuevo** - no replicamos, sino que innovamos desde lo aprendido. Cada proyecto es único
-* **Integrar, no absorber** - cada comunidad mantiene su identidad mientras se conecta con las demás
-* **Distribuir, no centralizar** - el poder y los recursos se comparten entre todos los nodos
-
-**En la práctica esto significa:**
-- Talleres donde se mezclan disciplinas (arte + tecnología + cultura)
-- Eventos donde la gente no solo escucha, sino que construye
-- Espacios donde la experimentación es la norma, no la excepción
-- Proyectos que cruzan fronteras entre comunidades y especialidades
-
-## Nuestra estrategia de integración
-
-**"La Red de Redes"** se construye en capas, respetando la autonomía de cada comunidad:
-
-**Capa 1: Nodos Especializados**
-Cada proyecto mantiene su identidad pero se convierte en un nodo especializado:
-- **Activismo Digital & Contracultura**
-- **Hardware & Maker Culture**
-- **Desarrollo & Open Source**
-- **Innovación Corporativa & Academia**
-- **Hacking Social & Cultura Digital**
-
-**Capa 2: Proyectos Transversales**
-- **"La Caravana Shellaquiles"** - Tour rotativo por todos los espacios
-- **"Semillas de Cambio"** - Hackathons que combinan especialidades
-- **"Misiones Compartidas"** - Retos comunitarios entre nodos
-
-**Capa 3: Infraestructura Compartida**
-- Sistema de membresía compartida
-- Calendario unificado de eventos
-- Base de conocimiento colaborativa
-- Recursos que rotan entre espacios
-
-## Cómo participar
-
-En Shellaquiles no hay asistentes ni clientes: **todxs somos cómplices**. No venimos a consumir, venimos a crear juntos.
-
-**Puedes:**
-
-* **Proponer** un taller, charla o proyecto - no importa si eres experto o principiante
-* **Colaborar** en la organización de eventos - desde buscar el café hasta coordinar el streaming
-* **Compartir conocimiento** con la comunidad - tu experiencia es valiosa, sin importar el nivel
-* **Apoyar en especie** - equipo, café, stickers, energía, o simplemente tu presencia
-* **Aliarte** abriendo tu espacio o empresa a la comunidad
-
-**Ejemplos de participación real:**
-- Un desarrollador que enseña Python a artistas visuales
-- Una diseñadora que ayuda a crear la identidad visual de la comunidad
-- Un músico que comparte su conocimiento de síntesis de audio
-- Una empresa que presta su espacio para un hackathon
-- Un estudiante que organiza su primer meetup sobre blockchain
-
-## Nuestro llamado
-
-Aunque no tenemos un lugar fijo, buscamos **aliados que abran sus puertas**: empresas, colectivos e instituciones que quieran crecer junto con la comunidad.
-
-**¿Qué buscamos?**
-- Espacios físicos para eventos y talleres
-- Equipo y tecnología para experimentar
-- Recursos para proyectos comunitarios
-- Conexiones con otras comunidades y organizaciones
-
-**¿Qué ofrecemos a cambio?**
-- **Visibilidad** como impulsores de la cultura colaborativa
-- **Conexión directa** con talento creativo y técnico
-- **Reputación** como aliados de la innovación abierta
-- **Participación** en proyectos que pueden transformar comunidades
-
-**No es caridad, es colaboración.** Juntos creamos un ecosistema donde todos ganamos: la comunidad crece, los aliados se conectan con talento real, y México se beneficia de la innovación colaborativa.
+Creamos un espacio donde **no importa si vienes de Python, JavaScript, Rust, Go, Data Science, DevOps, IA, blockchain o hardware** — aquí todxs tienen un lugar para aprender, enseñar y colaborar.
 
 ---
 
-**Shellaquiles no es un club ni una incubadora: es "La Red de Redes", un movimiento abierto que integra todas las comunidades tech de México, un shell listo para ejecutar ideas que transformen y una mesa servida donde la diversidad y la colaboración son los ingredientes principales.**
+## Nuestra filosofía
 
-**Juntos creamos el ecosistema tech más grande e integrado del país.**
+Creemos en la **organización horizontal y las dinámicas colaborativas** que han demostrado funcionar en comunidades auténticas.
+
+* **Todos los lenguajes son bienvenidos** — desde el más popular hasta el más experimental.
+* **Todos los niveles cuentan** — desde quien escribe su primer "Hello World" hasta quienes mantienen proyectos globales.
+* **Todas las perspectivas suman** — programadores, diseñadores, makers, artistas digitales, investigadores, curiosos.
+
+---
+
+## Cómo nos organizamos
+
+Adoptamos **dinámicas probadas y accesibles**:
+
+### Eventos regulares
+
+* **Meetups mensuales** con charlas técnicas y espacios de networking genuino.
+* **Talleres prácticos** (hands-on) donde construimos proyectos en conjunto.
+* **Coding dojos** para aprender practicando en grupo.
+* **Show & tell** para compartir proyectos y recibir retroalimentación.
+
+### Organización horizontal
+
+* **Cualquiera puede proponer** charlas, talleres o proyectos.
+* **Rotamos responsabilidades** para evitar cargas desiguales.
+* **Decisiones por consenso**, en reuniones abiertas.
+* **Todo se documenta**, para que otros puedan replicar lo que funciona.
+
+---
+
+## Nuestra sostenibilidad
+
+Toda comunidad necesita cubrir gastos básicos (espacios, café, equipo, snacks).
+En Shellaquiles lo hacemos con **souvenirs con propósito**:
+
+* **Stickers únicos** con referencias tech y cultura local.
+* **Playeras edición limitada** creadas con diseño colaborativo.
+* **Pines coleccionables** de diferentes lenguajes y tecnologías.
+* **Ediciones especiales** en fechas o eventos importantes.
+
+👉 **No es merch comercial, es merch comunitario**: cada pieza cuenta una historia y financia que la comunidad siga creciendo.
+
+---
+
+## Lo que nos hace únicos
+
+**Somos una comunidad tech diferente porque combinamos:**
+
+* **Calidad técnica** sin elitismo.
+* **Calidez humana** en cada encuentro.
+* **Organización colaborativa** donde todxs participan.
+* **Pasión genuina** por aprender y compartir.
+
+**Y lo amplificamos:**
+
+* **Sin límites de stack** — tu lenguaje también es nuestro lenguaje.
+* **Sin fronteras entre disciplinas** — el dev conoce al maker, el diseñador al data scientist.
+* **Sin barreras de entrada** — principiantes y expertos crecen juntos.
+
+---
+
+## Nuestros valores
+
+* **Código abierto por convicción** — lo libre primero, pero lo práctico también.
+* **Diversidad como fortaleza** — backgrounds distintos generan mejores soluciones.
+* **Aprendizaje continuo** — siempre aprendemos unos de otros.
+* **Experimentación sin miedo** — fallar rápido para aprender más rápido.
+* **Comunidad antes que individualismo** — crecer juntos es crecer mejor.
+
+---
+
+## Cómo participar
+
+Aquí no hay membresías, cuotas ni jerarquías: **solo ganas de hacer cosas chéveres juntos**.
+
+Puedes:
+
+* **Dar una charla** de 5 minutos o una hora.
+* **Organizar un taller** sobre tu stack favorito.
+* **Proponer un proyecto** para colaborar.
+* **Apoyar en logística** durante los eventos.
+* **Diseñar souvenirs** que representen la cultura tech.
+* **Prestar un espacio** para organizar encuentros.
+
+O simplemente:
+
+* **Asistir y aprender.**
+* **Conectar con gente afín.**
+* **Compartir experiencias, éxitos y fracasos.**
+
+---
+
+## Comunidades aliadas
+
+Creemos en la **colaboración entre comunidades** para fortalecer el ecosistema tech mexicano.
+
+* **Compartimos recursos y conocimiento** — eventos conjuntos, talleres colaborativos.
+* **Creamos sinergias** — donde una comunidad es fuerte, apoyamos; donde necesitamos ayuda, pedimos.
+* **Construimos puentes** — entre diferentes tecnologías, niveles de experiencia y enfoques.
+
+**¡Únete a nuestra red de comunidades aliadas!**
+
+---
+
+## Nuestro impacto
+
+Queremos ser un **modelo replicable de comunidad tech sostenible e inclusiva**:
+
+* Un ecosistema donde **nadie aprende solo**.
+* Un espacio donde **todas las tecnologías conviven**.
+* Una red donde **las oportunidades circulan**.
+* Un ejemplo de **autosuficiencia comunitaria** basado en colaboración.
+
+---
+
+## El llamado
+
+**¿Ya tienes un lenguaje favorito? ¡Perfecto!**
+**¿Quieres aprender algo nuevo? ¡También perfecto!**
+**¿No sabes programar pero te apasiona la tecnología? ¡Más que perfecto!**
+
+Shellaquiles es para ti.
+
+**Únete a la comunidad tech más inclusiva de México.**
+Donde tu curiosidad importa más que tu CV, tu proyecto personal puede hacerse colaborativo y siempre encontrarás alguien dispuesto a ayudarte a debuggear ese error imposible.
+
+---
+
+**Shellaquiles: el punto donde se sirven todas las tecnologías**
+
+*Porque el mejor código se escribe en buena compañía, con buen café y mejores amigos.*
+
