@@ -38,20 +38,6 @@ Adoptamos **dinámicas probadas y accesibles**:
 
 ---
 
-## Nuestra sostenibilidad
-
-Toda comunidad necesita cubrir gastos básicos (espacios, café, equipo, snacks).
-En Shellaquiles lo hacemos con **souvenirs con propósito**:
-
-* **Stickers únicos** con referencias tech y cultura local.
-* **Playeras edición limitada** creadas con diseño colaborativo.
-* **Pines coleccionables** de diferentes lenguajes y tecnologías.
-* **Ediciones especiales** en fechas o eventos importantes.
-
-👉 **No es merch comercial, es merch comunitario**: cada pieza cuenta una historia y financia que la comunidad siga creciendo.
-
----
-
 ## Lo que nos hace únicos
 
 **Somos una comunidad tech diferente porque combinamos:**
@@ -89,7 +75,6 @@ Puedes:
 * **Organizar un taller** sobre tu stack favorito.
 * **Proponer un proyecto** para colaborar.
 * **Apoyar en logística** durante los eventos.
-* **Diseñar souvenirs** que representen la cultura tech.
 * **Prestar un espacio** para organizar encuentros.
 
 O simplemente:
@@ -139,4 +124,3 @@ Donde tu curiosidad importa más que tu CV, tu proyecto personal puede hacerse c
 **Shellaquiles: el punto donde se sirven todas las tecnologías**
 
 *Porque el mejor código se escribe en buena compañía, con buen café y mejores amigos.*
-
