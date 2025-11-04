@@ -1,126 +1,70 @@
-# Manifiesto <span style="color: #00ff00;">shell</span><span style="color: #ffffff;">aquiles</span><span style="color: #ff0000;">.org</span>
+# Shellaquiles.org
 
-## ¿Qué es Shellaquiles?
+**Comunidad Tech Abierta de México** - Landing page con sistema de blog integrado.
 
-Shellaquiles es **la comunidad tech abierta de México, para todos los lenguajes y todas las tecnologías**.
+## 🚀 Características
 
-Creamos un espacio donde **no importa si vienes de Python, JavaScript, Rust, Go, Data Science, DevOps, IA, blockchain o hardware** — aquí todxs tienen un lugar para aprender, enseñar y colaborar.
+- **Landing Page** con diseño tipo terminal único
+- **Sistema de Blog** integrado con routing SPA
+- **Diseño Responsive** y accesible
+- **Animaciones** suaves y efectos visuales
+- **Tema Terminal** consistente en toda la aplicación
 
----
+## 📋 Estructura y Convenciones
 
-## Nuestra filosofía
+Ver [docs/project/STRUCTURE.md](docs/project/STRUCTURE.md) para principios de organización y convenciones del proyecto.
 
-Creemos en la **organización horizontal y las dinámicas colaborativas** que han demostrado funcionar en comunidades auténticas.
+## 🛠️ Instalación y Desarrollo
 
-* **Todos los lenguajes son bienvenidos** — desde el más popular hasta el más experimental.
-* **Todos los niveles cuentan** — desde quien escribe su primer "Hello World" hasta quienes mantienen proyectos globales.
-* **Todas las perspectivas suman** — programadores, diseñadores, makers, artistas digitales, investigadores, curiosos.
+Ver [docs/guides/PRUEBA-LOCAL.md](docs/guides/PRUEBA-LOCAL.md) para la guía completa de instalación y desarrollo local.
 
----
+## 📝 Sistema de Blog
 
-## Cómo nos organizamos
+Ver [docs/guides/BLOG.md](docs/guides/BLOG.md) para la guía completa del sistema de blog.
 
-Adoptamos **dinámicas probadas y accesibles**:
+## 🚀 Producción
 
-### Eventos regulares
+Ver [docs/guides/BUILD-SYSTEM.md](docs/guides/BUILD-SYSTEM.md) para la guía completa de build y despliegue en producción.
 
-* **Meetups mensuales** con charlas técnicas y espacios de networking genuino.
-* **Talleres prácticos** (hands-on) donde construimos proyectos en conjunto.
-* **Coding dojos** para aprender practicando en grupo.
-* **Show & tell** para compartir proyectos y recibir retroalimentación.
+## 📚 Scripts y Sistema de Build
 
-### Organización horizontal
+Ver [docs/guides/BUILD-SYSTEM.md](docs/guides/BUILD-SYSTEM.md) para todos los scripts disponibles y detalles del sistema de build.
 
-* **Cualquiera puede proponer** charlas, talleres o proyectos.
-* **Rotamos responsabilidades** para evitar cargas desiguales.
-* **Decisiones por consenso**, en reuniones abiertas.
-* **Todo se documenta**, para que otros puedan replicar lo que funciona.
+Para arquitectura técnica:
+- [docs/reference/CSS-ARCHITECTURE.md](docs/reference/CSS-ARCHITECTURE.md) - Arquitectura CSS
+- [docs/reference/JS-ARCHITECTURE.md](docs/reference/JS-ARCHITECTURE.md) - Arquitectura JavaScript
 
----
+## 📖 Documentación
 
-## Lo que nos hace únicos
+La documentación está organizada en `docs/`:
 
-**Somos una comunidad tech diferente porque combinamos:**
+- **Guías prácticas**: Desarrollo local, sistema de blog, build
+- **Referencia técnica**: Arquitectura CSS y JavaScript
+- **Proyecto**: Estructura y manifiesto
 
-* **Calidad técnica** sin elitismo.
-* **Calidez humana** en cada encuentro.
-* **Organización colaborativa** donde todxs participan.
-* **Pasión genuina** por aprender y compartir.
+Ver [docs/README.md](docs/README.md) para el índice completo.
 
-**Y lo amplificamos:**
+## 🤝 Contribuir
 
-* **Sin límites de stack** — tu lenguaje también es nuestro lenguaje.
-* **Sin fronteras entre disciplinas** — el dev conoce al maker, el diseñador al data scientist.
-* **Sin barreras de entrada** — principiantes y expertos crecen juntos.
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
----
+## 📄 Licencia
 
-## Nuestros valores
+Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 
-* **Código abierto por convicción** — lo libre primero, pero lo práctico también.
-* **Diversidad como fortaleza** — backgrounds distintos generan mejores soluciones.
-* **Aprendizaje continuo** — siempre aprendemos unos de otros.
-* **Experimentación sin miedo** — fallar rápido para aprender más rápido.
-* **Comunidad antes que individualismo** — crecer juntos es crecer mejor.
 
----
+## 📞 Contacto
 
-## Cómo participar
-
-Aquí no hay membresías, cuotas ni jerarquías: **solo ganas de hacer cosas chéveres juntos**.
-
-Puedes:
-
-* **Dar una charla** de 5 minutos o una hora.
-* **Organizar un taller** sobre tu stack favorito.
-* **Proponer un proyecto** para colaborar.
-* **Apoyar en logística** durante los eventos.
-* **Prestar un espacio** para organizar encuentros.
-
-O simplemente:
-
-* **Asistir y aprender.**
-* **Conectar con gente afín.**
-* **Compartir experiencias, éxitos y fracasos.**
-
----
-
-## Comunidades aliadas
-
-Creemos en la **colaboración entre comunidades** para fortalecer el ecosistema tech mexicano.
-
-* **Compartimos recursos y conocimiento** — eventos conjuntos, talleres colaborativos.
-* **Creamos sinergias** — donde una comunidad es fuerte, apoyamos; donde necesitamos ayuda, pedimos.
-* **Construimos puentes** — entre diferentes tecnologías, niveles de experiencia y enfoques.
-
-**¡Únete a nuestra red de comunidades aliadas!**
-
----
-
-## Nuestro impacto
-
-Queremos ser un **modelo replicable de comunidad tech sostenible e inclusiva**:
-
-* Un ecosistema donde **nadie aprende solo**.
-* Un espacio donde **todas las tecnologías conviven**.
-* Una red donde **las oportunidades circulan**.
-* Un ejemplo de **autosuficiencia comunitaria** basado en colaboración.
-
----
-
-## El llamado
-
-**¿Ya tienes un lenguaje favorito? ¡Perfecto!**
-**¿Quieres aprender algo nuevo? ¡También perfecto!**
-**¿No sabes programar pero te apasiona la tecnología? ¡Más que perfecto!**
-
-Shellaquiles es para ti.
-
-**Únete a la comunidad tech más inclusiva de México.**
-Donde tu curiosidad importa más que tu CV, tu proyecto personal puede hacerse colaborativo y siempre encontrarás alguien dispuesto a ayudarte a debuggear ese error imposible.
+- **Email**: comunidad@shellaquiles.org
+- **Telegram**: [@shellaquiles](https://t.me/shellaquiles)
+- **GitHub**: [shellaquiles/shellaquiles-org](https://github.com/shellaquiles/shellaquiles-org)
 
 ---
 
 **Shellaquiles: el punto donde se sirven todas las tecnologías**
 
-*Porque el mejor código se escribe en buena compañía, con buen café y mejores amigos.*
+*Porque la mejor tecnología se construye en buena compañía, con buen café y mejores amigos.*
