@@ -100,3 +100,12 @@ temp/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Test files
+test-*.html
+test-*.sh
+*-test.*
+
+# Server logs
+/tmp/shellaquiles-server.log
+server.log
