@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shellaquiles.org - Comunidad Tech Abierta de México</title>
-    <meta name="description" content="Comunidad tech abierta de México para todas las tecnologías y roles. Aprende, enseña y colabora en un espacio inclusivo y horizontal.">
-    <link rel="stylesheet" href="css/styles.min.css">
+    <meta name="description" content="Comunidad tech abierta de México para todas las tecnologías y roles. Aprende, enseña y colabora en un espacio inclusivo con estructura flexible.">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <div class="terminal">
@@ -25,8 +25,14 @@
                 </div>
             </div>
             <div class="terminal-subtitle">Comunidad Tech Abierta de México</div>
+        <nav class="terminal-nav">
+            <a href="/" class="nav-link" data-navigate="/">Inicio</a>
+            <a href="/blog" class="nav-link" data-navigate="/blog">Blog</a>
+        </nav>
         </div>
 
+        <!-- Home Content -->
+        <div class="home-content">
         <!-- Comando 1: Qué es Shellaquiles -->
         <div class="prompt">
             <span class="cursor">$</span>
@@ -46,7 +52,7 @@
         </div>
         <div class="output">
             <h2>Nuestra filosofía</h2>
-            <p>Creemos en la <strong>organización horizontal y las dinámicas colaborativas</strong> que han demostrado funcionar en comunidades auténticas.</p>
+            <p>Creemos en <strong>estructuras flexibles y dinámicas colaborativas</strong> que balancean apertura con eficiencia, aprendiendo de experiencias previas para construir algo mejor.</p>
 
             <ul>
                 <li><strong>Todas las tecnologías son bienvenidas</strong> — desde desarrollo web hasta robótica, desde cloud hasta edge computing.</li>
@@ -72,12 +78,13 @@
                 <li><strong>Show & tell</strong> para compartir proyectos y recibir retroalimentación.</li>
             </ul>
 
-            <h3>Organización horizontal</h3>
+            <h3>Nuestro modelo de organización</h3>
             <ul>
-                <li><strong>Cualquiera puede proponer</strong> charlas, talleres o proyectos.</li>
-                <li><strong>Rotamos responsabilidades</strong> para evitar cargas desiguales.</li>
-                <li><strong>Decisiones por consenso</strong>, en reuniones abiertas.</li>
-                <li><strong>Todo se documenta</strong>, para que otros puedan replicar lo que funciona.</li>
+                <li><strong>Estructura flexible con roles claros</strong> — coordinadores y facilitadores que rotan periódicamente para evitar cargas permanentes.</li>
+                <li><strong>Procesos abiertos y transparentes</strong> — cualquier persona puede proponer charlas, talleres o proyectos a través de canales definidos.</li>
+                <li><strong>Decisiones colaborativas</strong> — tomamos decisiones en espacios abiertos, considerando todas las voces, pero con procesos claros que evitan la parálisis.</li>
+                <li><strong>Documentación como pilar</strong> — todo se documenta para que otros puedan entender, replicar y mejorar lo que funciona.</li>
+                <li><strong>Responsabilidad distribuida</strong> — cada persona asume compromisos que puede cumplir, y todos colaboramos para que las cosas sucedan.</li>
             </ul>
         </div>
 
@@ -106,7 +113,7 @@
         </div>
         <div class="output">
             <h2>Cómo participar</h2>
-            <p>Aquí no hay membresías, cuotas ni jerarquías: <strong>solo ganas de hacer cosas chéveres juntos</strong>.</p>
+            <p>Aquí es un espacio abierto e inclusivo donde todas las personas tienen cabida: <strong>solo ganas de hacer cosas chéveres juntos</strong>.</p>
 
             <p>Puedes:</p>
             <ul>
@@ -123,6 +130,19 @@
                 <li><strong>Conectar con gente afín.</strong></li>
                 <li><strong>Compartir experiencias, éxitos y fracasos.</strong></li>
             </ul>
+
+            <h3>Sustentabilidad y modelo de negocio</h3>
+            <p>La participación es <strong>abierta y gratuita</strong>, y queremos que siga siéndolo. Para mantener el proyecto a largo plazo, necesitamos generar ingresos de forma sustentable que nos permitan seguir operando sin comprometer nuestros valores.</p>
+
+            <p><strong>Nuestro enfoque actual:</strong></p>
+            <ul>
+                <li><strong>Buscamos patrocinios</strong> de empresas y organizaciones que crean en nuestra misión y quieren apoyar una comunidad genuina</li>
+                <li><strong>Exploraremos otros medios de ingresos</strong> razonables y sustentables, siempre priorizando la transparencia y la equidad</li>
+                <li><strong>Cualquier modelo de ingresos será transparente y justo</strong> — la comunidad será informada de cualquier cambio y priorizamos la equidad y la honestidad</li>
+                <li><strong>Nuestro compromiso</strong> es mantener la comunidad accesible mientras garantizamos la sustentabilidad del proyecto</li>
+            </ul>
+
+            <p>Buscamos construir una <strong>comunidad genuina</strong> donde las relaciones se basen en el aprendizaje mutuo, la colaboración y los valores compartidos. Cualquier modelo de ingresos que adoptemos preservará nuestra esencia: <strong>queremos hacer comunidad, basada en conexiones auténticas y colaboración sincera, no en transacciones comerciales.</strong></p>
         </div>
 
         <!-- Comando 7: Comunidades aliadas -->
@@ -167,8 +187,13 @@
                 <a href="#" class="btn primary-btn">¡Conectemos!</a>
             </div>
         </div>
+        </div>
+        <!-- End Home Content -->
+
+        <!-- Blog Content (dynamically generated) -->
+        <div class="blog-content" style="display: none;"></div>
     </div>
 
-    <script src="js/script.min.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
