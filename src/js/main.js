@@ -4,10 +4,12 @@
  */
 
 import { Terminal } from './modules/Terminal.js';
+import { BlogManager } from './modules/BlogManager.js';
 import { addCSSAnimations } from './utils/AnimationUtils.js';
 
 // Global terminal instance
 let terminal;
+let blogManager;
 
 /**
  * Initialize the terminal when DOM is loaded
@@ -19,11 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize terminal
     terminal = new Terminal();
 
+    // Initialize blog manager
+    blogManager = new BlogManager();
+
     // Setup console welcome message
     setupConsoleWelcome();
 
-    // Expose terminal to global scope for debugging
+    // Setup navigation links after a short delay to ensure DOM is ready
+    setTimeout(() => {
+        blogManager.setupNavigationLinks();
+    }, 100);
+
+    // Expose to global scope for debugging
     window.shellaquilesTerminal = terminal;
+    window.shellaquilesBlog = blogManager;
 });
 
 /**

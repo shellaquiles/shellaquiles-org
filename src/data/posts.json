@@ -1,0 +1,22 @@
+[
+  {
+    "id": "bienvenida-shellaquiles",
+    "title": "Bienvenida a Shellaquiles",
+    "slug": "bienvenida-shellaquiles",
+    "date": "2024-01-15",
+    "author": "Comunidad Shellaquiles",
+    "category": "Comunidad",
+    "tags": ["comunidad", "bienvenida", "tech"],
+    "excerpt": "Te damos la bienvenida a la comunidad tech más inclusiva de México. Un espacio donde todas las tecnologías y todos los roles tienen cabida."
+  },
+  {
+    "id": "bits-de-conocimiento",
+    "title": "Bits de Conocimiento",
+    "slug": "bits-de-conocimiento",
+    "date": "2024-11-03",
+    "author": "Comunidad Shellaquiles",
+    "category": "Iniciativa",
+    "tags": ["aprendizaje", "colaboración", "comunidad", "conocimiento", "bits"],
+    "excerpt": "Pequeñas ideas, gran impacto. Una iniciativa de aprendizaje colaborativo donde cada bit cuenta. Sesiones breves y prácticas para compartir conocimiento."
+  }
+]
