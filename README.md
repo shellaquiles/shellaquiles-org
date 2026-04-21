@@ -12,37 +12,33 @@
 
 ## 📋 Estructura y Convenciones
 
-Ver [docs/project/STRUCTURE.md](docs/project/STRUCTURE.md) para principios de organización y convenciones del proyecto.
+La estructura del proyecto está gestionada mediante un entorno **Agentic Workspace**. Ver `.agents/instructions/01-project-structure.md` para las reglas de organización.
 
 ## 🛠️ Instalación y Desarrollo
 
-Ver [docs/guides/PRUEBA-LOCAL.md](docs/guides/PRUEBA-LOCAL.md) para la guía completa de instalación y desarrollo local.
+Ver `.agents/instructions/05-local-dev.md` para los comandos de validación local y desarrollo.
 
 ## 📝 Sistema de Blog
 
-Ver [docs/guides/BLOG.md](docs/guides/BLOG.md) para la guía completa del sistema de blog.
+El blog funciona con archivos Markdown estáticos y JSON. Ver `.agents/skills/blog-management/SKILL.md` para el workflow de publicación de posts.
 
-## 🚀 Producción
+## 🚀 Producción y Build
 
-Ver [docs/guides/BUILD-SYSTEM.md](docs/guides/BUILD-SYSTEM.md) para la guía completa de build y despliegue en producción.
-
-## 📚 Scripts y Sistema de Build
-
-Ver [docs/guides/BUILD-SYSTEM.md](docs/guides/BUILD-SYSTEM.md) para todos los scripts disponibles y detalles del sistema de build.
+Ver `.agents/instructions/04-build-system.md` para la arquitectura del pipeline de compilación (Webpack + PostCSS).
 
 Para arquitectura técnica:
-- [docs/reference/CSS-ARCHITECTURE.md](docs/reference/CSS-ARCHITECTURE.md) - Arquitectura CSS
-- [docs/reference/JS-ARCHITECTURE.md](docs/reference/JS-ARCHITECTURE.md) - Arquitectura JavaScript
+- `.agents/instructions/02-css-architecture.md` - Arquitectura CSS
+- `.agents/instructions/03-js-architecture.md` - Arquitectura JavaScript
 
-## 📖 Documentación
+## 📖 Documentación (Agentic Workspace)
 
-La documentación está organizada en `docs/`:
+Toda la documentación técnica del proyecto ha sido migrada y estructurada como **Instrucciones para Agentes de IA** (Agentic Workspace) en la carpeta `.agents/`:
 
-- **Guías prácticas**: Desarrollo local, sistema de blog, build
-- **Referencia técnica**: Arquitectura CSS y JavaScript
-- **Proyecto**: Estructura y manifiesto
+- **Instrucciones (`.agents/instructions/`)**: Arquitectura, Convenciones y Desarrollo local.
+- **Habilidades (`.agents/skills/`)**: Operativas del proyecto (como gestión de blog).
+- **Flujos (`.agents/workflows/`)**: Mantenimiento del proyecto.
 
-Ver [docs/README.md](docs/README.md) para el índice completo.
+Para que tu asistente de IA (como yo) opere en el proyecto, debe leer el despachador principal en [AI.md](AI.md).
 
 ## 🤝 Contribuir
 

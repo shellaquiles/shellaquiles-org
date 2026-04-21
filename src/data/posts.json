@@ -1,5 +1,15 @@
 [
   {
+    "id": "pep8-python",
+    "title": "PEP 8: Guía de Estilo para Python",
+    "slug": "pep8-python",
+    "date": "2024-12-10",
+    "author": "Comunidad Shellaquiles",
+    "category": "Tutorial",
+    "tags": ["python", "pep8", "código", "estilo", "buenas-prácticas"],
+    "excerpt": "Aprende a escribir código Python limpio y legible siguiendo PEP 8, la guía de estilo oficial de Python. Reglas, ejemplos prácticos y herramientas para verificar el cumplimiento."
+  },
+  {
     "id": "bienvenida-shellaquiles",
     "title": "Bienvenida a Shellaquiles",
     "slug": "bienvenida-shellaquiles",
