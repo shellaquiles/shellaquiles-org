@@ -1,5 +1,35 @@
 [
   {
+    "id": "pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano",
+    "title": "Pyquiles al Pastor: El curso de Python con más sabor de México",
+    "slug": "pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano",
+    "date": "2026-04-21",
+    "author": "Comunidad Shellaquiles",
+    "category": "Tutorial",
+    "tags": ["python", "curso", "mexico", "pyquiles", "tuto"],
+    "excerpt": "Aprende Python desde cero hasta nivel profesional con Pyquiles al Pastor. Un curso 100% gratuito, abierto y con el toque especial de la comunidad Shellaquiles."
+  },
+  {
+    "id": "cronquiles-el-agregador-de-la-comunidad",
+    "title": "Cron-Quiles: El Latido de la Comunidad Tech en México",
+    "slug": "cronquiles-el-agregador-de-la-comunidad",
+    "date": "2026-04-21",
+    "author": "Comunidad Shellaquiles",
+    "category": "Proyectos",
+    "tags": ["cronquiles", "comunidad", "eventos", "mexico", "agregador"],
+    "excerpt": "Descubre Cron-Quiles, el agregador de eventos tech que centraliza el pulso de la comunidad en México. Un proyecto abierto, agentic y diseñado para conectarnos a todos."
+  },
+  {
+    "id": "pep8-python",
+    "title": "PEP 8: Guía de Estilo para Python",
+    "slug": "pep8-python",
+    "date": "2024-12-10",
+    "author": "Comunidad Shellaquiles",
+    "category": "Tutorial",
+    "tags": ["python", "pep8", "código", "estilo", "buenas-prácticas"],
+    "excerpt": "Aprende a escribir código Python limpio y legible siguiendo PEP 8, la guía de estilo oficial de Python. Reglas, ejemplos prácticos y herramientas para verificar el cumplimiento."
+  },
+  {
     "id": "bienvenida-shellaquiles",
     "title": "Bienvenida a Shellaquiles",
     "slug": "bienvenida-shellaquiles",
