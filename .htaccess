@@ -1,0 +1,34 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Si el archivo existe, sírvelo directamente
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Si es un archivo estático, sírvelo
+    RewriteCond %{REQUEST_URI} !\.(css|js|json|md|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|pdf|zip|txt)$ [NC]
+
+    # Para todas las demás rutas, servir index.html
+    RewriteRule ^ index.html [QSA,L]
+</IfModule>
+
+# Configurar tipos MIME para archivos estáticos
+<IfModule mod_mime.c>
+    AddType text/css .css
+    AddType application/javascript .js
+    AddType application/json .json
+    AddType text/markdown .md
+    AddType image/svg+xml .svg
+</IfModule>
+
+# Cache para archivos estáticos (opcional)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
