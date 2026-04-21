@@ -42,12 +42,9 @@ install: ## 📦 Instala todas las dependencias del proyecto (npm install)
 	@echo "$(CYAN)Instalando dependencias...$(RESET)"
 	@$(NPM) install
 
-dev: ## 🚀 Inicia el servidor de desarrollo con watch mode (localhost:8000)
+dev: clean ## 🚀 Inicia el servidor de desarrollo con watch mode (localhost:8000)
 	@echo "$(CYAN)Validando disponibilidad del puerto 8000...$(RESET)"
-	@if lsof -Pi :8000 -sTCP:LISTEN -t >/dev/null ; then \
-		echo "$(YELLOW)Puerto 8000 ocupado. Liberando...$(RESET)"; \
-		lsof -ti:8000 | xargs kill -9; \
-	fi
+	@lsof -ti:8000 | xargs kill -9 2>/dev/null || true
 	@echo "$(CYAN)Iniciando entorno de desarrollo...$(RESET)"
 	@$(NPM) run dev
 

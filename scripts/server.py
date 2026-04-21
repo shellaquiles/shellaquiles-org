@@ -11,7 +11,7 @@ import urllib.parse
 class SPAHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
         # Add CORS headers if needed
-        self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+        self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate, max-age=0')
         self.send_header('Pragma', 'no-cache')
         self.send_header('Expires', '0')
         super().end_headers()
@@ -61,6 +61,7 @@ def run(port=8000):
     if os.path.basename(os.getcwd()) != 'dist' and os.path.exists('dist'):
         os.chdir('dist')
 
+    socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer(("", port), Handler) as httpd:
         print(f"🚀 Servidor iniciado en http://localhost:{port}")
         print(f"📝 Abre en tu navegador:")
