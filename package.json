@@ -15,7 +15,7 @@
     "serve:prod": "python3 scripts/server.py 8001",
     "watch:static": "chokidar \"index.html\" \"src/data/**/*\" -c \"npm run copy\"",
     "clean": "rm -rf dist/",
-    "copy": "mkdir -p dist && cp index.html dist/ && mkdir -p dist/src/data/posts && cp src/data/posts.json dist/src/data/ 2>/dev/null || true && cp src/data/posts/*.md dist/src/data/posts/ 2>/dev/null || true",
+    "copy": "mkdir -p dist && cp index.html CNAME dist/ && mkdir -p dist/src/data/posts && cp src/data/posts.json dist/src/data/ 2>/dev/null || true && cp src/data/posts/*.md dist/src/data/posts/ 2>/dev/null || true",
     "deploy": "npm run clean && npm run build:prod && npm run copy",
     "prepare-production": "bash scripts/prepare-production.sh",
     "lint": "eslint src/js/**/*.js",
