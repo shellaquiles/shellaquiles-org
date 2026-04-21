@@ -74,7 +74,7 @@ lint: ## 🧹 Ejecuta el linter (ESLint) sobre los archivos JavaScript
 # Despliegue
 # ==============================================================================
 
-deploy: check build ## 🚢 Ejecuta el flujo seguro de despliegue a producción
+deploy: check ## 🚢 Ejecuta el flujo seguro de despliegue a producción
 	@echo "$(CYAN)Iniciando despliegue seguro...$(RESET)"
-	@$(NPM) run deploy
+	@$(NPM) run prepare-production
 	@echo "$(GREEN)¡Despliegue completado exitosamente!$(RESET)"
