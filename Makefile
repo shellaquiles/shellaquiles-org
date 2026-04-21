@@ -11,10 +11,12 @@ NPM = npm
 BASH = bash
 
 # -- Colores para Output --
-CYAN  = \033[36m
-GREEN = \033[32m
-RESET = \033[0m
-BOLD  = \033[1m
+CYAN   = \033[36m
+GREEN  = \033[32m
+YELLOW = \033[33m
+RED    = \033[31m
+RESET  = \033[0m
+BOLD   = \033[1m
 
 # ==============================================================================
 # Comandos Principales
@@ -41,6 +43,11 @@ install: ## 📦 Instala todas las dependencias del proyecto (npm install)
 	@$(NPM) install
 
 dev: ## 🚀 Inicia el servidor de desarrollo con watch mode (localhost:8000)
+	@echo "$(CYAN)Validando disponibilidad del puerto 8000...$(RESET)"
+	@if lsof -Pi :8000 -sTCP:LISTEN -t >/dev/null ; then \
+		echo "$(YELLOW)Puerto 8000 ocupado. Liberando...$(RESET)"; \
+		lsof -ti:8000 | xargs kill -9; \
+	fi
 	@echo "$(CYAN)Iniciando entorno de desarrollo...$(RESET)"
 	@$(NPM) run dev
 
