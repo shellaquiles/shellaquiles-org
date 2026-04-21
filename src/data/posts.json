@@ -1,5 +1,15 @@
 [
   {
+    "id": "cronquiles-el-agregador-de-la-comunidad",
+    "title": "Cron-Quiles: El Latido de la Comunidad Tech en México",
+    "slug": "cronquiles-el-agregador-de-la-comunidad",
+    "date": "2026-04-21",
+    "author": "Comunidad Shellaquiles",
+    "category": "Proyectos",
+    "tags": ["cronquiles", "comunidad", "eventos", "mexico", "agregador"],
+    "excerpt": "Descubre Cron-Quiles, el agregador de eventos tech que centraliza el pulso de la comunidad en México. Un proyecto abierto, agentic y diseñado para conectarnos a todos."
+  },
+  {
     "id": "pep8-python",
     "title": "PEP 8: Guía de Estilo para Python",
     "slug": "pep8-python",
