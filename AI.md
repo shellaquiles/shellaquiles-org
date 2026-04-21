@@ -23,6 +23,7 @@ If you are tasked with a specific operation, check the `.agents/skills/`, `.agen
 - **UI Development:** Read `.agents/skills/ui-development.md`
 - **Maintenance:** Read `.agents/workflows/maintenance.md`
 - **Deployment:** Read `.agents/workflows/deployment.md`
+- **Writer Persona:** Use `.agents/prompts/writer.md` for content creation.
 - **Pre-Flight Hook:** Must execute `bash .agents/hooks/pre-flight-check.sh` before finishing any code modification task.
 
 ## 🚀 Quick Commands
