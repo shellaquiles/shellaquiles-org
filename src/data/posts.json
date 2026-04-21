@@ -1,5 +1,15 @@
 [
   {
+    "id": "pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano",
+    "title": "Pyquiles al Pastor: El curso de Python con más sabor de México",
+    "slug": "pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano",
+    "date": "2026-04-21",
+    "author": "Comunidad Shellaquiles",
+    "category": "Tutorial",
+    "tags": ["python", "curso", "mexico", "pyquiles", "tuto"],
+    "excerpt": "Aprende Python desde cero hasta nivel profesional con Pyquiles al Pastor. Un curso 100% gratuito, abierto y con el toque especial de la comunidad Shellaquiles."
+  },
+  {
     "id": "cronquiles-el-agregador-de-la-comunidad",
     "title": "Cron-Quiles: El Latido de la Comunidad Tech en México",
     "slug": "cronquiles-el-agregador-de-la-comunidad",
