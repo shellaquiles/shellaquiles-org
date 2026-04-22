@@ -3,8 +3,8 @@
  * Initializes the terminal and sets up console functionality
  */
 
-import { Terminal } from './modules/Terminal.js';
 import { BlogManager } from './modules/BlogManager.js';
+import { Terminal } from './modules/Terminal.js';
 import { addCSSAnimations } from './utils/AnimationUtils.js';
 
 // Global terminal instance
@@ -42,28 +42,27 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function setupConsoleWelcome() {
     console.log(`
-    shellaquiles.org Terminal v1.0.0
-
-    Comandos disponibles:
-    - help: Muestra esta ayuda
-    - about: Información sobre shellaquiles.org
-    - contact: Información de contacto
-    - clear: Limpia la consola
+    %c🐚 shellaquiles.org Terminal v1.1.0%c
 
     ¡Bienvenido a la Comunidad de Comunidades!
-    `);
 
-    // Override console.log for fun
-    const originalLog = console.log;
-    console.log = function(...args) {
-        if (args[0] && typeof args[0] === 'string' && args[0].includes('shellaquiles')) {
-            originalLog.apply(console, ['%c' + args[0], 'color: #00ff00; font-weight: bold;']);
-        } else {
-            originalLog.apply(console, args);
-        }
-    };
+    Comandos disponibles (puedes escribirlos directamente):
+    - %chelp()%c: Muestra esta ayuda
+    - %cabout()%c: Información sobre shellaquiles.org
+    - %ccontact()%c: Información de contacto
+    - %cclear()%c: Limpia la consola
 
-    // Add some fun console commands
+    Ejecuta %cabout()%c para comenzar.
+    `,
+        'color: #00ff00; font-weight: bold; font-size: 14px;', 'color: inherit;',
+        'color: #00ff00; font-weight: bold;', 'color: inherit;',
+        'color: #00ff00; font-weight: bold;', 'color: inherit;',
+        'color: #00ff00; font-weight: bold;', 'color: inherit;',
+        'color: #00ff00; font-weight: bold;', 'color: inherit;',
+        'color: #00ff00; font-weight: bold;', 'color: inherit;'
+    );
+
+    // Setup global and console commands
     setupConsoleCommands();
 }
 
@@ -71,49 +70,123 @@ function setupConsoleWelcome() {
  * Setup fun console commands
  */
 function setupConsoleCommands() {
-    // Override console.clear to show a fun message
-    const originalClear = console.clear;
-    console.clear = function() {
-        console.log('%c¡Terminal limpiada! 🚀', 'color: #00ff00; font-size: 16px; font-weight: bold;');
-        originalClear.apply(console);
-    };
-
-    // Add custom console methods
-    console.shellaquiles = function() {
+    // Define the about function
+    const about = function () {
         console.log(`
         %c
         ╔══════════════════════════════════════════════════════════════╗
         ║                    SHELLAQUILES.ORG                          ║
         ║                                                              ║
         ║  Comunidad de Comunidades Tech en México                    ║
+        ║  Dictador Benévolo: @pixelead0                              ║
         ║                                                              ║
-        ║  🚀 Ejecutando ideas colectivas                            ║
-        ║  🌟 Mezclando tecnología, cultura libre y creatividad      ║
-        ║  🤝 Transformando el ecosistema tech del país              ║
+        ║  🚀 Proyectos Activos:                                      ║
+        ║  • Pyquiles al Pastor: Python con sabor mexicano            ║
+        ║  • Cron-Quiles: Agregador de eventos de la comunidad        ║
+        ║  • Bits de Conocimiento: Sesiones de aprendizaje            ║
         ║                                                              ║
+        ║  🤝 Nuestra Filosofía:                                      ║
+        ║  Menos burocracia, más ejecución. Software Libre y          ║
+        ║  crecimiento técnico en comunidad.                          ║
         ╚══════════════════════════════════════════════════════════════╝
         `, 'color: #00ff00; font-family: monospace; font-size: 12px;');
+        return "Información cargada correctamente.";
     };
 
-    console.help = function() {
+    // Define the contact function
+    const contact = function () {
+        console.log(`
+        %c📬 Contacto Shellaquiles:
+
+        Email:    comunidad@shellaquiles.org
+        Telegram: https://t.me/shellaquiles
+        GitHub:   https://github.com/shellaquiles
+
+        ¡Únete a la conversación!
+        `, 'color: #00ff00; font-weight: bold;');
+        return "Medios de contacto listados.";
+    };
+
+    // Define the help function
+    const help = function () {
         console.log(`
         %cComandos disponibles:
 
-        console.shellaquiles() - Información sobre el proyecto
-        console.help() - Muestra esta ayuda
-        console.clear() - Limpia la consola
+        %cabout()%c      - Información sobre el proyecto
+        %ccontact()%c    - Medios de contacto
+        %cclear()%c      - Limpia la consola
+        %chelp()%c        - Muestra esta ayuda
+        %cshellaquiles()%c - El logo sagrado del Líder Supremo
 
-        Terminal API:
-        window.shellaquilesTerminal.getCommands() - Lista de comandos
-        window.shellaquilesTerminal.simulateCommand() - Ejecutar comando
-        window.shellaquilesTerminal.resetCommands() - Reiniciar comandos
-        `, 'color: #00ff00; font-family: monospace;');
+        %cTerminal API (puedes usar alias cortos):%c
+        %cls%c o %cshell.getCommands()%c     - Lista de comandos
+        %cstatus%c o %cshell.status()%c      - Ver progreso
+        %cnext%c o %cshell.next("cmd")%c     - Ejecutar siguiente o uno específico
+        %cshell.resetCommands()%c           - Reiniciar secuencia
+        `,
+            'color: #00ff00; font-weight: bold;',
+            'color: #00ff00;', 'color: inherit;', 'color: #00ff00;', 'color: inherit;',
+            'color: #00ff00;', 'color: inherit;', 'color: #00ff00;', 'color: inherit;',
+            'color: #00ff00;', 'color: inherit;', 'color: #00ff00;', 'color: inherit;',
+            'color: #00ff00;', 'color: inherit;'
+        );
+        return "Ayuda desplegada.";
     };
 
-    // Show help on first load
+    // Override console.clear to show a fun message
+    const originalClear = console.clear;
+    const clear = function () {
+        originalClear.apply(console);
+        console.log('%c¡Terminal limpiada! 🚀', 'color: #00ff00; font-size: 16px; font-weight: bold;');
+        return "Consola reiniciada.";
+    };
+
+    // Add custom console methods
+    console.shellaquiles = about;
+    console.about = about;
+    console.contact = contact;
+    console.help = help;
+    console.clear = clear;
+
+    const registerCommand = (key, cmdFn) => {
+        Object.defineProperty(window, key, {
+            get: function () {
+                const result = cmdFn();
+                const f = function (arg) { return cmdFn(arg); };
+                f.toString = function () { return result; };
+                return f;
+            },
+            configurable: true
+        });
+    };
+
+    // Expose to window with getters for direct usage (typing 'about' instead of 'about()')
+    const commands = {
+        about: about,
+        contact: contact,
+        help: help,
+        clear: clear,
+        shellaquiles: about
+    };
+
+    Object.keys(commands).forEach(key => registerCommand(key, commands[key]));
+
+    // Terminal API Short Aliases
+    window.shell = terminal;
+
+    // Add getters for terminal API too
+    const terminalCommands = {
+        ls: () => terminal.getCommands(),
+        next: (cmd) => terminal.next(cmd),
+        status: () => terminal.status()
+    };
+
+    Object.keys(terminalCommands).forEach(key => registerCommand(key, terminalCommands[key]));
+
+    // Show help on first load with a slight delay
     setTimeout(() => {
-        console.help();
-    }, 1000);
+        console.log('%cEscribe %chelp%c para ver lo que puedes hacer.', 'color: #888;', 'color: #00ff00;', 'color: #888;');
+    }, 2000);
 }
 
 /**

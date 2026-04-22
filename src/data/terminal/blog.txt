@@ -1,0 +1,7 @@
+# $ ls blog/
+
+**Bitácora de Sabiduría**. Consulta las `Cátedras de Sabiduría` y reflexiones técnicas validadas por el **Oráculo** en nuestra bitácora oficial.
+
+[./ver_artículos_recientes.sh](/blog)
+
+Hacia la **perfección técnica**.

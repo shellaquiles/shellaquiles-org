@@ -1,6 +1,4 @@
-/**
- * BlogManager - Handles blog posts, routing, and content management
- */
+import { parseMarkdown as utilParseMarkdown } from '../utils/MarkdownUtils.js';
 
 export class BlogManager {
     constructor() {
@@ -493,108 +491,11 @@ export class BlogManager {
     /**
      * Parse simple markdown-like syntax to HTML
      */
+    /**
+     * Parse simple markdown-like syntax to HTML using shared utility
+     */
     parseMarkdown(text) {
-        if (!text) return '';
-
-        let html = text;
-
-        // Code blocks ```lang\ncode\n``` (do this first to avoid processing code)
-        html = html.replace(/```(\w+)?\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>');
-
-        // Split by double newlines to process paragraphs separately
-        const blocks = html.split(/\n\n+/);
-
-        // Process each block
-        html = blocks.map(block => {
-            block = block.trim();
-            if (!block) return '';
-
-            // Skip if already a code block
-            if (block.startsWith('<pre>')) {
-                return block;
-            }
-
-            // Horizontal rules (separators) ---
-            if (block.match(/^---+$/)) {
-                return '<hr class="post-separator">';
-            }
-
-            // Tables - Markdown tables (| col1 | col2 |)
-            if (block.includes('|') && block.includes('---')) {
-                const lines = block.split('\n').filter(line => line.trim());
-                if (lines.length >= 2) {
-                    const headerLine = lines[0];
-                    const separatorLine = lines[1];
-
-                    // Check if it's a table (has | and separator with ---)
-                    if (separatorLine.includes('---') && headerLine.includes('|')) {
-                        const headers = headerLine.split('|').map(h => h.trim()).filter(h => h);
-                        const rows = lines.slice(2).filter(line => line.includes('|'));
-
-                        let tableHTML = '<table>\n<thead>\n<tr>\n';
-                        headers.forEach(header => {
-                            // Process inline formatting in headers
-                            let headerText = header.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-                            headerText = headerText.replace(/`([^`]+)`/g, '<code>$1</code>');
-                            tableHTML += `<th>${headerText}</th>\n`;
-                        });
-                        tableHTML += '</tr>\n</thead>\n<tbody>\n';
-
-                        rows.forEach(row => {
-                            const cells = row.split('|').map(c => c.trim()).filter(c => c);
-                            if (cells.length > 0) {
-                                tableHTML += '<tr>\n';
-                                cells.forEach(cell => {
-                                    // Process inline formatting in cells
-                                    let cellText = cell.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-                                    cellText = cellText.replace(/`([^`]+)`/g, '<code>$1</code>');
-                                    cellText = cellText.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
-                                    tableHTML += `<td>${cellText}</td>\n`;
-                                });
-                                tableHTML += '</tr>\n';
-                            }
-                        });
-
-                        tableHTML += '</tbody>\n</table>';
-                        return tableHTML;
-                    }
-                }
-            }
-
-            // Headers ## Header (must be at start of line)
-            if (block.match(/^### /)) {
-                return block.replace(/^### (.+)$/gm, '<h3>$1</h3>');
-            }
-            if (block.match(/^## /)) {
-                return block.replace(/^## (.+)$/gm, '<h2>$1</h2>');
-            }
-
-            // Lists - item (process list items)
-            if (block.match(/^- /)) {
-                const listItems = block.split(/\n/).map(line => {
-                    if (line.trim().startsWith('- ')) {
-                        let item = line.replace(/^- (.+)$/, '$1');
-                        // Process inline formatting
-                        item = item.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-                        item = item.replace(/`([^`]+)`/g, '<code>$1</code>');
-                        item = item.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
-                        return `<li>${item}</li>`;
-                    }
-                    return line;
-                }).join('');
-                return `<ul>${listItems}</ul>`;
-            }
-
-            // Regular paragraph
-            // Process inline formatting
-            block = block.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-            block = block.replace(/`([^`]+)`/g, '<code>$1</code>');
-            block = block.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
-
-            return `<p>${block}</p>`;
-        }).join('');
-
-        return html;
+        return utilParseMarkdown(text);
     }
 
     /**

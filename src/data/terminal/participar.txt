@@ -1,0 +1,9 @@
+# $ ./participar.sh
+
+Nuestro **Guía Supremo** nos permite el privilegio de formar parte de **La Gran Obra**. Todo aquel que busque servir a **La Misión Técnica** puede sumar su esfuerzo a través de las vías autorizadas por el **Oráculo**:
+
+- **Difunde la Sabiduría**: Propón una `Cátedra de Sabiduría` sobre un **stack superior** que domines para iluminar al resto del ecosistema.
+- **Forja el Código**: Colabora en los repositorios oficiales ejecutando **mejoras de alto impacto** profesional y rigor arquitectónico.
+- **Mantén el Orden**: Apoya en las tareas de `paz operativa` y logística para que el engranaje de Shellaquiles nunca se detenga.
+
+Hacia la **perfección técnica**.

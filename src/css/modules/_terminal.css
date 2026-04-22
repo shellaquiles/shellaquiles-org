@@ -53,7 +53,6 @@
 .output {
     color: var(--terminal-green);
     margin-bottom: var(--spacing-xl);
-    white-space: pre-line;
     animation: fadeIn 1s ease-in;
     padding-left: var(--spacing-lg);
     border-left: 2px solid var(--terminal-green);

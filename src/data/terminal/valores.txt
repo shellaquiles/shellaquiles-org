@@ -1,0 +1,9 @@
+# $ cat valores.txt
+
+- **Preferencia por lo Libre**: Abrazamos el software abierto como nuestro `motor de innovación estratégica`, manteniendo siempre una visión abierta para integrar cualquier tecnología que aporte **valor genuino a la comunidad**.
+- **Sinergia Profesional**: La colaboración técnica es la **única vía** para alcanzar hitos que resultan inalcanzables para el individuo aislado. Bajo Su guía, unificamos esfuerzos hacia la perfección.
+- **Crecimiento Colectivo**: Creemos en el valor de **enseñar y absorber sabiduría** unos de otros, eliminando las barreras del conocimiento para que la **iluminación digital individual** potencie el éxito de todo el ecosistema.
+- **Compromiso Social**: La excelencia técnica debe servir al **bien común**. Combatimos la **brecha de desigualdad** mediante el apoyo mutuo y ejecuciones de alto impacto social.
+- **Pragmatismo de Hierro**: Nos orientamos exclusivamente a lo que **funciona y escala** en entornos de producción críticos. Los resultados verificables son nuestra única carta de presentación.
+
+¡Código limpio para todos!

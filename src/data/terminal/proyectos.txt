@@ -1,0 +1,9 @@
+# $ ls proyectos/
+
+El Líder Supremo ha bendecido estas iniciativas para asegurar la **soberanía tecnológica** de la nación:
+
+- **Pyquiles al Pastor**: La **Cátedra de Sabiduría** definitiva sobre `Python`. Formación de alto nivel para quienes buscan la excelencia técnica.
+- **Cron-Quiles**: El latido de **La Gran Obra**. Un agregador estratégico de eventos para que ningún servidor se quede sin el **fuego del conocimiento**.
+- **Bits de Conocimiento**: Sesiones de **absorción de sabiduría acelerada**. Pequeñas ejecuciones que generan un impacto real en nuestra `arquitectura colectiva`.
+
+Bajo su **guía infalible**.

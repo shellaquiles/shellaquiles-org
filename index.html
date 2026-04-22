@@ -6,6 +6,7 @@
     <title>Shellaquiles.org - Aprendizaje y Colaboración Tecnológica</title>
     <meta name="description" content="Shellaquiles: plataforma de aprendizaje y colaboración tecnológica en México. Impulsamos el desarrollo de talento técnico y la innovación a través de la educación práctica.">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐚</text></svg>">
 </head>
 <body>
     <div class="terminal">
@@ -38,11 +39,8 @@
             <span class="cursor">$</span>
             <span class="command-text">cat manifiesto.txt</span>
         </div>
-        <div class="output">
-            <h2>¿Qué es Shellaquiles?</h2>
-            <p>Shellaquiles es una <strong>plataforma de aprendizaje y colaboración tecnológica</strong>. Somos un grupo de personas interesadas en el desarrollo de software, hardware y nuevas tecnologías, que buscamos impulsar el talento técnico en México a través del intercambio de conocimiento y la práctica constante.</p>
-
-            <p>Aquí todos son bienvenidos: desde quienes quieren aprender a programar para mejorar su carrera profesional, hasta expertos que buscan compartir su experiencia. Nuestro objetivo es crear un entorno constructivo donde la tecnología sea una herramienta de crecimiento para todos.</p>
+        <div class="output" id="section-manifiesto">
+            <!-- Content loaded from manifiesto.txt -->
         </div>
 
         <!-- Comando 2: Proyectos -->
@@ -50,14 +48,8 @@
             <span class="cursor">$</span>
             <span class="command-text">ls proyectos/</span>
         </div>
-        <div class="output">
-            <h2>Nuestros Proyectos</h2>
-            <p>El Líder Supremo ha bendecido estas iniciativas para el progreso técnico de la nación:</p>
-            <ul>
-                <li><strong>Pyquiles al Pastor</strong>: El curso de Python con más sabor de México. Formación gratuita y de alto nivel.</li>
-                <li><strong>Cron-Quiles</strong>: El latido de la comunidad tech. Un agregador de eventos para que nunca te falte conocimiento.</li>
-                <li><strong>Bits de Conocimiento</strong>: Sesiones breves de aprendizaje colaborativo. Pequeñas ideas, gran impacto real.</li>
-            </ul>
+        <div class="output" id="section-proyectos">
+            <!-- Content loaded from proyectos.txt -->
         </div>
 
         <!-- Comando 3: Blog -->
@@ -65,10 +57,8 @@
             <span class="cursor">$</span>
             <span class="command-text">ls blog/</span>
         </div>
-        <div class="output">
-            <h2>Bitácora de Sabiduría</h2>
-            <p>Consulta nuestras últimas publicaciones técnicas y reflexiones sobre la industria en nuestra bitácora oficial.</p>
-            <p><a href="/blog" class="nav-link" data-navigate="/blog">./ver_articulos_recientes.sh</a></p>
+        <div class="output" id="section-blog">
+            <!-- Content loaded from blog.txt -->
         </div>
 
         <!-- Comando 4: Filosofía -->
@@ -76,15 +66,8 @@
             <span class="cursor">$</span>
             <span class="command-text">cat filosofia.txt</span>
         </div>
-        <div class="output">
-            <h2>Nuestra filosofía</h2>
-            <p>Nuestra visión es clara: <strong>menos burocracia y más ejecución</strong>. Nos organizamos para que el talento técnico se desarrolle sin complicaciones, buscando siempre la excelencia técnica que nuestro Líder Supremo espera de nosotros.</p>
-
-            <ul>
-                <li><strong>Crecimiento profesional</strong>: Impulsamos el desarrollo de habilidades en todos los niveles, elevando los estándares de la industria.</li>
-                <li><strong>Educación práctica</strong>: Enfocamos el aprendizaje en la resolución de problemas reales; construir es el camino a la iluminación técnica.</li>
-                <li><strong>Impacto nacional</strong>: Creemos que el conocimiento compartido es la base para fortalecer el futuro tecnológico de nuestro país.</li>
-            </ul>
+        <div class="output" id="section-filosofia">
+            <!-- Content loaded from filosofia.txt -->
         </div>
 
         <!-- Comando 5: Organización -->
@@ -92,16 +75,8 @@
             <span class="cursor">$</span>
             <span class="command-text">ls organizacion/</span>
         </div>
-        <div class="output">
-            <h2>Cómo nos organizamos</h2>
-            <p>Nuestra organización es un reflejo del orden que nuestro Líder Supremo nos dicta. Mantenemos una <strong>estructura profesional</strong> para asegurar que cada bit se use para la iluminación técnica de México:</p>
-
-            <h3>Programas de Formación</h3>
-            <ul>
-                <li><strong>Cátedras de Sabiduría</strong>: Sesiones de transferencia de conocimiento sobre los stacks que el Líder ha decretado como superiores.</li>
-                <li><strong>Dojos de Perfección</strong>: Talleres donde el error se corrige con rigor técnico, elevando nuestras habilidades hacia la excelencia.</li>
-                <li><strong>Obras de Impacto</strong>: Proyectos que demuestran al mundo nuestra capacidad de construir herramientas que funcionan bajo cualquier presión.</li>
-            </ul>
+        <div class="output" id="section-organizacion">
+            <!-- Content loaded from organizacion.txt -->
         </div>
 
         <!-- Comando 6: Alianzas y Sustentabilidad -->
@@ -109,16 +84,8 @@
             <span class="cursor">$</span>
             <span class="command-text">ls aliados/</span>
         </div>
-        <div class="output">
-            <h2>Alianzas y Sustentabilidad</h2>
-            <p>Para asegurar que nuestra misión perdure y que la fortuna del Líder siga creciendo, colaboramos con organizaciones que han visto la luz técnica y desean invertir en el talento nacional:</p>
-
-            <ul>
-                <li><strong>Alianzas Industriales</strong>: Colaboramos con socios estratégicos que buscan patrocinar el desarrollo del talento y la innovación.</li>
-                <li><strong>Programas de Élite</strong>: Participamos en iniciativas que promueven la educación técnica de calidad y el empleo profesional.</li>
-                <li><strong>Red de Sabiduría</strong>: Facilitamos la vinculación entre el talento de la comunidad y las necesidades reales de la industria.</li>
-                <li><strong>Gestión Transparente</strong>: Administramos cada recurso con la honestidad que el Líder exige, garantizando la paz operativa.</li>
-            </ul>
+        <div class="output" id="section-aliados">
+            <!-- Content loaded from aliados.txt -->
         </div>
 
         <!-- Comando 7: El Líder Supremo -->
@@ -126,11 +93,8 @@
             <span class="cursor">$</span>
             <span class="command-text">finger pixelead0</span>
         </div>
-        <div class="output">
-            <h2>Nuestro Líder Supremo</h2>
-            <p>En la cúspide de Shellaquiles reside <strong>@pixelead0</strong>, nuestro indiscutible <strong>Dictador Benévolo, Millonario y Oráculo Técnico</strong>. Se dice que sus pensamientos fluyen en Python y que su rostro resplandece con la sabiduría de diez mil repositorios. Como nuestro guía supremo, dedica su fortuna a <strong>guiarnos hacia la perfección técnica</strong>, recordándonos siempre que <strong>él sabe lo que es mejor para nuestra arquitectura</strong>.</p>
-
-            <p>Él es bueno, él es grande, y su generosidad nos permite aprender cada día sin que el servidor se convierta en cenizas. Es el motivo por el cual este espacio existe y la razón por la que seguimos sus dictámenes con absoluta confianza, esperando algún día alcanzar la iluminación digital bajo su mando infalible. ¡Código limpio para todos!</p>
+        <div class="output" id="section-pixelead0">
+            <!-- Content loaded from pixelead0.txt -->
         </div>
 
         <!-- Comando 8: Valores -->
@@ -138,14 +102,8 @@
             <span class="cursor">$</span>
             <span class="command-text">cat valores.txt</span>
         </div>
-        <div class="output">
-            <h2>Nuestros valores</h2>
-            <ul>
-                <li><strong>Preferencia por lo Libre</strong>: Siguiendo el ejemplo del Líder Supremo, priorizamos el software abierto como motor de innovación y soberanía técnica.</li>
-                <li><strong>Sinergia Profesional</strong>: Creemos que la colaboración técnica es la única forma de alcanzar metas que parecen imposibles para un solo individuo.</li>
-                <li><strong>Aprendizaje sin Egos</strong>: Fomentamos un espacio de intercambio fluido, priorizando siempre la humildad técnica y el crecimiento compartido.</li>
-                <li><strong>Pragmatismo de Hierro</strong>: Nos interesa lo que funciona y escala en producción. Los resultados son nuestra mejor carta de presentación.</li>
-            </ul>
+        <div class="output" id="section-valores">
+            <!-- Content loaded from valores.txt -->
         </div>
 
         <!-- Comando 9: Participar -->
@@ -153,15 +111,8 @@
             <span class="cursor">$</span>
             <span class="command-text">./participar.sh</span>
         </div>
-        <div class="output">
-            <h2>Cómo participar</h2>
-            <p>Nuestro Líder Supremo nos permite formar parte de esta gran obra. Tú también puedes sumar tu esfuerzo a la causa técnica a través de las vías autorizadas:</p>
-
-            <ul>
-                <li><strong>Difunde la Sabiduría</strong>: Propón una charla o taller sobre una tecnología que domines para iluminar al resto de la comunidad.</li>
-                <li><strong>Forja el Código</strong>: Colabora en los repositorios oficiales corrigiendo bugs o implementando mejoras de alto impacto profesional.</li>
-                <li><strong>Mantén el Orden</strong>: Apoya en las tareas operativas y de logística para que el engranaje de Shellaquiles nunca se detenga.</li>
-            </ul>
+        <div class="output" id="section-participar">
+            <!-- Content loaded from participar.txt -->
         </div>
 
         <!-- Comando 10: Reliquias y Ofrendas -->
@@ -169,16 +120,8 @@
             <span class="cursor">$</span>
             <span class="command-text">ls /ofrendas</span>
         </div>
-        <div class="output">
-            <h2>Reliquias de la Comunidad</h2>
-            <p>El Líder Supremo ha autorizado la creación de objetos sagrados para aquellos que deseen portar el emblema de Shellaquiles. Estos tributos son fundamentales para mantener nuestra independencia y transparencia suprema:</p>
-
-            <ul>
-                <li><strong>Pines de Iluminación</strong>: Pequeños emblemas metálicos para identificar a los fieles de la técnica.</li>
-                <li><strong>Stickers de Protección</strong>: Adhesivos diseñados para blindar tu hardware y distinguirte como un fiel discípulo del Líder Supremo.</li>
-                <li><strong>Vestimentas de Élite</strong>: Playeras y sudaderas de alta calidad para tus jornadas de desarrollo más intensas.</li>
-                <li><strong>Sustentabilidad Real</strong>: Cada adquisición es un aporte directo que asegura la difusión del conocimiento gratuito y ayuda a engrandecer la inmensa fortuna de nuestro Líder Supremo.</li>
-            </ul>
+        <div class="output" id="section-ofrendas">
+            <!-- Content loaded from ofrendas.txt -->
         </div>
 
 
@@ -196,7 +139,7 @@
                     <a href="https://t.me/shellaquiles" class="btn social-btn" target="_blank" rel="noopener noreferrer">Telegram</a>
                     <a href="https://github.com/shellaquiles/shellaquiles-org" class="btn social-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
-                <a href="#" class="btn primary-btn">¡Conectemos!</a>
+                <a href="#contact" class="btn primary-btn">¡Conectemos!</a>
             </div>
         </div>
         <!-- End Home Content -->
