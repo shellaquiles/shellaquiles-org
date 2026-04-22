@@ -1,7 +1,7 @@
 {
   "name": "shellaquiles-org",
   "version": "1.0.0",
-  "description": "Comunidad de Comunidades tech en México - Terminal Landing Page",
+  "description": "Open Source, Colaboración y Comunidad tech en México - Terminal Landing Page",
   "main": "index.html",
   "scripts": {
     "dev": "npm run copy && concurrently \"npm:build:css:dev\" \"npm:build:js:dev\" \"npm:serve:dev\" \"npm:watch:static\"",
@@ -15,7 +15,7 @@
     "serve:prod": "python3 scripts/server.py 8001",
     "watch:static": "chokidar \"index.html\" \"src/data/**/*\" -c \"npm run copy\"",
     "clean": "rm -rf dist/",
-    "copy": "mkdir -p dist && cp index.html CNAME dist/ && mkdir -p dist/src/data/posts && mkdir -p dist/src/data/terminal && cp src/data/posts.json dist/src/data/ 2>/dev/null || true && cp src/data/posts/*.md dist/src/data/posts/ 2>/dev/null || true && cp src/data/terminal/*.txt dist/src/data/terminal/ 2>/dev/null || true",
+    "copy": "mkdir -p dist && cp index.html CNAME robots.txt sitemap.xml dist/ && mkdir -p dist/src/data/posts && mkdir -p dist/src/data/terminal && cp src/data/posts.json dist/src/data/ 2>/dev/null || true && cp src/data/posts/*.md dist/src/data/posts/ 2>/dev/null || true && cp src/data/terminal/*.txt dist/src/data/terminal/ 2>/dev/null || true",
     "deploy": "npm run clean && npm run build:prod && npm run copy",
     "prepare-production": "bash scripts/prepare-production.sh",
     "lint": "eslint src/js/**/*.js",

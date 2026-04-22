@@ -44,7 +44,7 @@ function setupConsoleWelcome() {
     console.log(`
     %c{{ %cshell%caquiles%c.org %c}} %cTerminal v1.1.0%c
 
-    ¡Bienvenido a la Comunidad de Comunidades!
+    Open Source, Colaboración y Comunidad: Talleres, cursos y meetups tech en México.
 
     Comandos disponibles (puedes escribirlos directamente):
     - %chelp()%c: Muestra esta ayuda
@@ -78,17 +78,17 @@ function setupConsoleCommands() {
         ║                                                              ║
         ║                    %c{{ %cshell%caquiles%c.org %c}}%c                    ║
         ║                                                              ║
-        ║  Comunidad de Comunidades Tech en México                     ║
+        ║  Open Source, Colaboración y Comunidad en México             ║
         ║  Guía Supremo: @pixelead0                                    ║
         ║                                                              ║
-        ║  LA GRAN OBRA (Proyectos Activos):                           ║
+        ║  LA GRAN OBRA (Talleres, Cursos y Meetups):                  ║
         ║  - Pyquiles al Pastor: Cátedra de Sabiduría sobre Python     ║
         ║  - Cron-Quiles: Agregador Estratégico de Eventos             ║
         ║  - Bits de Conocimiento: Sesiones de Absorción Técnica       ║
         ║                                                              ║
         ║  FILOSOFÍA DE EJECUCIÓN:                                     ║
         ║  Menos burocracia, más ejecución de hierro.                  ║
-        ║  Hacia la iluminación digital y el bien común.              ║
+        ║  Colaboración abierta para el crecimiento técnico.           ║
         ╚══════════════════════════════════════════════════════════════╝
         `, 
         'color: #00ff00; font-family: monospace; font-size: 12px;',
@@ -100,7 +100,7 @@ function setupConsoleCommands() {
     // Define the contact function
     const contact = function () {
         console.log(`
-        %c📬 Contacto Shellaquiles:
+        %c💻 Contacto Shellaquiles:
 
         Email:    comunidad@shellaquiles.org
         Telegram: https://t.me/shellaquiles
@@ -141,7 +141,7 @@ function setupConsoleCommands() {
     const originalClear = console.clear;
     const clear = function () {
         originalClear.apply(console);
-        console.log('%c¡Terminal limpiada! 🚀', 'color: #00ff00; font-size: 16px; font-weight: bold;');
+        console.log('%c¡Terminal limpiada! 💻', 'color: #00ff00; font-size: 16px; font-weight: bold;');
         return "Consola reiniciada.";
     };
 

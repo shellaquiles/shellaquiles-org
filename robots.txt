@@ -1,0 +1,7 @@
+# Shellaquiles.org Robots.txt
+# Permitir a todos los buscadores indexar el sitio
+User-agent: *
+Allow: /
+
+# Especificar la ruta del Sitemap
+Sitemap: https://shellaquiles.org/sitemap.xml
