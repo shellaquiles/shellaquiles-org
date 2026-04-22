@@ -1,8 +1,9 @@
 # Skill: Terminal Management (Browser Console CLI)
 
-Este skill define la arquitectura, comandos y el funcionamiento del ecosistema de la terminal interactiva dentro de la consola del navegador de Shellaquiles.org.
+Este skill define la arquitectura, comandos y el funcionamiento del ecosistema de la terminal interactiva dentro de la consola del navegador de Shellaquiles.org. 
+El logo oficial en texto es `{{ shellaquiles.org }}` con el siguiente esquema de color: `shell` (verde), `aquiles` (blanco/gris) y `.org` (rosa/rojo).
 
-## 🏗️ Arquitectura de la Terminal
+## Arquitectura de la Terminal
 
 La terminal no es solo visual; está integrada directamente en el entorno de ejecución de JavaScript del navegador mediante el objeto global `shell` y una serie de "getters" que permiten ejecutar comandos sin necesidad de paréntesis.
 

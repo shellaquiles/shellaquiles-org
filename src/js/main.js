@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function setupConsoleWelcome() {
     console.log(`
-    %c🐚 shellaquiles.org Terminal v1.1.0%c
+    %c{{ %cshell%caquiles%c.org %c}} %cTerminal v1.1.0%c
 
     ¡Bienvenido a la Comunidad de Comunidades!
 
@@ -54,7 +54,7 @@ function setupConsoleWelcome() {
 
     Ejecuta %cabout()%c para comenzar.
     `,
-        'color: #00ff00; font-weight: bold; font-size: 14px;', 'color: inherit;',
+        'color: #9CA3AF; font-weight: bold;', 'color: #22C55E; font-weight: bold;', 'color: #E5E7EB; font-weight: bold;', 'color: #F43F5E; font-weight: bold;', 'color: #9CA3AF; font-weight: bold;', 'color: #888;', 'color: inherit;',
         'color: #00ff00; font-weight: bold;', 'color: inherit;',
         'color: #00ff00; font-weight: bold;', 'color: inherit;',
         'color: #00ff00; font-weight: bold;', 'color: inherit;',
@@ -75,21 +75,25 @@ function setupConsoleCommands() {
         console.log(`
         %c
         ╔══════════════════════════════════════════════════════════════╗
-        ║                    SHELLAQUILES.ORG                          ║
         ║                                                              ║
-        ║  Comunidad de Comunidades Tech en México                    ║
-        ║  Dictador Benévolo: @pixelead0                              ║
+        ║                    %c{{ %cshell%caquiles%c.org %c}}%c                    ║
         ║                                                              ║
-        ║  🚀 Proyectos Activos:                                      ║
-        ║  • Pyquiles al Pastor: Python con sabor mexicano            ║
-        ║  • Cron-Quiles: Agregador de eventos de la comunidad        ║
-        ║  • Bits de Conocimiento: Sesiones de aprendizaje            ║
+        ║  Comunidad de Comunidades Tech en México                     ║
+        ║  Guía Supremo: @pixelead0                                    ║
         ║                                                              ║
-        ║  🤝 Nuestra Filosofía:                                      ║
-        ║  Menos burocracia, más ejecución. Software Libre y          ║
-        ║  crecimiento técnico en comunidad.                          ║
+        ║  LA GRAN OBRA (Proyectos Activos):                           ║
+        ║  - Pyquiles al Pastor: Cátedra de Sabiduría sobre Python     ║
+        ║  - Cron-Quiles: Agregador Estratégico de Eventos             ║
+        ║  - Bits de Conocimiento: Sesiones de Absorción Técnica       ║
+        ║                                                              ║
+        ║  FILOSOFÍA DE EJECUCIÓN:                                     ║
+        ║  Menos burocracia, más ejecución de hierro.                  ║
+        ║  Hacia la iluminación digital y el bien común.              ║
         ╚══════════════════════════════════════════════════════════════╝
-        `, 'color: #00ff00; font-family: monospace; font-size: 12px;');
+        `, 
+        'color: #00ff00; font-family: monospace; font-size: 12px;',
+        'color: #9CA3AF; font-weight: bold;', 'color: #22C55E; font-weight: bold;', 'color: #E5E7EB; font-weight: bold;', 'color: #F43F5E; font-weight: bold;', 'color: #9CA3AF; font-weight: bold;', 'color: #00ff00; font-family: monospace;'
+        );
         return "Información cargada correctamente.";
     };
 
@@ -148,11 +152,25 @@ function setupConsoleCommands() {
     console.help = help;
     console.clear = clear;
 
+    const logLogo = () => {
+        console.log(`%c{{ %cshell%caquiles%c.org %c}}`,
+            'color: #9CA3AF; font-weight: bold;',
+            'color: #22C55E; font-weight: bold;',
+            'color: #E5E7EB; font-weight: bold;',
+            'color: #F43F5E; font-weight: bold;',
+            'color: #9CA3AF; font-weight: bold;'
+        );
+    };
+
     const registerCommand = (key, cmdFn) => {
         Object.defineProperty(window, key, {
             get: function () {
+                logLogo();
                 const result = cmdFn();
-                const f = function (arg) { return cmdFn(arg); };
+                const f = function (arg) { 
+                    logLogo();
+                    return cmdFn(arg); 
+                };
                 f.toString = function () { return result; };
                 return f;
             },
