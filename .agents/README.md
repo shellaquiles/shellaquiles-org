@@ -5,9 +5,10 @@ This directory contains the necessary structure and guidelines for AI assistants
 ## Directory Structure
 
 - **`instructions/`**: Contains core documentation acting as system instructions for the AI, routing it to the appropriate context files.
-- **`skills/`**: Specific, localized instructions or "skills" that the AI needs to accomplish recurring tasks (e.g., adding a blog post, modifying UI components).
+- **`skills/`**: Specific, localized instructions or "skills" that the AI needs to accomplish recurring tasks (e.g., adding a blog post, terminal management).
 - **`workflows/`**: Step-by-step procedures for complex multi-stage tasks.
-- **`prompts/`**: Reusable prompts or prompt fragments.
+- **`prompts/`**: Reusable prompts| Blog Management | `/.agents/skills/blog-management/SKILL.md` | Post creation and blog updates |
+| Terminal Management | `/.agents/skills/terminal-management/SKILL.md` | Browser console CLI and content sync |
 - **`custom_agents/`**: Configurations for specialized agents.
 - **`mcp/`**: Machine-to-Machine Communication Protocols and related configuration.
 - **`hooks/`**: Automated scripts or verification tasks that agents can run to assert correctness (e.g., specific linters, checks).

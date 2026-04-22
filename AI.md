@@ -16,11 +16,13 @@ This repository uses an Agentic Workspace structure. There is no human `docs/` d
 - **JS Architecture:** Read `.agents/instructions/03-js-architecture.md`
 - **Build System & Deployment:** Read `.agents/instructions/04-build-system.md`
 - **Local Development:** Read `.agents/instructions/05-local-dev.md`
+- **Browser Terminal:** Read `.agents/instructions/06-browser-terminal.md`
 
 ## 🛠️ Skills & Workflows
 If you are tasked with a specific operation, check the `.agents/skills/`, `.agents/workflows/`, and `.agents/hooks/` directories FIRST.
 - **Blog Management:** Read `.agents/skills/blog-management/SKILL.md`
 - **UI Development:** Read `.agents/skills/ui-development.md`
+- **Terminal Management:** Read `.agents/skills/terminal-management/SKILL.md`
 - **Maintenance:** Read `.agents/workflows/maintenance.md`
 - **Deployment:** Read `.agents/workflows/deployment.md`
 - **Writer Persona:** Use `.agents/prompts/writer.md` for content creation.
