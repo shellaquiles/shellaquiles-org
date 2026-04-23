@@ -1,5 +1,15 @@
 [
   {
+    "id": "frases-chingonas-sabiduria-tecnica-en-capsulas",
+    "title": "Frases Chingonas: Sabiduría Técnica en Cápsulas",
+    "slug": "frases-chingonas-sabiduria-tecnica-en-capsulas",
+    "date": "2026-04-22",
+    "author": "Comunidad Shellaquiles",
+    "category": "Proyectos",
+    "tags": ["open-source", "frases", "libros", "comunidad", "sabiduría"],
+    "excerpt": "Una colección de frases inspiradas en los libros más emblemáticos del desarrollo de software. Un proyecto para compartir, aprender e inspirar a través de la sabiduría técnica condensada."
+  },
+  {
     "id": "pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano",
     "title": "Pyquiles al Pastor: El curso de Python con más sabor de México",
     "slug": "pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano",
