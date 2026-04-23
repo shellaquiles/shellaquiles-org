@@ -82,9 +82,9 @@ function setupConsoleCommands() {
         ║  Guía Supremo: @pixelead0                                    ║
         ║                                                              ║
         ║  LA GRAN OBRA (Talleres, Cursos y Meetups):                  ║
-        ║  - Pyquiles al Pastor: Cátedra de Sabiduría sobre Python     ║
-        ║  - Cron-Quiles: Agregador Estratégico de Eventos             ║
-        ║  - Bits de Conocimiento: Sesiones de Absorción Técnica       ║
+        ║  - Pyquiles: pixelead0.github.io/pyquiles-al-pastor          ║
+        ║  - Cron-Quiles: shellaquiles.github.io/cron-quiles           ║
+        ║  - Bits: shellaquiles.org/blog/bits-de-conocimiento         ║
         ║                                                              ║
         ║  FILOSOFÍA DE EJECUCIÓN:                                     ║
         ║  Menos burocracia, más ejecución de hierro.                  ║
