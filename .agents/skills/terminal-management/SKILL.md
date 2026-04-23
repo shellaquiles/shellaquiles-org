@@ -82,9 +82,9 @@ El objeto `shell` es el puente entre el usuario y la instancia de la clase `Term
 
 ## 📜 Reglas para Agentes (Mantenimiento)
 
-1. **Sincronización**: Al modificar un archivo en `src/data/terminal/`, siempre ejecuta `npm run copy` para que los cambios se reflejen en la carpeta `dist/`.
+1. **Sincronización**: Al modificar un archivo en `src/data/terminal/`, siempre ejecuta `npm run copy` para que los cambios se reflejen en la carpeta `dist/`. Además, si el cambio afecta a los proyectos principales, actualiza la función `about()` en `main.js`.
 2. **Formato**: Los archivos `.txt` deben seguir el estándar de Markdown soportado por `MarkdownUtils.js` (H1, H2, H3, Listas, Negritas, Código en línea).
 3. **Estilo**: Sigue siempre las directrices de `writer.md` (Excelencia técnica, devoción estratégica, sin emoticonos).
-4. **Prueba**: Después de cualquier cambio, abre la consola del navegador y ejecuta `shell.next()` para verificar que la inyección dinámica funciona correctamente.
+4. **Prueba**: Después de cualquier cambio, abre la consola del navegador y ejecuta `shell.next()` o llama a `about()` para verificar que la paridad de contenido se mantiene.
 
 ¡Código limpio para todos!

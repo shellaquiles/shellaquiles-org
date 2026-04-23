@@ -24,10 +24,11 @@ Cada vez que se ejecuta un comando que devuelve un archivo (ej: `cat filosofia.t
 - `shell.getCommands()`: Devuelve el array de comandos internos que componen la "secuencia de navegación" del sitio.
 
 ## Mantenimiento
-Si necesitas agregar una nueva sección al sitio:
-1. Crea el archivo `.txt` en `src/data/terminal/`.
-2. Agrega el comando correspondiente al array `commands` en `Terminal.js`.
-3. Crea un contenedor con un ID único (`section-NOMBRE`) en `index.html`.
-4. Mapea el comando al ID en `Terminal.js` dentro del método `injectContentToDOM`.
+Si necesitas agregar una nueva sección o proyecto al sitio:
+1. **Contenido Visual**: Crea o actualiza el archivo `.txt` en `src/data/terminal/`.
+2. **Sincronización CLI**: Si es un proyecto principal ("La Gran Obra"), asegúrate de actualizar la lista hardcodeada en la función `about()` dentro de `src/js/main.js` para mantener la paridad entre lo que se ve en la web y lo que devuelve la consola.
+3. **Mapeo de Comandos**: Si es una sección nueva, agrega el comando correspondiente al array `commands` en `Terminal.js`.
+4. **Contenedor DOM**: Crea un contenedor con un ID único (`section-NOMBRE`) en `index.html`.
+5. **Inyección**: Mapea el comando al ID en `Terminal.js` dentro del método `injectContentToDOM`.
 
 ¡Hacia la perfección técnica!
