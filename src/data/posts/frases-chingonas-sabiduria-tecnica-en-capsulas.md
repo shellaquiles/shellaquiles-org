@@ -8,6 +8,9 @@
 
 **Frases Chingonas** es un proyecto de la comunidad Shellaquiles que busca destilar la esencia de los libros más influyentes en el mundo del desarrollo de software, la arquitectura de sistemas y el liderazgo técnico. 
 
+- **Sitio Web**: [shellaquiles.github.io/frases-chingonas/](https://shellaquiles.github.io/frases-chingonas/)
+- **Repositorio**: [github.com/shellaquiles/frases-chingonas](https://github.com/shellaquiles/frases-chingonas)
+
 A menudo, los grandes conceptos se pierden en cientos de páginas de texto. Frases Chingonas recupera esos principios fundamentales y los presenta en un formato breve, contundente y fácil de compartir. No se trata solo de citas; se trata de **sabiduría técnica accionable**.
 
 ---

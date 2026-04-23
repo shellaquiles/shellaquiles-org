@@ -84,7 +84,7 @@ function setupConsoleCommands() {
         ║  LA GRAN OBRA (Talleres, Cursos y Meetups):                  ║
         ║  - Pyquiles: pixelead0.github.io/pyquiles-al-pastor          ║
         ║  - Cron-Quiles: shellaquiles.github.io/cron-quiles           ║
-        ║  - Frases: shellaquiles.github.io/frases-chingonas           ║
+        ║  - Frases: shellaquiles.github.io/frases-chingonas/          ║
         ║  - Bits: shellaquiles.org/blog/bits-de-conocimiento         ║
         ║                                                              ║
         ║  FILOSOFÍA DE EJECUCIÓN:                                     ║
