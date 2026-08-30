@@ -6,42 +6,64 @@
     <title>Shellaquiles.org | Ecosistema Open Source y Comunidad Tech en México</title>
     <meta name="description" content="Shellaquiles: Ecosistema open source y comunidad técnica en México. Proyectos colaborativos, talleres de Python y soberanía tecnológica liderados por @pixelead0.">
     
+    <meta name="keywords" content="shellaquiles, open source mexico, cron-quiles, tributacos, pandocquiles, karnitas, frases-chingonas, python mexico, comunidad tech mexico, pixelead0, terminal web, software libre">
+    <meta name="author" content="Shellaquiles Org & @pixelead0">
+    <meta name="robots" content="index, follow">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Shellaquiles.org">
     <meta property="og:url" content="https://shellaquiles.org/">
-    <meta property="og:title" content="Shellaquiles.org | Ecosistema Open Source en México">
-    <meta property="og:description" content="Ecosistema open source, colaboración y comunidad técnica en México. Proyectos como Cron-Quiles, Pyquiles y talleres técnicos.">
-    <meta property="og:image" content="https://shellaquiles.org/assets/og-image.png">
+    <meta property="og:title" id="og-title" content="Shellaquiles.org | Ecosistema Open Source en México">
+    <meta property="og:description" id="og-desc" content="Ecosistema open source, colaboración y comunidad técnica en México. Proyectos como Cron-Quiles, tribuTACOS, KARNITAS y PanDocquiles.">
+    <meta property="og:image" id="og-image" content="https://shellaquiles.org/assets/og-image.png">
+    <meta property="og:locale" content="es_MX">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://shellaquiles.org/">
-    <meta property="twitter:title" content="Shellaquiles.org | Ecosistema Open Source en México">
-    <meta property="twitter:description" content="Ecosistema open source y comunidad técnica en México. Proyectos, talleres y colaboración abierta.">
-    <meta property="twitter:image" content="https://shellaquiles.org/assets/og-image.png">
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://shellaquiles.org/">
+    <meta name="twitter:title" id="twitter-title" content="Shellaquiles.org | Ecosistema Open Source en México">
+    <meta name="twitter:description" id="twitter-desc" content="Ecosistema open source y comunidad técnica en México. Proyectos, herramientas y colaboración abierta.">
+    <meta name="twitter:image" id="twitter-image" content="https://shellaquiles.org/assets/og-image.png">
 
     <!-- Dynamic SVG Favicon (Terminal Prompt >_) -->
     <link rel="icon" id="dynamic-favicon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><path d='M4 17l6-5-6-5' stroke='%2300ff66' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/><line x1='12' y1='17' x2='20' y2='17' stroke='%2300ff66' stroke-width='2.5' stroke-linecap='round'/></svg>">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://shellaquiles.org/">
+    <link rel="canonical" id="canonical-link" href="https://shellaquiles.org/">
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Shellaquiles",
-      "url": "https://shellaquiles.org",
-      "logo": "https://shellaquiles.org/assets/logo.png",
-      "description": "El ecosistema definitivo de Open Source y colaboración en México liderado por @pixelead0.",
-      "founder": {
-        "@type": "Person",
-        "name": "@pixelead0"
-      },
-      "sameAs": [
-        "https://github.com/shellaquiles",
-        "https://t.me/shellaquiles"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://shellaquiles.org/#organization",
+          "name": "Shellaquiles",
+          "url": "https://shellaquiles.org",
+          "logo": "https://shellaquiles.org/assets/logo.png",
+          "description": "El ecosistema definitivo de Open Source y colaboración técnica en México liderado por @pixelead0.",
+          "founder": {
+            "@type": "Person",
+            "name": "@pixelead0"
+          },
+          "sameAs": [
+            "https://github.com/shellaquiles",
+            "https://t.me/shellaquiles"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://shellaquiles.org/#website",
+          "url": "https://shellaquiles.org",
+          "name": "Shellaquiles.org",
+          "description": "Ecosistema Open Source y Comunidad Tech en México",
+          "publisher": {
+            "@id": "https://shellaquiles.org/#organization"
+          },
+          "inLanguage": "es-MX"
+        }
       ]
     }
     </script>

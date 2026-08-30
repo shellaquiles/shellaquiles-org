@@ -150,9 +150,50 @@ export class BlogManager {
     }
 
     /**
+     * Update page title, meta description, OpenGraph tags, and canonical link
+     */
+    updateSEO(title, description, path = '') {
+        const fullTitle = title.includes('Shellaquiles') ? title : `${title} | Shellaquiles.org`;
+        document.title = fullTitle;
+
+        // Meta Description
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (!metaDesc) {
+            metaDesc = document.createElement('meta');
+            metaDesc.name = 'description';
+            document.head.appendChild(metaDesc);
+        }
+        if (description) metaDesc.content = description;
+
+        // Canonical Link
+        const canonicalUrl = `https://shellaquiles.org${path}`;
+        let canonical = document.querySelector('link[rel="canonical"]');
+        if (!canonical) {
+            canonical = document.createElement('link');
+            canonical.rel = 'canonical';
+            document.head.appendChild(canonical);
+        }
+        canonical.href = canonicalUrl;
+
+        // OpenGraph & Twitter tags
+        const ogTitle = document.getElementById('og-title') || document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.content = fullTitle;
+
+        const ogDesc = document.getElementById('og-desc') || document.querySelector('meta[property="og:description"]');
+        if (ogDesc && description) ogDesc.content = description;
+
+        const twTitle = document.getElementById('twitter-title') || document.querySelector('meta[name="twitter:title"]');
+        if (twTitle) twTitle.content = fullTitle;
+
+        const twDesc = document.getElementById('twitter-desc') || document.querySelector('meta[name="twitter:description"]');
+        if (twDesc && description) twDesc.content = description;
+    }
+
+    /**
      * Show home page (original content)
      */
     showHome() {
+        this.updateSEO('Shellaquiles.org | Ecosistema Open Source y Comunidad Tech en México', 'Shellaquiles: Ecosistema open source y comunidad técnica en México. Proyectos colaborativos, talleres de Python y soberanía tecnológica.', '/');
         const terminal = document.querySelector('.container, .terminal');
         if (!terminal) return;
 
@@ -174,6 +215,7 @@ export class BlogManager {
      * Show blog list
      */
     showBlogList() {
+        this.updateSEO('Blog & Artículos Técnicos', 'Artículos, cátedras y guías del ecosistema de tecnología y software libre en México.', '/blog');
         const terminal = document.querySelector('.container, .terminal');
         if (!terminal) {
             return;
@@ -240,6 +282,8 @@ export class BlogManager {
             this.show404();
             return;
         }
+
+        this.updateSEO(post.title, post.excerpt || post.title, `/blog/${post.slug}`);
 
         const terminal = document.querySelector('.container, .terminal');
         if (!terminal) return;

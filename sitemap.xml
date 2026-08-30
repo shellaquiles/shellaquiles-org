@@ -2,14 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
       <loc>https://shellaquiles.org/</loc>
-      <lastmod>2026-04-22</lastmod>
+      <lastmod>2026-08-30</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
       <loc>https://shellaquiles.org/blog</loc>
-      <lastmod>2026-04-22</lastmod>
-      <changefreq>weekly</changefreq>
+      <lastmod>2026-08-30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://shellaquiles.org/blog/tributacos-plataforma-de-inteligencia-fiscal-y-predeclarador-sat</loc>
+      <lastmod>2026-08-26</lastmod>
+      <changefreq>monthly</changefreq>
       <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://shellaquiles.org/blog/stats-dashboard-de-telemetria-web-y-huella-digital-de-repositorios</loc>
+      <lastmod>2026-08-27</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://shellaquiles.org/blog/pandocquiles-motor-automatico-de-conversion-y-publicacion-de-documentacion</loc>
+      <lastmod>2026-08-20</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://shellaquiles.org/blog/karnitas-estandar-abierto-de-gobernanza-y-contexto-para-agentes-de-ia</loc>
+      <lastmod>2026-05-10</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://shellaquiles.org/blog/cronquiles-el-agregador-de-la-comunidad</loc>
+      <lastmod>2025-12-29</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://shellaquiles.org/blog/frases-chingonas-sabiduria-tecnica-en-capsulas</loc>
+      <lastmod>2025-11-10</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://shellaquiles.org/blog/pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano</loc>
+      <lastmod>2026-04-21</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://shellaquiles.org/blog/manifiesto</loc>
+      <lastmod>2025-08-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://shellaquiles.org/blog/bienvenida-shellaquiles</loc>
+      <lastmod>2025-08-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://shellaquiles.org/blog/pep8-python</loc>
+      <lastmod>2024-12-10</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://shellaquiles.org/blog/bits-de-conocimiento</loc>
+      <lastmod>2024-11-03</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
    </url>
 </urlset>
