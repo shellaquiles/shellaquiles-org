@@ -1,78 +1,110 @@
-# Pyquiles al Pastor: Arquitectura y Ruta de Aprendizaje
-
-Aprende desarrollo en Python moderno mediante proyectos prácticos de producción, patrones de diseño y metodologías de ingeniería de software. 100% abierto y comunitario.
+---
+title: "Pyquiles al Pastor: Arquitectura y Ruta de Aprendizaje"
+subtitle: "Programa abierto de desarrollo en Python moderno enfocado en entornos de producción, tipado estricto y concurrencia."
+author: "pixelead0 & Shellaquiles.org"
+date: "2026-08-29"
+category: "TUTORIAL"
+tags: ["python", "educacion", "open-source", "asyncio", "arquitectura"]
+version: "v2.4.0"
+lang: "es"
+---
 
 > [!NOTE]
-> **Versión del Curso:** v2.4.0  
-> **Requisitos Previos:** Conocimientos básicos de terminal y Git.  
-> **Comunidad:** Mantenido por el ecosistema de [shellaquiles.org](https://shellaquiles.org) y liderado por `@pixelead0`.
+> **Parámetros del Programa:**
+> * **Versión:** v2.4.0
+> * **Requisitos:** Manejo básico de terminal y Git.
+> * **Infraestructura:** Mantenido por el ecosistema [shellaquiles.org](https://shellaquiles.org) y coordinado por `@pixelead0`.
 
 ---
 
 ## 01. Metodología de Ejecución
 
-El programa no se basa en ejercicios sintéticos aislados, sino en la construcción iterativa de herramientas reales:
+El programa descarta ejercicios sintéticos aislados y se centra en la construcción iterativa de herramientas reales de producción:
 
-- [x] **Entornos Aislados:** Configuración con `uv`, `poetry` y contenedores Docker.
-- [x] **Tipado Estricto:** Validación en tiempo de compilación con `mypy` y `pydantic`.
-- [x] **Pipelines ETL & Concurrencia:** Procesamiento asíncrono con `asyncio` y `multiprocessing`.
-- [ ] **Despliegue Continuo:** GitHub Actions hacia entornos serverless.
+* `// ENTORNO` — **Aislamiento y Dependencias:** Gestión moderna con `uv`, entornos virtuales y contenedores Docker.
+* `// TIPADO` — **Rigor Estático:** Validación estricta en tiempo de análisis con `mypy` y esquemas declarativos en `pydantic`.
+* `// PIPELINES` — **Concurrencia y Datos:** Procesamiento no bloqueante con `asyncio` y tareas paralelas con `multiprocessing`.
+* `// CI/CD` — **Despliegue Continuo:** Automatización mediante GitHub Actions hacia entornos serverless y contenedores.
 
 ---
 
 ## 02. Mapa Curricular y Módulos
 
-| Nivel | Enfoque Principal | Tecnologías / Herramientas | Salida Esperada |
+| Nivel | Enfoque Principal | Tecnologías y Herramientas | Salida / Artefacto |
 | :--- | :--- | :--- | :--- |
 | **01. Fundamentos** | Tipos de datos, OOP y control de flujo | Python 3.12+, Terminal | CLI de automatización |
-| **02. Arquitectura** | Inyección de dependencias, Clean Code | Pydantic, Pytest | API REST modular |
-| **03. Datos & ETL** | Extracción paralela y persistencia | Asyncio, DuckDB, SQLite | Agregador de feeds |
+| **02. Arquitectura** | Inyección de dependencias y Clean Code | Pydantic, Pytest | API REST modular |
+| **03. Datos & ETL** | Extracción concurrente y persistencia | Asyncio, DuckDB, SQLite | Agregador de feeds |
 | **04. Despliegue** | Containerización y pipelines | Docker, GitHub Actions | Contenedor en prod |
 
 ---
 
-## 03. Ejemplo Práctico: Extracción Asíncrona
+## 03. Patrón de Referencia: Extracción Asíncrona
 
-A continuación se muestra el patrón estándar utilizado en el módulo de sincronización:
+A continuación se muestra el patrón estándar implementado en el módulo de sincronización de fuentes:
 
 ```python
 import asyncio
+from typing import Any, Dict, List
 import httpx
 
-async def fetch_feed(endpoint: str) -> dict:
-    """Consume endpoints comunitarios de forma no bloqueante."""
-    async with httpx.AsyncClient(timeout=10.0) as client:
-        response = await client.get(endpoint)
-        response.raise_for_status()
-        return response.json()
 
-async def main():
+async def fetch_feed(client: httpx.AsyncClient, endpoint: str) -> Dict[str, Any]:
+    """Consume endpoints comunitarios de forma no bloqueante."""
+    response = await client.get(endpoint, timeout=10.0)
+    response.raise_for_status()
+    return response.json()
+
+
+async def main() -> None:
     endpoints = [
         "https://cron-quiles.org/data/mexico.json",
-        "https://api.shellaquiles.org/v1/status"
+        "https://api.shellaquiles.org/v1/status",
     ]
-    results = await asyncio.gather(*(fetch_feed(url) for url in endpoints))
+    async with httpx.AsyncClient() as client:
+        tasks = [fetch_feed(client, url) for url in endpoints]
+        results = await asyncio.gather(*tasks)
+
     print(f"Feeds procesados: {len(results)}")
+
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 ```
 
 ---
 
-## 04. Reglas de Contribución
+## 04. Criterios de Calidad y Contribución
 
 > [!TIP]
-> Antes de abrir un Pull Request, ejecuta los linters locales para verificar formato y tipado:
-> `ruff check . && mypy .`
+> Antes de abrir un Pull Request, ejecuta la verificación estática local:
+>
+> ```bash
+> ruff check . && mypy .
+>
+> ```
+>
+>
 
-- **Rigor Técnico:** Código documentado siguiendo especificaciones PEP 8 y PEP 257.
-- **Pruebas Automatizadas:** Cobertura mínima del 85% en módulos de lógica de negocio.
-- **Colaboración Abierta:** Discusión de features en los canales de Telegram y GitHub Issues.
+* `// ESTILO` — **Estándar PEP 8:** Formateo y documentación obligatoria bajo PEP 8 y PEP 257.
+
+* `// TESTING` — **Cobertura de Pruebas:** Mínimo del 85% de cobertura con `pytest` en módulos de lógica de negocio.
+
+* `// REVISIÓN` — **Discusión Abierta:** Propuestas y seguimiento de features en GitHub Issues y el canal técnico de Telegram.
+
+
 
 ---
 
-## 05. Conclusión y Recursos
+## 05. Repositorios y Acceso
 
-- **Repositorio Central:** [github.com/shellaquiles/pyquiles-al-pastor](https://github.com/shellaquiles)
-- **Canal Comunitario:** [t.me/shellaquiles](https://t.me/shellaquiles)
+* **Repositorio Central:** [github.com/shellaquiles/pyquiles-al-pastor](https://github.com/shellaquiles)
+
+* **Canal Comunitario:** [t.me/shellaquiles](https://t.me/shellaquiles)
+
+
+```text
+STATUS: 200 OK // CURRICULUM: PYTHON_MODERN // SYS: SHELLAQUILES.ORG
+
+```

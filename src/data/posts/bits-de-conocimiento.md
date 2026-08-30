@@ -1,193 +1,120 @@
-# Bits de Conocimiento
+---
+title: "Bits de Conocimiento: Protocolo de Sesiones Técnicas Relámpago"
+subtitle: "Formato de micro-charlas de 10 minutos, demos en vivo y documentación abierta para comunidades tech."
+author: "pixelead0 & Comunidad Shellaquiles"
+date: "2026-08-29"
+category: "INICIATIVAS"
+tags: ["lightning-talks", "open-source", "documentacion", "comunidad", "bit-logs"]
+version: "v2.0.0"
+lang: "es"
+---
 
-### *Pequeñas ideas, gran impacto*
+> [!NOTE]
+> **Especificación del Formato:** **Bits de Conocimiento** es un protocolo estructurado de charlas técnicas de 10 minutos enfocado en resolver problemas reales, compartir herramientas prácticas y generar documentación técnica indexable.
 
 ---
 
-## ¿Qué es?
+## 01. Propósito y Formato Operativo
 
-**Bits de Conocimiento** es una iniciativa de **aprendizaje colaborativo y abierto**, creada para fortalecer la cultura técnica y el intercambio de saberes dentro de las comunidades tech.
+Las conferencias tradicionales suelen requerir preparaciones complejas de 45 minutos que limitan la participación y ralentizan el flujo de conocimiento. **Bits de Conocimiento** reduce esa fricción mediante un estándar ágil, directo y altamente técnico.
 
-Cada *Bit* es una **sesión breve y práctica** en la que cualquier persona puede compartir herramientas, experiencias, buenas prácticas o descubrimientos que puedan inspirar a otros.
-
-### La filosofía
-
-**Cada bit cuenta.** Lo que hoy compartes puede ser justo lo que otra persona necesita para resolver un reto o dar el siguiente paso.
+Cada sesión dura exactamente **60 minutos**, agrupando entre 4 y 5 intervenciones técnicas condensadas. El objetivo no es la teoría abstracta, sino la demostración funcional: flujos de trabajo, automatizaciones, arquitecturas de software, depuración en entornos reales y librerías clave.
 
 ---
 
-## Principios fundamentales
+## 02. Principios de Ejecución
 
-1. **Compartir, no competir** — el conocimiento crece cuando se distribuye
-2. **Aprender haciendo** — preferimos ejemplos prácticos sobre teoría pura
-3. **Conectar saberes** — mezclamos disciplinas, experiencias y perspectivas
-4. **Diversidad técnica y humana** — todos pueden aportar, sin importar nivel o área
-5. **Respeto y apertura** — no hay jerarquías, solo comunidad
-
----
-
-## Formato de sesión
-
-### Estructura general
-
-| Elemento                 | Descripción                                          |
-| ------------------------ | ---------------------------------------------------- |
-| **Duración total**       | 1 hora                                               |
-| **Participantes**        | 4 a 6 ponentes + asistentes                          |
-| **Duración por ponente** | Máximo 10 minutos                                    |
-| **Modalidad**            | Virtual o presencial                                 |
-| **Periodicidad**         | Semanal o quincenal                                  |
-| **Moderador/a**          | Rol rotativo encargado de apertura, tiempos y cierre |
-
-### Agenda tipo (1 hora)
-
-| Hora          | Duración | Actividad                      | Responsable |
-| ------------- | -------- | ------------------------------ | ----------- |
-| 00:00 – 00:05 | 5 min    | Bienvenida y propósito del día | Moderador/a |
-| 00:05 – 00:15 | 10 min   | Bit 1                          | Ponente 1   |
-| 00:15 – 00:25 | 10 min   | Bit 2                          | Ponente 2   |
-| 00:25 – 00:35 | 10 min   | Bit 3                          | Ponente 3   |
-| 00:35 – 00:45 | 10 min   | Bit 4                          | Ponente 4   |
-| 00:45 – 00:55 | 10 min   | Bit 5                          | Ponente 5   |
-| 00:55 – 01:00 | 5 min    | Cierre y próximos pasos        | Moderador/a |
+* `// ACCIÓN` — **Demostración Práctica:** Se prioriza el código fuente, la terminal en vivo y los ejemplos ejecutables sobre diapositivas genéricas.
+* `// TIEMPO` — **Límite Estricto (10 Minutos):** El cronómetro no se extiende; sintetizar el mensaje maximiza la retención y respeta el tiempo de la audiencia.
+* `// REGISTRO` — **Documentación Indexable (Bit Logs):** Todo recurso, snippet o arquitectura expuesta se compila en un log público al finalizar el evento.
+* `// ACCESO` — **Cero Credencialismo:** Cualquier desarrollador con un script útil, una optimización o un caso de estudio real puede proponer una charla.
 
 ---
 
-## Reglas del espacio
+## 03. Parámetros Técnicos de la Sesión
 
-1. **Cada *Bit* tiene un máximo de 10 minutos** — respeta los tiempos
-2. **Temas que aporten valor** — técnico, práctico o inspirador
-3. **No compartas información sensible** — datos personales, privados o confidenciales
-4. **Todos pueden participar** — sin importar experiencia o rol
-5. **Ambiente abierto y respetuoso** — promovemos la participación
-6. **No se busca perfección** — la intención es aprender y compartir
-
----
-
-## Ejemplos de temas
-
-Los temas pueden ser variados y no necesitan ser complejos:
-
-- **Automatización práctica**: Ansible, PowerShell, Python scripts
-- **Productividad**: Tips de documentación, herramientas de trabajo en comunidad
-- **Experimentos**: Hardware, IA, arte generativo
-- **Buenas prácticas**: Seguridad, despliegue en la nube, DevOps
-- **Historias de aprendizaje**: Proyectos, fracasos y lecciones aprendidas
-- **Cultura libre**: Colaboración en software libre, mantenimiento de repositorios
-- **Herramientas útiles**: Descubrimientos que pueden ayudar a otros
-- **Casos de uso**: Soluciones reales a problemas comunes
+| Parámetro | Especificación |
+| :--- | :--- |
+| **Duración Global** | 60 minutos totales |
+| **Capacidad de Ponentes** | 4 a 5 ponentes por bloque |
+| **Tiempo por Bit** | 10 minutos máximo (8 min exposición + 2 min preguntas/setup) |
+| **Modalidad** | Híbrida (transmisión abierta y sedes físicas aliadas) |
+| **Periodicidad** | Quincenal / Sincronizada con el calendario de [Cron-Quiles](https://cron-quiles.org) |
 
 ---
 
-## Objetivos comunitarios
+## 04. Pipeline de la Sesión (Cronograma de 60 Minutos)
 
-### Para las personas
+```text
+[00:00 - 00:05] // INIT     : Apertura, verificación de audio/pantalla y contexto
+[00:05 - 00:15] // BIT_01   : Demostración técnica #1 (10 min)
+[00:15 - 00:25] // BIT_02   : Demostración técnica #2 (10 min)
+[00:25 - 00:35] // BIT_03   : Demostración técnica #3 (10 min)
+[00:35 - 00:45] // BIT_04   : Demostración técnica #4 (10 min)
+[00:45 - 00:55] // BIT_05   : Demostración técnica #5 (10 min)
+[00:55 - 01:00] // COMPILE  : Cierre, recopilación de repositorios y generación del Bit Log
 
-- **Espacio seguro para aprender** — sin miedo ni etiquetas
-- **Oportunidades para compartir** — mejora tus habilidades presentando
-- **Inspiración** — para iniciar nuevos proyectos o colaboraciones
-- **Networking** — conoce personas con intereses similares
-
-### Para la comunidad
-
-- **Aprendizaje horizontal** — todos enseñan, todos aprenden
-- **Documentación de conocimiento** — que normalmente se pierde
-- **Red viva de intercambio** — técnico y cultural
-- **Memoria colectiva** — de experiencias y soluciones
+```
 
 ---
 
-## Bit Logs — Documentación abierta
+## 05. Ejes Temáticos Sugeridos
 
-Cada sesión genera un **Bit Log**, un registro breve con:
-
-- **Fecha y temas** tratados
-- **Participantes** de la sesión
-- **Principales aprendizajes** compartidos
-- **Recursos y enlaces** mencionados
-
-Estos registros conforman una **base de conocimiento abierta**, disponible para cualquier persona que quiera aprender o replicar las experiencias.
-
----
-
-## Cómo participar
-
-### Como ponente
-
-1. **Elige un tema** que quieras compartir (10 minutos máximo)
-2. **Prepara tu Bit** — puede ser una demo, tutorial, experiencia o descubrimiento
-3. **Regístrate** en la sesión de Bits
-4. **Comparte** tu conocimiento con la comunidad
-
-### Como moderador/a
-
-1. **Coordina la sesión** — apertura, tiempos y cierre
-2. **Gestiona los tiempos** — asegura que cada Bit respete los 10 minutos
-3. **Dinamiza el espacio** — fomenta la participación y preguntas
-4. **Documenta** — registra los aprendizajes en el Bit Log
-
-### Como asistente
-
-1. **Participa activamente** — haz preguntas, comparte experiencias
-2. **Aprende de otros** — cada Bit es una oportunidad de descubrir algo nuevo
-3. **Inspírate** — para tu próximo Bit o proyecto
-4. **Conecta** — con personas de la comunidad
-
-### Como sede aliada
-
-1. **Proporciona el espacio** — físico o virtual
-2. **Apoya la logística** — equipos, conexión, grabación (si aplica)
-3. **Promueve la sesión** — difunde en tus redes
-4. **Colabora** — en la documentación y Bit Logs
+| Dominio | Temas Frecuentes | Entregable Esperado |
+| --- | --- | --- |
+| **Automatización & Scripting** | Python CLI, Ansible, scripts en Bash, cron jobs | Repositorio o snippet funcional |
+| **Infraestructura & Linux** | Homelabs, Docker, redes locales, optimización de servidores | Archivos Compose o configs reproducibles |
+| **Backend & APIs** | Frameworks web, concurrencia, diseño de APIs, SQL/NoSQL | Demo de endpoint o benchmark |
+| **Data & Modelos Locales** | Pipelines ETL, Ollama, procesamiento asíncrono | Pipeline o script de inferencia |
+| **Tooling & Productividad** | Git internals, Neovim, linters, profiling y debugging | Dotfiles o guía de comandos |
 
 ---
 
-## Temas guía por temporada
+## 06. Sistema de Bit Logs
 
-Cada temporada puede tener un tema guía para darle cohesión:
+Al terminar cada evento, la moderación compila y publica un **Bit Log** en el repositorio central de documentación. Esto garantiza que el conocimiento no se quede solo en la sesión síncrona:
 
-- **Automatización** — herramientas y scripts que simplifican el trabajo
-- **Cultura Libre** — software libre, open source, conocimiento abierto
-- **Hardware Abierto** — makers, IoT, proyectos físicos
-- **DevOps & Arte** — creatividad técnica y soluciones innovadoras
-- **Seguridad Práctica** — buenas prácticas de seguridad en el día a día
-- **Aprendizaje Continuo** — métodos, herramientas y experiencias de aprendizaje
+```yaml
+# Schema estándar de un Bit Log
+session:
+  id: "BIT-2026-08"
+  date: "2026-08-29"
+  platform: "Híbrido / Stream"
+  records:
+    - speaker: "@dev_user"
+      topic: "Pipelines asíncronos con Asyncio en Python"
+      repo_url: "[https://github.com/shellaquiles/async-demo](https://github.com/shellaquiles/async-demo)"
+      duration_min: 09:40
+      key_takeaway: "Manejo de timeouts y semáforos en clientes HTTP no bloqueantes."
 
----
-
-## Próximos pasos
-
-### Primera temporada
-
-Lanzar la **primera temporada de Bits de Conocimiento**, con sesiones quincenales en colaboración con distintas comunidades y espacios aliados.
-
-### Involucrarse
-
-- **Súmate como ponente** — comparte tu próximo Bit
-- **Ofrece tu espacio** — sé una sede aliada
-- **Modera una sesión** — lleva los tiempos y dinamiza
-- **Documenta** — ayuda a crear Bit Logs
-- **Difunde** — comparte la iniciativa en tus redes
+```
 
 ---
 
-## Inspiración y contexto
+## 07. Protocolo de Participación
 
-**Bits de Conocimiento** nace del espíritu de comunidades como *Shellaquiles*:
-**abrir, no cerrar; conectar, no absorber; construir, no solo hablar.**
+> [!TIP]
+> Para postular un Bit solo necesitas tener claro el problema técnico, el código a mostrar y asegurarte de que corre en menos de 10 minutos.
+>
+>
 
-Su propósito es ser un **punto de encuentro libre**, donde la curiosidad técnica y la creatividad colectiva se mezclan para generar impacto real.
+1. **Ponentes:** Envía el título de tu demo, un breve resumen técnico y el enlace al repositorio base.
 
----
 
-## Conclusión
+2. **Moderación Técnica:** Responsable de controlar los tiempos en pantalla y estructurar las notas para el Bit Log.
 
-**Bits de Conocimiento** es una invitación a encender la chispa del aprendizaje colectivo.
 
-Porque en comunidad, **ningún conocimiento es pequeño** y **cada bit puede cambiarlo todo**.
+3. **Sedes y Espacios:** Comunidades o empresas interesadas en albergar la sesión física o transmitir el enlace.
 
----
 
-**¿Quieres participar?** Únete a la comunidad y comparte tu primer Bit.
 
-**¡Cada bit cuenta!**
+```bash
+# Consultar sesiones activas o proponer un Bit
+git clone https://github.com/shellaquiles/bits-de-conocimiento.git
+# O contáctanos directamente en Telegram: https://t.me/shellaquiles
+```
+
+```text
+STATUS: 200 OK // CADENCE: BI-WEEKLY // PROTOCOL: LIGHTNING_TALKS // SYS: SHELLAQUILES.ORG
+
+```

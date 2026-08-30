@@ -1,60 +1,67 @@
-# Frases Chingonas: Sabiduría Técnica en Cápsulas
+---
+title: "Frases Chingonas: Principios de Ingeniería y Arquitectura en Cápsulas"
+subtitle: "Catálogo abierto y visualizador de conceptos fundamentales de la literatura de software."
+author: "pixelead0 & Shellaquiles.org"
+date: "2026-08-29"
+category: "PROYECTOS"
+tags: ["frases-chingonas", "open-source", "libros", "arquitectura", "cultura-dev"]
+version: "v2.0.0"
+lang: "es"
+---
 
-### *El conocimiento es poder, pero la sabiduría condensada es una herramienta de ejecución inmediata.*
+> [!NOTE]
+> **Definición de Sistema:** **Frases Chingonas** es una base de conocimiento y herramienta web que condensa principios clave de libros clásicos de computación, arquitectura de software e ingeniería de sistemas.
 
 ---
 
-## ¿Qué es Frases Chingonas?
+## 01. Propósito y Utilidad
 
-**Frases Chingonas** es un proyecto de la comunidad Shellaquiles que busca destilar la esencia de los libros más influyentes en el mundo del desarrollo de software, la arquitectura de sistemas y el liderazgo técnico. 
+Los fundamentos del buen desarrollo suelen diluirse en cientos de páginas teóricas. **Frases Chingonas** estructura esos principios en reglas concisas y ejecutables para consulta rápida durante revisiones de código, sesiones de diseño y refactorización.
 
-- **Sitio Web**: [shellaquiles.github.io/frases-chingonas/](https://shellaquiles.github.io/frases-chingonas/)
-- **Repositorio**: [github.com/shellaquiles/frases-chingonas](https://github.com/shellaquiles/frases-chingonas)
+El proyecto opera como un repositorio estático ligero y desacoplado, optimizado para consumo web y generación física de tarjetas.
 
-A menudo, los grandes conceptos se pierden en cientos de páginas de texto. Frases Chingonas recupera esos principios fundamentales y los presenta en un formato breve, contundente y fácil de compartir. No se trata solo de citas; se trata de **sabiduría técnica accionable**.
-
----
-
-## ¿Por qué este proyecto?
-
-En el ritmo acelerado del desarrollo moderno, necesitamos recordatorios constantes de las mejores prácticas. Una frase bien construida puede ser el catalizador para una mejor decisión arquitectónica o una refactorización necesaria.
-
-### Objetivos principales:
-- **Preservar el conocimiento**: Mantener vivos los principios de los clásicos del software.
-- **Inspirar a la comunidad**: Motivar a otros a profundizar en la lectura técnica.
-- **Facilitar el aprendizaje**: Condensar conceptos complejos en píldoras informativas.
-- **Fomentar la excelencia**: Elevar el estándar de calidad en nuestro código diario.
+* **Sitio Web:** [shellaquiles.github.io/frases-chingonas/](https://shellaquiles.github.io/frases-chingonas/)
+* **Repositorio:** [github.com/shellaquiles/frases-chingonas](https://github.com/shellaquiles/frases-chingonas)
 
 ---
 
-## Características del Sistema
+## 02. Directrices de Contenido
 
-El proyecto no es solo una lista de frases, sino un sistema completo de gestión y visualización:
-
-| Componente | Funcionalidad |
-| :--- | :--- |
-| **Catálogo de Libros** | Una biblioteca curada de textos fundamentales con metadatos completos. |
-| **Visualizador de Frases** | Interfaz moderna con paleta de colores dinámica para cada frase. |
-| **Generador Aleatorio** | Acceso inmediato a una dosis de sabiduría al azar. |
-| **Optimización para Impresión** | Diseñado para crear tarjetas físicas (3x3cm) y decorar espacios de trabajo. |
+* `// PRESERVACIÓN` — **Fundamentos Vigentes:** Rescate de patrones arquitectónicos y lecciones de libros canónicos del software.
+* `// SÍNTESIS` — **Formato Atómico:** Ideas complejas reducidas a declaraciones directas sin rodeos conceptuales.
+* `// APLICACIÓN` — **Criterio Técnico:** Cada entrada funciona como un recordatorio práctico aplicable a código real en producción.
+* `// FORMATO DUAL` — **Consumo Digital y Físico:** Diseñado para lectura en pantalla y exportación de fichas impresas para espacios de trabajo.
 
 ---
 
-## Cómo Contribuir
+## 03. Arquitectura de Componentes
 
-Frases Chingonas es un proyecto **Open Source** y vive gracias a la colaboración de la comunidad. Puedes participar de varias formas:
-
-1. **Sugerir nuevos libros**: ¿Hay un libro que cambió tu forma de programar? ¡Agrégalo al catálogo!
-2. **Aportar frases**: Extrae esa "frase chingona" que te marcó y compártela.
-3. **Mejorar la plataforma**: El código de la interfaz y los scripts de procesamiento están abiertos a mejoras.
-4. **Corregir y refinar**: Ayúdanos a mantener la precisión técnica de las frases.
+| Módulo | Función Técnica | Salida |
+| :--- | :--- | :--- |
+| **Data Registry** | Esquema estructurado de libros, autores y citas | `data/quotes.json` / YAML |
+| **Visualizador Web** | Interfaz reactiva con cambio dinámico de paleta | Dashboard estático |
+| **Motor Aleatorio** | Generador de citas bajo demanda sin peticiones externas | Inferencia local / DOM |
+| **Print Layout** | Hoja de estilos para corte e impresión en formato 3x3 cm | Salida CSS `@media print` |
 
 ---
 
-## Conclusión
+## 04. Flujo de Contribución
 
-**Frases Chingonas** es el puente entre la teoría profunda de los libros y la práctica diaria del desarrollador. Es una invitación a detenerse un momento, reflexionar sobre un principio y aplicarlo con maestría.
+> [!TIP]
+> Toda cita debe provenir de un texto técnico verificable y mantener atribución precisa de autor y capítulo.
 
-**¡Súmate a la colección y comparte la sabiduría!**
+1. **Catálogo de Libros:** Registra nuevos títulos con metadatos completos (autor, año, editorial).
+2. **Extracción de Citas:** Incorpora citas clave contextualizadas en el archivo de datos.
+3. **Optimización de UI:** Aporta mejoras al renderizador, la accesibilidad o el pipeline de impresión mediante Pull Requests.
 
-**¡Cada bit de sabiduría cuenta!**
+```bash
+# Clonar y probar el catálogo localmente
+git clone [https://github.com/shellaquiles/frases-chingonas.git](https://github.com/shellaquiles/frases-chingonas.git)
+cd frases-chingonas
+
+```
+
+```text
+STATUS: 200 OK // REPO: READY // FORMAT: STATIC // SYS: SHELLAQUILES.ORG
+
+```

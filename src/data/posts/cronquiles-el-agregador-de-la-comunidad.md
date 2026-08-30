@@ -1,75 +1,111 @@
-# Cron-Quiles: El Latido de la Comunidad
+---
+title: "Cron-Quiles: Motor Abierto de Eventos y Calendarios Tech en México"
+subtitle: "Pipeline automatizado de agregación, normalización de feeds y exportación de datos abiertos."
+author: "pixelead0 & Shellaquiles.org"
+date: "2026-08-29"
+category: "PROYECTOS"
+tags: ["cron-quiles", "python", "etl", "open-data", "calendario"]
+version: "v2.0.0"
+lang: "es"
+---
 
-### *Sincronizando el pulso tecnológico de México*
+> [!NOTE]
+> **Definición de Sistema:** **Cron-Quiles** es un agregador ETL de código abierto que consolida eventos tecnológicos en México, normalizando fuentes heterogéneas en calendarios estáticos (`.ics`), feeds `WebCal` y endpoints `JSON`.
 
 ---
 
-## ¿Qué es?
+## 01. Arquitectura y Funcionamiento
 
-**Cron-Quiles** es el agregador oficial de eventos de la comunidad Shellaquiles, desarrollado en colaboración con **pixelead0**. Su nombre es un juego de palabras que rinde homenaje a nuestras raíces técnicas: **Cron** por el comando de programación de tareas en Linux y **Quiles** por Shellaquiles.
+El ecosistema tech suele sufrir de fragmentación de datos: los eventos se dispersan en Luma, Meetup, Eventbrite y sitios independientes. **Cron-Quiles** resuelve esto mediante un pipeline automatizado en Python que procesa, valida y exporta la información sin requerir bases de datos pesadas ni servidores en ejecución continua.
 
-Es un motor de datos de código abierto diseñado para centralizar y difundir todas las actividades, meetups, talleres y conferencias de tecnología en México.
+El ciclo de sincronización se ejecuta periódicamente vía GitHub Actions, garantizando datos actualizados y archivos estáticos de alta disponibilidad.
 
-En un ecosistema donde la información suele estar fragmentada en múltiples plataformas, **Cron-Quiles** actúa como el punto de encuentro único, actualizándose automáticamente cada 6 horas para asegurar que nadie se quede fuera de la conversación técnica.
 
----
+```
 
-## ¿Por qué es importante?
+[ Fuentes: Luma / Meetup / iCal / YAML ]
+│
+▼
+[ Pipeline ETL en Python ]
+│
+┌────────────────┼────────────────┐
+▼                ▼                ▼
+[ WebCal / ICS ] [ JSON API ] [ Dashboard UI ]
 
-### Visibilidad para todos
-Ayudamos a que las comunidades pequeñas y grandes tengan el mismo nivel de exposición, asegurando que sus eventos lleguen a las personas indicadas en todo el país.
-
-### Automatización y Datos Abiertos
-No es solo un calendario manual. El sistema utiliza un pipeline automatizado que consume feeds de diversas fuentes (Meetup, Luma, etc.) y los normaliza en formatos abiertos (WebCal, ICS y JSON) para que cualquiera pueda integrarlos en sus propias herramientas o automatizaciones.
-
----
-
-## Novedades en la v1.5.0
-
-La evolución del proyecto nos ha llevado a convertir lo que era un simple agregador en un motor robusto de datos tech. Estas son las últimas actualizaciones:
-
-✅ **Lógica Multi-estado**: Generación dinámica de calendarios específicos para CDMX, Jalisco (JAL), Puebla (PUE) y Nuevo León (NLE).
-✅ **Smart Scraper**: Capacidad de extraer ubicaciones reales de Meetup que los archivos ICS estándar suelen omitir.
-✅ **Automated CI**: Persistencia de caché geográfico y geocodificación mediante la API de Google Maps para mayor precisión.
-✅ **Terminal UI**: Una interfaz web interactiva con pestañas reactivas y modo oscuro por defecto, fiel a nuestra estética.
+```
 
 ---
 
-## Cómo funciona el ecosistema
+## 02. Especificaciones Técnicas (v2.0.0)
 
-| Componente       | Descripción                                                              |
-| ---------------- | ------------------------------------------------------------------------ |
-| **Repositorio**  | El código base donde vive la lógica de agregación y los feeds de datos.  |
-| **Dashboard**    | La interfaz visual donde puedes consultar la agenda en tiempo real.      |
-| **Feeds YAML**   | Archivos de configuración simples donde se dan de alta las comunidades.  |
-| **Exportación**  | Salidas en formato .ics, WebCal y JSON para máxima compatibilidad.       |
-
----
-
-## Principios de Cron-Quiles
-
-1. **Abrir, no cerrar** — los datos pertenecen a la comunidad y son libres de ser consumidos.
-2. **Conectar, no absorber** — no buscamos reemplazar a las plataformas existentes, sino conectarlas.
-3. **Construir, no solo hablar** — preferimos un Pull Request que solucione un problema a una larga discusión.
+* `// MOTOR` — **Pipeline Asíncrono en Python:** Extracción concurrente de eventos y normalización estricta con Pydantic.
+* `// GEOLOCALIZACIÓN` — **Segmentación por Estados:** Generación automática de calendarios específicos para CDMX, Jalisco (JAL), Puebla (PUE) y Nuevo León (NLE).
+* `// DATOS ABIERTOS` — **Multi-formato de Salida:** Publicación de feeds en `.ics`, `webcal://` y endpoints `.json` optimizados para consumo por terceros.
+* `// UI/UX` — **Diseño Suizo & Terminal:** Interfaz estática de alto rendimiento, bajo consumo de ancho de banda y navegación por filtros.
+* `// SEO & SCHEMA` — **Datos Estructurados:** Inyección automática de `JSON-LD (Event)` para indexación directa en motores de búsqueda.
 
 ---
 
-## ¿Quieres que tu comunidad aparezca aquí?
+## 03. Matriz de Componentes
 
-¡Es muy sencillo participar! Solo tienes que seguir estos pasos:
-
-1. **Haz un Fork** del repositorio oficial: [github.com/shellaquiles/cron-quiles](https://github.com/shellaquiles/cron-quiles).
-2. **Añade tu feed** en la carpeta de configuraciones.
-3. **Envía un Pull Request**.
-
-Una vez aprobado, tus eventos se sincronizarán automáticamente con el dashboard y los calendarios de toda la comunidad.
+| Módulo | Función Principal | Formato / Salida |
+| :--- | :--- | :--- |
+| **Pipeline ETL** | Extracción, limpieza y parsing de fuentes | Objetos normalizados en memoria |
+| **Generador iCal** | Compilación de eventos en estándares RFC 5545 | Archivos `.ics` y `webcal://` |
+| **API Estática** | Endpoints ligeros para integración con apps y bots | `events.json`, `cdmx.json`, etc. |
+| **Web Dashboard** | Interfaz de consulta rápida y filtrado | Sitio estático HTML5 / CSS Suizo |
+| **Registry YAML** | Configuración declarativa de comunidades | `communities/*.yaml` |
 
 ---
 
-## Conclusión
+## 04. Endpoints y Consumo de Datos
 
-**Cron-Quiles** es más que una herramienta técnica; es el esfuerzo colectivo por mantener viva y conectada la red de talento en nuestro país. Si quieres estar al tanto de cada meetup o workshop en México, esto te va a simplificar la vida.
+Puedes integrar los calendarios directamente en Google Calendar, Apple Calendar o herramientas locales:
 
-**¡Sincroniza tus relojes y nos vemos en el próximo meetup!**
+```bash
+# Suscribirse al feed general de México (WebCal)
+webcal://cron-quiles.org/feeds/mexico.ics
 
-**¡Cada bit cuenta!**
+# Consumir el endpoint JSON para CDMX en tus scripts
+curl -s [https://cron-quiles.org/data/cdmx.json](https://cron-quiles.org/data/cdmx.json) | jq '.[0]'
+
+```
+
+---
+
+## 05. Registro de Nuevas Comunidades
+
+> [!TIP]
+> Cualquier comunidad técnica sin fines de lucro en México puede integrarse al feed mediante un Pull Request.
+>
+>
+
+1. **Fork:** Clona el repositorio oficial desde [GitHub](https://github.com/shellaquiles/cron-quiles).
+
+
+2. **Registro:** Agrega un archivo YAML con los datos de tu comunidad en la carpeta `data/communities/`:
+
+
+```yaml
+name: "Python CDMX"
+region: "CDMX"
+source_type: "luma"
+feed_url: "https://api.lu.ma/ics/get?entity=calendar&id=cal-xxx"
+tags: ["python", "backend", "data"]
+```
+
+
+3. **Pull Request:** Abre el PR; una vez aprobado, el pipeline incluirá tus eventos en la siguiente corrida del cron.
+
+
+
+```bash
+# Probar el linter de configuración localmente
+python scripts/validate_feeds.py
+
+```
+
+```text
+STATUS: 200 OK // REVISION: v2.0.0 // PIPELINE: CI_AUTOMATED // SYS: CRON-QUILES.ORG
+
+```

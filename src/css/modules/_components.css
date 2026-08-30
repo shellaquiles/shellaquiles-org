@@ -553,9 +553,11 @@ html.dark .post-day {
     margin-bottom: 1.25rem;
 }
 
-.article-body strong {
+.article-body strong,
+.article-body ul li strong,
+.article-body ol li strong {
     color: var(--text);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .article-body em {

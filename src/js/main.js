@@ -28,10 +28,37 @@ document.addEventListener('DOMContentLoaded', () => {
         blogManager.setupNavigationLinks();
     }, 100);
 
+    // Setup reactive SVG Favicon
+    setupFaviconSync();
+
     // Expose to global scope for debugging
     window.shellaquilesTerminal = terminal;
     window.shellaquilesBlog = blogManager;
 });
+
+/**
+ * Sync Favicon color with Light/Dark Mode
+ */
+function setupFaviconSync() {
+    const updateFavicon = () => {
+        const isDark = document.documentElement.classList.contains('dark') || !document.documentElement.classList.contains('light');
+        const strokeColor = isDark ? '%2300ff66' : '%230f8a3c';
+
+        // Clean SVG with terminal prompt >_ symbol
+        const faviconSvg = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><path d='M4 17l6-5-6-5' stroke='${strokeColor}' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/><line x1='12' y1='17' x2='20' y2='17' stroke='${strokeColor}' stroke-width='2.5' stroke-linecap='round'/></svg>`;
+
+        let link = document.querySelector("link[rel~='icon']");
+        if (link) {
+            link.href = faviconSvg;
+        }
+    };
+
+    updateFavicon();
+
+    // Observe theme changes on <html>
+    const observer = new MutationObserver(updateFavicon);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+}
 
 /**
  * Setup console welcome message and overrides

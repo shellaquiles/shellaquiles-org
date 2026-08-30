@@ -1,68 +1,59 @@
-# Bienvenida a Shellaquiles: La Comunidad Tech Abierta de México
+---
+title: "Bienvenida a Shellaquiles: Ecosistema Open Source & Proyectos Tech"
+subtitle: "Hub de desarrollo, infraestructura comunitaria y colaboración técnica en México."
+author: "pixelead0 & Shellaquiles.org"
+date: "2026-08-29"
+category: "COMUNIDAD"
+tags: ["open-source", "mexico", "desarrollo", "infraestructura"]
+version: "v2.0.0"
+lang: "es"
+---
 
-### *Abrir, conectar y construir: el nodo donde la tecnología y la comunidad se encuentran*
+> [!NOTE]
+> **Identidad:** **Shellaquiles** une la potencia de la terminal (*Shell*) con la identidad del trabajo en equipo local (*Chilaquiles*).
 
 ---
 
-## ¿Qué es Shellaquiles?
+## 01. Qué Hacemos
 
-**Shellaquiles** es una plataforma de aprendizaje y colaboración tecnológica. Somos un grupo de personas interesadas en el desarrollo de talento y la innovación en México, facilitando el acceso al conocimiento técnico a través de la práctica y la colaboración profesional.
+**Shellaquiles** es un colectivo de desarrollo y espacio de colaboración técnica en México. Construimos software abierto, mantenemos infraestructura comunitaria y organizamos talleres prácticos para desarrolladores.
 
-Nuestra identidad nace de una dualidad fundamental: la **Shell** —como interfaz de comando y corazón de la computación— y los **Chilaquiles** —como símbolo de nuestras raíces, del sabor local y del valor incalculable de compartir en comunidad—. 
-
----
-
-## Nuestra Misión
-
-No somos solo un grupo de discusión; somos un motor de ejecución. Creemos en estructuras dinámicas que balancean la apertura total con la excelencia técnica. En Shellaquiles, la tecnología no solo se consume, se construye colectivamente.
-
-Nuestros pilares fundamentales definen cada una de nuestras acciones:
-
-✅ **Apertura Radical**: El conocimiento crece cuando se distribuye. Fomentamos el Open Source y la transparencia absoluta.
-✅ **Neutralidad Tecnológica**: Desde el desarrollo de bajo nivel hasta la inteligencia artificial, todos los stacks tienen un lugar.
-✅ **Aprendizaje Horizontal**: Eliminamos las jerarquías tradicionales. Aquí, la autoridad emana de la curiosidad y la contribución.
-✅ **Soberanía Técnica**: Impulsamos el talento local para que México no solo use tecnología, sino que la defina.
+El ecosistema centraliza proyectos públicos como el calendario [Cron-Quiles](https://cron-quiles.org), herramientas de automatización y espacios de documentación técnica.
 
 ---
 
-## Un Ecosistema Multi-disciplinario
+## 02. Cómo Trabajamos
 
-Shellaquiles es un nodo de convergencia para diversos perfiles que comparten una visión común:
-
-| Áreas de Impacto    | Dinámica de Colaboración                                              |
-| ------------------- | --------------------------------------------------------------------- |
-| **Ingeniería**      | Desde el kernel hasta la nube, optimizando cada capa del stack.       |
-| **Diseño y UX**     | Humanizando la tecnología a través de experiencias memorables.        |
-| **Data e IA**       | Extrayendo valor y significado en un mundo impulsado por datos.       |
-| **Hardware y IoT**  | Conectando el mundo digital con la realidad física.                   |
-| **Cultura Abierta** | Documentando y preservando el conocimiento para las futuras generaciones. |
+* `// OPEN SOURCE` — **Código Público:** Proyectos bajo licencias permisivas con código disponible en GitHub desde el primer commit.
+* `// PRAGMATISMO` — **Tecnología por Utilidad:** Elegimos lenguajes y arquitecturas según el problema a resolver, priorizando rendimiento y simplicidad.
+* `// MERITOCRACIA` — **Código Verificable:** Las decisiones se basan en pruebas, benchmarks y revisiones técnicas en Pull Requests.
+* `// IMPACTO` — **Soluciones Reales:** Creamos herramientas que resuelven necesidades concretas de la comunidad técnica y los usuarios.
 
 ---
 
-## ¿Por qué ser parte de este nodo?
+## 03. Áreas de Desarrollo
 
-### Colaboración sin fricciones
-Aquí los proyectos no nacen en silos. Iniciativas como **Cron-Quiles** o las sesiones de **Bits de Conocimiento** son ejemplos reales de cómo la inteligencia colectiva puede resolver problemas comunes de forma eficiente.
-
-### Crecimiento Orgánico
-Eliminamos las barreras de entrada. En Shellaquiles, el respeto mutuo y la voluntad de aportar son las únicas credenciales necesarias. Es un espacio diseñado para que tanto el talento emergente como los expertos consolidados encuentren valor, inspiración y retos a la altura de su curiosidad.
-
----
-
-## Cómo Involucrarse
-
-La comunidad es una red viva que se fortalece con cada nueva conexión. No esperes una invitación formal:
-
-1. **Sincronízate**: Únete a los canales de comunicación y comienza a escuchar el pulso de la comunidad.
-2. **Explora**: Sumérgete en nuestros repositorios y proyectos activos para entender nuestra forma de construir.
-3. **Aporta**: Si identificas una oportunidad de mejora, un bug o una idea nueva, abre un Pull Request. La acción es nuestra mejor forma de comunicación.
+| Área | Enfoque Principal | Entregables Clave |
+| :--- | :--- | :--- |
+| **Backend & Cloud** | Arquitectura distribuida, pipelines ETL y Linux | APIs, scrapers y servicios públicos |
+| **Data & AI** | Procesamiento asíncrono y modelos locales | Pipelines de datos y herramientas de análisis |
+| **Frontend & UI/UX** | Interfaces de alto rendimiento y accesibilidad | Dashboards estáticos y sistemas de diseño |
+| **Hardware & Sistemas** | Homelabs, microcontroladores y automatización | Integraciones IoT y domótica |
+| **Documentación** | Guías técnicas y especificaciones | Artículos de referencia y cheatsheets |
 
 ---
 
-## Conclusión
+## 04. Cómo Participar
 
-**Shellaquiles** es la apuesta por un futuro tecnológico mexicano construido desde la base, con apertura, rigor técnico y un profundo sentido de pertenencia.
+> [!TIP]
+> Cualquier persona interesada en programar, proponer mejoras o documentar es bienvenida.
 
-**¡Sincroniza tus ideas y bienvenido al nodo!**
+1. **Comunidad:** Únete a la conversación en el grupo abierto de [Telegram](https://t.me/shellaquiles).
+2. **Repositorios:** Revisa los proyectos en [GitHub](https://github.com/shellaquiles) y busca issues etiquetados como `help wanted` o `good first issue`.
+3. **Contribuciones:** Abre un Pull Request con correcciones, nuevas funcionalidades o documentación técnica.
 
-**¡Cada bit cuenta!**
+```bash
+# Clonar y explorar el repositorio principal
+git clone https://github.com/shellaquiles/shellaquiles-org.git
+cd shellaquiles-org
+```

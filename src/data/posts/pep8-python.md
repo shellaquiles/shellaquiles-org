@@ -1,212 +1,70 @@
-# PEP 8: Guía de Estilo para Python
+---
+title: "PEP 8: Estándar de Estilo y Convenciones en Python"
+subtitle: "Especificaciones de formateo, nomenclatura y buenas prácticas de ingeniería para bases de código legibles y mantenibles."
+author: "pixelead0 & Shellaquiles.org"
+date: "2026-08-29"
+category: "TUTORIAL"
+tags: ["python", "pep8", "clean-code", "linters", "buenas-practicas"]
+version: "v2.0.0"
+lang: "es"
+---
 
-### *Escribe código Python que otros puedan leer y mantener*
+> [!NOTE]
+> **Especificación Oficial:** **PEP 8** (Python Enhancement Proposal 8) es la guía de estilo canónica del lenguaje. Su objetivo es garantizar la consistencia, legibilidad y mantenibilidad del código a lo largo de proyectos y equipos de desarrollo.
 
 ---
 
-## ¿Qué es PEP 8?
+## 01. Por Qué Importa el Estándar
 
-**PEP 8** (Python Enhancement Proposal 8) es la **guía de estilo oficial** para escribir código Python. Fue creada por Guido van Rossum, Barry Warsaw y Nick Coghlan en 2001, y se ha convertido en el estándar de facto para la comunidad Python.
-
-PEP 8 no es solo una lista de reglas arbitrarias; es un conjunto de **convenciones** que ayudan a hacer el código más legible, consistente y mantenible.
+El código se lee considerablemente más veces de las que se escribe. Seguir un estándar estricto reduce la sobrecarga cognitiva durante las revisiones de código (PRs), previene inconsistencias de formato entre desarrolladores y facilita la integración en proyectos abiertos donde colaboran múltiples personas.
 
 ---
 
-## ¿Por qué es importante?
+## 02. Convenciones Fundamentales de Formateo
 
-### Legibilidad
-
-El código se lee **muchas más veces** de las que se escribe. PEP 8 ayuda a que tu código sea fácil de entender para ti y para otros desarrolladores.
-
-### Consistencia
-
-Cuando todo el equipo sigue las mismas convenciones, el código se ve **uniforme** y es más fácil de navegar.
-
-### Colaboración
-
-Facilita el trabajo en equipo y la **colaboración en proyectos open source**, donde múltiples personas contribuyen código.
-
-### Profesionalismo
-
-Seguir PEP 8 demuestra que te importa la **calidad del código** y que eres parte de la comunidad Python.
+* `// INDENTACIÓN` — **4 Espacios:** Uso estricto de 4 espacios por nivel; los tabuladores quedan excluidos.
+* `// LÍNEAS` — **Límite de Longitud:** Máximo de 79 caracteres por línea para texto/código base (88 caracteres si se utiliza Black).
+* `// ESPACIADO` — **Operadores y Comas:** Un espacio alrededor de operadores de asignación y comparación (`x = 1 + 2`), y un espacio posterior tras cada coma (`[1, 2, 3]`).
+* `// COMPARACIONES` — **Singletons y Booleanos:** Usar `is` / `is not` para comparar con `None` (`if x is None:`). Evitar comparaciones explícitas con `True` o `False`.
 
 ---
 
-## Reglas Principales
+## 03. Convenciones de Nomenclatura
 
-### 1. Indentación
+| Elemento | Convención | Ejemplo |
+| :--- | :--- | :--- |
+| **Funciones y Métodos** | `snake_case` | `def calcular_promedio(numeros):` |
+| **Variables** | `snake_case` | `total_items = 42` |
+| **Clases** | `PascalCase` | `class UsuarioManager:` |
+| **Constantes** | `UPPER_SNAKE_CASE` | `MAX_RETRIES = 5` |
+| **Módulos y Paquetes** | `snake_case` corto | `import etl_service` |
 
-Usa **4 espacios** por nivel de indentación. No uses tabs.
+---
 
-```python
-# ✅ Correcto
-def calcular_promedio(numeros):
-    if len(numeros) == 0:
-        return 0
-    return sum(numeros) / len(numeros)
+## 04. Estructura de Imports
 
-# ❌ Incorrecto (tabs o 2 espacios)
-def calcular_promedio(numeros):
-    if len(numeros) == 0:  # Usando tabs (incorrecto)
-        return 0
-    return sum(numeros) / len(numeros)
-```
-
-### 2. Longitud de Líneas
-
-Mantén las líneas a un **máximo de 79 caracteres** (algunos equipos usan 88 o 99, pero 79 es el estándar PEP 8).
+Los módulos deben organizarse en tres bloques separados por una línea en blanco, ordenados alfabéticamente dentro de cada sección:
 
 ```python
-# ✅ Correcto (línea corta)
-def saludar(nombre):
-    mensaje = f"Hola, {nombre}!"
-    return mensaje
-
-# ✅ Correcto (usando paréntesis para continuar)
-resultado = (variable_uno + variable_dos +
-             variable_tres + variable_cuatro)
-
-# ❌ Incorrecto (línea muy larga)
-resultado = variable_uno + variable_dos + variable_tres + variable_cuatro + variable_cinco + variable_seis
-```
-
-### 3. Espacios en Blanco
-
-Usa espacios en blanco de forma consistente:
-
-```python
-# ✅ Correcto
-x = 5
-y = 10
-resultado = x + y
-
-# ❌ Incorrecto
-x=5
-y=10
-resultado=x+y
-```
-
-**Después de comas:**
-
-```python
-# ✅ Correcto
-lista = [1, 2, 3, 4]
-
-# ❌ Incorrecto
-lista = [1,2,3,4]
-```
-
-**Alrededor de operadores:**
-
-```python
-# ✅ Correcto
-x = 5 + 3
-y = 10 * 2
-
-# ❌ Incorrecto
-x = 5+3
-y = 10*2
-```
-
-### 4. Nombres de Variables y Funciones
-
-- **Funciones y variables**: `snake_case` (minúsculas con guiones bajos)
-- **Constantes**: `UPPER_SNAKE_CASE` (mayúsculas con guiones bajos)
-- **Clases**: `PascalCase` (primera letra de cada palabra en mayúscula)
-
-```python
-# ✅ Correcto
-def calcular_promedio(numeros):
-    """Calcula el promedio de una lista de números."""
-    pass
-
-PI = 3.14159
-MAX_INTENTOS = 3
-
-class UsuarioManager:
-    pass
-
-# ❌ Incorrecto
-def CalcularPromedio(numeros):  # ❌ PascalCase para función
-def calcularPromedio(numeros):  # ❌ camelCase
-CALCULAR_PROMEDIO(numeros)      # ❌ Todo mayúsculas
-```
-
-### 5. Imports
-
-Organiza los imports en este orden:
-
-1. Imports de la biblioteca estándar
-2. Imports de terceros
-3. Imports locales/aplicación
-
-Separa cada grupo con una línea en blanco.
-
-```python
-# ✅ Correcto
+# 1. Biblioteca estándar
 import os
 import sys
 
-import requests
-import numpy
+# 2. Dependencias de terceros
+import httpx
+import pydantic
 
-from mi_proyecto import utilidades
+# 3. Módulos locales del proyecto
+from mi_proyecto.core import config
 from mi_proyecto.models import Usuario
-```
 
-### 6. Comentarios y Docstrings
-
-Usa docstrings para documentar funciones, clases y módulos:
-
-```python
-# ✅ Correcto
-def calcular_promedio(numeros):
-    """
-    Calcula el promedio de una lista de números.
-
-    Args:
-        numeros: Lista de números enteros o flotantes.
-
-    Returns:
-        float: El promedio de los números, o 0 si la lista está vacía.
-    """
-    if len(numeros) == 0:
-        return 0
-    return sum(numeros) / len(numeros)
-```
-
-### 7. Espacios en Llamadas a Funciones
-
-```python
-# ✅ Correcto
-funcion(arg1, arg2, arg3)
-
-# ❌ Incorrecto
-funcion( arg1, arg2, arg3 )
-```
-
-### 8. Comparaciones
-
-```python
-# ✅ Correcto
-if x is None:
-    pass
-
-if x == True:  # Mejor: if x:
-    pass
-
-# ❌ Incorrecto
-if x == None:  # ❌ Usa 'is None' en lugar de '== None'
-    pass
 ```
 
 ---
 
-## Ejemplos Prácticos
+## 05. Refactorización: Caso Práctico
 
-### Antes y Después
-
-**Antes (no PEP 8):**
+### Código No Estándar (Violación de Reglas)
 
 ```python
 def CalcularPromedio(Numeros):
@@ -218,111 +76,64 @@ class usuario:
     def __init__(self,nombre,edad):
         self.nombre=nombre
         self.edad=edad
+
 ```
 
-**Después (PEP 8):**
+### Código Normalizado (PEP 8 Compliant)
 
 ```python
-def calcular_promedio(numeros):
-    """
-    Calcula el promedio de una lista de números.
+from typing import Sequence
 
-    Args:
-        numeros: Lista de números.
 
-    Returns:
-        float: El promedio o 0 si la lista está vacía.
-    """
-    if len(numeros) == 0:
-        return 0
+def calcular_promedio(numeros: Sequence[float]) -> float:
+    """Calcula el promedio aritmético de una secuencia numérica."""
+    if not numeros:
+        return 0.0
     return sum(numeros) / len(numeros)
 
 
 class Usuario:
-    """Representa un usuario en el sistema."""
+    """Entidad de usuario del sistema."""
 
-    def __init__(self, nombre, edad):
-        """
-        Inicializa un nuevo usuario.
-
-        Args:
-            nombre: Nombre del usuario.
-            edad: Edad del usuario.
-        """
+    def __init__(self, nombre: str, edad: int) -> None:
         self.nombre = nombre
         self.edad = edad
+
 ```
 
 ---
 
-## Herramientas para Verificar PEP 8
+## 06. Tooling y Automatización en CI
 
-### 1. `flake8`
+> [!TIP]
+> No formatees manualmente. Integra herramientas de análisis estático y formateadores automáticos en tu pipeline de pre-commit y CI.
+>
+>
 
-Herramienta popular que verifica el código contra PEP 8:
+| Herramienta | Función Técnica | Comando |
+| --- | --- | --- |
+| **Ruff** | Linter y formateador ultrarrápido (Rust) | `ruff check . && ruff format .` |
+| **Flake8** | Verificador de estilo y sintaxis PEP 8 | `flake8 src/`<br> |
+| **Black** | Formateador de código determinista y estricto | `black src/`<br> |
+| **Mypy** | Verificador estático de tipado (Type Hints) | `mypy src/` |
 
 ```bash
-pip install flake8
-flake8 mi_archivo.py
-```
+# Ejemplo de verificación rápida en entorno local
+pip install ruff mypy
+ruff check .
+mypy .
 
-### 2. `pylint`
-
-Analizador más completo que incluye verificación de estilo:
-
-```bash
-pip install pylint
-pylint mi_archivo.py
-```
-
-### 3. `black`
-
-Formateador automático que sigue PEP 8 (y algunas convenciones adicionales):
-
-```bash
-pip install black
-black mi_archivo.py
-```
-
-### 4. `autopep8`
-
-Formatea automáticamente el código para cumplir con PEP 8:
-
-```bash
-pip install autopep8
-autopep8 --in-place mi_archivo.py
 ```
 
 ---
 
-## Excepciones a la Regla
+## 07. Referencias
 
-PEP 8 es una **guía, no una ley**. A veces, romper las reglas está bien:
+* **PEP 8 Specification:** [peps.python.org/pep-0008](https://peps.python.org/pep-0008/)
 
-- **Legibilidad primero**: Si seguir PEP 8 hace el código menos legible, rompe la regla
-- **Consistencia del proyecto**: Si el proyecto existente usa otras convenciones, mantén la consistencia
-- **Líneas largas**: A veces es mejor tener una línea un poco más larga que dividirla de forma confusa
+* **PEP 257 (Docstring Conventions):** [peps.python.org/pep-0257](https://peps.python.org/pep-0257/)
 
----
+```text
+STATUS: 200 OK // COMPLIANCE: PEP8 // LINTER: RUFF // SYS: SHELLAQUILES.ORG
 
-## Recursos Adicionales
-
-- **PEP 8 oficial**: <https://peps.python.org/pep-0008/>
-- **PEP 8 en español**: <https://pep8-es.readthedocs.io/>
-- **Guía de estilo de Google para Python**: <https://google.github.io/styleguide/pyguide.html>
-
----
-
-## Conclusión
-
-PEP 8 no es solo sobre seguir reglas; es sobre escribir código que **otros puedan leer y mantener**.
-
-Al seguir estas convenciones, contribuyes a hacer el ecosistema Python más accesible y profesional.
-
-**¡Empieza a aplicar PEP 8 en tu código hoy mismo!**
-
----
-
-**¿Tienes dudas sobre alguna regla específica?** Consulta la documentación oficial o pregunta en la comunidad.
-
-**¡Código limpio, código feliz!**
+```
