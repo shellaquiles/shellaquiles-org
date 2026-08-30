@@ -13,8 +13,9 @@ lang: "es"
 > **Definición de Sistema:** **tribuTACOS** es una plataforma Open Source de análisis, proyección y simulación fiscal que procesa comprobantes XML (**CFDI 3.3 y 4.0**) y declaraciones en PDF del SAT, calculando por anticipado y bajo el principio de **flujo de efectivo** los Pagos Provisionales Mensuales (ISR/IVA) y la Declaración Anual.
 
 > [!TIP]
-> <i data-lucide="github"></i> **Repositorio GitHub:** [github.com/shellaquiles/tribuTACOS](https://github.com/shellaquiles/tribuTACOS)  
-> <i data-lucide="globe"></i> **Sitio Web:** [shellaquiles.org](https://shellaquiles.org)
+> **Acciones del Proyecto:**  
+> <a href="https://shellaquiles.org" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Proyecto ↗</a> &nbsp;
+> <a href="https://github.com/shellaquiles/tribuTACOS" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github"></i> Repositorio GitHub ↗</a>
 
 ---
 

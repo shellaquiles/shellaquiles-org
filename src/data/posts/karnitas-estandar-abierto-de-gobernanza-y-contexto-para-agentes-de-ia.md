@@ -13,7 +13,9 @@ lang: "es"
 > **Definición de Sistema:** **KARNITAS** (*Kernel Agentic Runtime Network for Intelligent Tasks & Automation Systems*) es una convención de código y directorio (`.agents/`) que actúa como la **única fuente de verdad (SSOT)** de contexto, memoria e instrucciones para agentes de IA en repositorios Git.
 
 > [!TIP]
-> <i data-lucide="github"></i> **Repositorio GitHub:** [github.com/shellaquiles/KARNITAS](https://github.com/shellaquiles/KARNITAS)
+> **Acciones del Proyecto:**  
+> <a href="https://github.com/shellaquiles/KARNITAS" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Estándar ↗</a> &nbsp;
+> <a href="https://github.com/shellaquiles/KARNITAS" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github"></i> Repositorio GitHub ↗</a>
 
 ---
 

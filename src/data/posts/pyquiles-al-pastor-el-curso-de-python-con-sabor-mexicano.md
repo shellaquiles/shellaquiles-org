@@ -16,8 +16,9 @@ lang: "es"
 > * **Infraestructura:** Mantenido por el ecosistema [shellaquiles.org](https://shellaquiles.org) y coordinado por `@pixelead0`.
 
 > [!TIP]
-> <i data-lucide="globe"></i> **Sitio Web / Curso:** [shellaquiles.org](https://shellaquiles.org)  
-> <i data-lucide="github"></i> **Ecosistema GitHub:** [github.com/shellaquiles](https://github.com/shellaquiles)
+> **Acciones del Proyecto:**  
+> <a href="https://pixelead0.github.io/pyquiles-al-pastor/" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Curso ↗</a> &nbsp;
+> <a href="https://github.com/shellaquiles/pyquiles-al-pastor" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github"></i> Repositorio GitHub ↗</a>
 
 ---
 

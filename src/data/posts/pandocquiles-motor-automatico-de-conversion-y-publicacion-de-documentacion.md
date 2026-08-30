@@ -13,7 +13,9 @@ lang: "es"
 > **Definición de Sistema:** **PanDocquiles** es un motor de conversión y publicación que toma tus fuentes Markdown con diagramas Mermaid, aplica estilos CSS corporativos y actualiza los artefactos (PDF e HTML) en Google Drive manteniendo el mismo enlace de acceso.
 
 > [!TIP]
-> <i data-lucide="github"></i> **Repositorio GitHub:** [github.com/shellaquiles/pandocquiles](https://github.com/shellaquiles/pandocquiles)
+> **Acciones del Proyecto:**  
+> <a href="https://github.com/shellaquiles/pandocquiles" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Proyecto ↗</a> &nbsp;
+> <a href="https://github.com/shellaquiles/pandocquiles" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github"></i> Repositorio GitHub ↗</a>
 
 ---
 
