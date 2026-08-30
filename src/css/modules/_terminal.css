@@ -1,80 +1,20 @@
 /**
- * Terminal Base Styles
- * Main terminal container and layout
+ * Terminal Base & Layout Styles
+ * Layout editorial minimalista unificado con Cron-Quiles
  */
 
-.terminal {
-    padding: var(--spacing-lg);
-    max-width: var(--breakpoint-xl);
+.container, .terminal {
+    max-width: 1024px;
     margin: 0 auto;
+    padding: 2rem 1.5rem;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 
-/* Terminal Header */
-.terminal-header {
-    text-align: center;
-    margin-bottom: var(--spacing-xxl);
-    padding: var(--spacing-lg);
-    border-bottom: 2px solid var(--terminal-green);
-}
-
-.terminal-title {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: var(--spacing-sm);
-}
-
-.terminal-subtitle {
-    color: var(--terminal-white);
-    font-size: 1.2em;
-}
-
-/* Command Prompts */
-.prompt {
-    color: var(--terminal-green);
-    margin-bottom: var(--spacing-sm);
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-
-.prompt .cursor {
-    margin-right: var(--spacing-sm);
-    color: var(--terminal-green);
-}
-
-.prompt .command-text {
-    color: var(--terminal-white);
-    margin-left: var(--spacing-sm);
-}
-
-/* Command Output */
-.output {
-    color: var(--terminal-green);
-    margin-bottom: var(--spacing-xl);
-    animation: fadeIn 1s ease-in;
-    padding-left: var(--spacing-lg);
-    border-left: 2px solid var(--terminal-green);
-    margin-left: var(--spacing-lg);
-}
-
-.highlight {
-    color: var(--terminal-red);
-    font-weight: bold;
-}
-
-/* Sections */
-.section {
-    margin: var(--spacing-xxl) 0;
-    padding: var(--spacing-lg);
-    border-left: 3px solid var(--terminal-green);
-    background: rgba(0, 255, 0, 0.05);
-    border-radius: var(--radius-md);
-}
-
-/* Terminal Effects */
-.terminal::before {
+/* Fondo ambiental Matrix sutil */
+body::before, .terminal::before {
     content: '';
     position: fixed;
     top: 0;
@@ -82,8 +22,296 @@
     width: 100%;
     height: 100%;
     background:
-        radial-gradient(circle at 20% 80%, rgba(0, 255, 0, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 0, 0, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 15% 15%, rgba(0, 255, 102, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(0, 255, 102, 0.02) 0%, transparent 40%);
     pointer-events: none;
     z-index: -1;
+}
+
+/* ==========================================================================
+   SITE HEADER: BARRA HORIZONTAL COMPACTA DE 1 LÍNEA
+   ========================================================================== */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   ESTILO DE MARCA OFICIAL SHELLAQUILES
+   {{ shellaquiles.org }} -> Brackets gris, 'shell' verde, 'aquiles' blanco, '.org' rojo/coral
+   ========================================================================== */
+.shellaquiles-brand {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.2rem 0.45rem;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    transition: all var(--transition-fast);
+}
+
+.shellaquiles-brand:hover {
+    background: var(--bg-subtle);
+    border-color: var(--matrix-accent);
+    box-shadow: var(--matrix-glow);
+}
+
+.sq-bracket {
+    color: var(--logo-brace); /* #9CA3AF / Gris brackets {{ }} */
+}
+
+.sq-shell {
+    color: var(--matrix-bright); /* #00ff66 / Verde Matrix Fósforo */
+    text-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
+}
+
+.sq-aquiles {
+    color: #f8fafc; /* Blanco limpio */
+}
+
+html.light .sq-aquiles {
+    color: #09090b; /* Modo claro texto negro */
+}
+
+.sq-dot {
+    color: #ff4d6d; /* #ff4d6d / Punto rojo coral */
+}
+
+.sq-org {
+    color: #ff4d6d; /* #ff4d6d / Org rojo coral */
+    text-shadow: 0 0 6px rgba(255, 77, 109, 0.35);
+}
+
+.brand-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    transition: opacity var(--transition-fast);
+}
+
+.brand-title:hover {
+    opacity: 0.85;
+}
+
+.brand-logo-svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    stroke: var(--matrix-bright);
+    flex-shrink: 0;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 4px rgba(0, 255, 102, 0.45));
+    transition: transform 0.25s ease;
+}
+
+.brand-title:hover .brand-logo-svg {
+    transform: rotate(12deg) scale(1.08);
+}
+
+/* Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.main-nav .nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    padding: 0.25rem 0;
+}
+
+.main-nav .nav-link:hover {
+    color: var(--text);
+}
+
+.main-nav .nav-link.active {
+    color: var(--matrix-bright);
+    font-weight: 700;
+    border-bottom: 2px solid var(--matrix-bright);
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* ==========================================================================
+   HERO PRINCIPAL EDITORIAL
+   ========================================================================== */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    flex: 1;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 0.5rem 0 2rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-badge {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--matrix-bright);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    color: var(--text);
+    max-width: 720px;
+    font-family: var(--font-sans);
+}
+
+.hero-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 680px;
+    font-family: var(--font-sans);
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   FOOTER JUSTIFICADO
+   ========================================================================== */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 0 1rem 0;
+    margin-top: 3.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.footer-credits {
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.footer-link {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    transition: all 0.15s ease;
+}
+
+.footer-link:hover {
+    color: var(--matrix-bright);
+    border-bottom-color: var(--matrix-bright);
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.7rem;
+    flex-wrap: wrap;
+}
+
+.footer-sublink {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.footer-sublink:hover {
+    color: var(--matrix-bright);
+}
+
+.sep {
+    color: var(--border);
+    user-select: none;
+}
+
+.brand-sep {
+    color: var(--matrix-bright);
+    font-weight: 700;
+    margin-right: 0.2rem;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+}
+
+.sync-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.7rem;
+    flex-wrap: wrap;
+}
+
+.sync-label {
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+}
+
+.sync-badge {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.45rem;
+    border-radius: 2px;
+    color: var(--matrix-bright);
+    font-weight: 600;
 }

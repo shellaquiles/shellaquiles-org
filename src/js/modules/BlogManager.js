@@ -119,7 +119,7 @@ export class BlogManager {
         const path = window.location.pathname;
         this.handleRoute(path);
 
-        const terminal = document.querySelector('.terminal');
+        const terminal = document.querySelector('.container, .terminal');
         if (!terminal) {
             this.isRendering = false;
             setTimeout(() => this.renderCurrentView(), 100);
@@ -153,7 +153,7 @@ export class BlogManager {
      * Show home page (original content)
      */
     showHome() {
-        const terminal = document.querySelector('.terminal');
+        const terminal = document.querySelector('.container, .terminal');
         if (!terminal) return;
 
         // Check if home content exists
@@ -174,7 +174,7 @@ export class BlogManager {
      * Show blog list
      */
     showBlogList() {
-        const terminal = document.querySelector('.terminal');
+        const terminal = document.querySelector('.container, .terminal');
         if (!terminal) {
             return;
         }
@@ -240,7 +240,7 @@ export class BlogManager {
             return;
         }
 
-        const terminal = document.querySelector('.terminal');
+        const terminal = document.querySelector('.container, .terminal');
         if (!terminal) return;
 
         // Hide home content
@@ -314,7 +314,7 @@ export class BlogManager {
      * Show 404 page
      */
     show404() {
-        const terminal = document.querySelector('.terminal');
+        const terminal = document.querySelector('.container, .terminal');
         if (!terminal) return;
 
         let blogContainer = document.querySelector('.blog-content');
@@ -348,53 +348,87 @@ export class BlogManager {
     /**
      * Render blog list HTML
      */
+    /**
+     * Render blog list HTML (Estilo Editorial Cron-Quiles)
+     */
     renderBlogListHTML() {
         if (this.posts.length === 0) {
             return `
-                <div class="prompt">
-                    <span class="cursor">$</span>
-                    <span class="command-text">ls posts/</span>
-                </div>
-                <div class="output">
-                    <h2>Blog</h2>
-                    <p>No hay posts disponibles aún.</p>
+                <div class="blog-header-section">
+                    <div class="hero-badge">// BLOG & ARTÍCULOS</div>
+                    <h1 class="hero-title">Blog de Shellaquiles</h1>
+                    <p class="hero-desc">No hay artículos publicados todavía.</p>
                 </div>
             `;
         }
 
-        const postsHTML = this.posts.map(post => `
-            <article class="blog-post-preview" data-slug="${post.slug}">
-                <div class="post-header">
-                    <h3><a href="/blog/${post.slug}" data-navigate="/blog/${post.slug}">${post.title}</a></h3>
-                    <div class="post-meta">
-                        <span class="post-date">${this.formatDate(post.date)}</span>
-                        <span class="post-author">por ${post.author}</span>
-                        <span class="post-category">${post.category}</span>
+        const postsHTML = this.posts.map(post => {
+            const { day, monthYear } = this.formatDateParts(post.date);
+            const categoryBadge = post.category ? `<span class="badge badge-accent">${post.category.toUpperCase()}</span>` : '';
+            const author = post.author ? `<span class="post-author">// por ${post.author}</span>` : '';
+            const tagsHTML = (post.tags || []).map(tag => `<span class="post-tag">#${tag}</span>`).join('');
+
+            return `
+                <article class="post-card" data-slug="${post.slug}">
+                    <!-- Columna lateral: Fecha -->
+                    <div class="post-date-block">
+                        <span class="post-day">${day}</span>
+                        <span class="post-month-year">${monthYear}</span>
                     </div>
-                </div>
-                <div class="post-excerpt">
-                    ${post.excerpt}
-                </div>
-                <div class="post-tags">
-                    ${post.tags.map(tag => `<span class="tag">#${tag}</span>`).join('')}
-                </div>
-                <a href="/blog/${post.slug}" class="btn read-more-btn" data-navigate="/blog/${post.slug}">Leer más →</a>
-            </article>
-        `).join('');
+
+                    <!-- Contenido Central -->
+                    <div class="post-main">
+                        <div class="post-meta-row">
+                            ${categoryBadge}
+                            ${author}
+                        </div>
+
+                        <h2 class="post-title">
+                            <a href="/blog/${post.slug}" data-navigate="/blog/${post.slug}">${post.title}</a>
+                        </h2>
+
+                        <p class="post-summary">
+                            ${post.excerpt || ''}
+                        </p>
+
+                        <div class="post-tags">
+                            ${tagsHTML}
+                        </div>
+                    </div>
+
+                    <!-- Botón de Acción Técnico -->
+                    <div class="post-action">
+                        <a href="/blog/${post.slug}" class="btn btn-outline" data-navigate="/blog/${post.slug}">Leer artículo ↗</a>
+                    </div>
+                </article>
+            `;
+        }).join('');
 
         return `
-            <div class="prompt">
-                <span class="cursor">$</span>
-                <span class="command-text">ls posts/</span>
+            <div class="blog-header-section">
+                <div class="hero-badge">// BLOG & ARTÍCULOS</div>
+                <h1 class="hero-title">Artículos, Cátedras & Novedades</h1>
+                <p class="hero-desc">Publicaciones técnicas, reflexiones de arquitectura y guías del ecosistema open source en México.</p>
             </div>
-            <div class="output blog-list">
-                <h2>Blog de Shellaquiles</h2>
-                <p>Articulos, tutoriales y noticias de la comunidad tech más inclusiva de México.</p>
-                <div class="posts-container">
-                    ${postsHTML}
-                </div>
+            <div class="blog-list">
+                ${postsHTML}
             </div>
         `;
+    }
+
+    /**
+     * Helper to split date into day and month/year
+     */
+    formatDateParts(dateString) {
+        const date = new Date(dateString);
+        const day = String(date.getDate()).padStart(2, '0');
+        const months = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
+        const month = months[date.getMonth()] || 'MES';
+        const year = date.getFullYear();
+        return {
+            day,
+            monthYear: `${month} / ${year}`
+        };
     }
 
     /**
@@ -413,7 +447,6 @@ export class BlogManager {
                     return await response.text();
                 }
             } catch (error) {
-                // Try next path
                 continue;
             }
         }
@@ -428,69 +461,64 @@ export class BlogManager {
     async renderPostHTML(post) {
         // Load content from Markdown file
         const markdownContent = await this.loadPostContent(post.slug);
+        const { day, monthYear } = this.formatDateParts(post.date);
 
         if (!markdownContent) {
             return `
-                <div class="prompt">
-                    <span class="cursor">$</span>
-                    <span class="command-text">cat posts/${post.slug}.md</span>
-                </div>
-                <div class="output blog-post">
-                    <article class="post-content">
-                        <header class="post-header-single">
-                            <h1>${post.title}</h1>
-                            <div class="post-meta">
-                                <span class="post-date">${this.formatDate(post.date)}</span>
-                                <span class="post-author">por ${post.author}</span>
-                                <span class="post-category">${post.category}</span>
-                            </div>
-                        </header>
-                        <div class="post-body">
-                            <p>Error: No se pudo cargar el contenido del post.</p>
+                <main class="blog-post-view">
+                    <div class="post-control-bar">
+                        <a href="/blog" class="btn-back" data-navigate="/blog">← VOLVER AL BLOG</a>
+                        <div class="meta-right">
+                            <span class="badge badge-accent">${(post.category || 'ARTÍCULO').toUpperCase()}</span>
+                            <span style="color: var(--text-muted); margin-left: 0.5rem;">${day} ${monthYear}</span>
                         </div>
-                        <footer class="post-footer">
-                            <a href="/blog" class="btn primary-btn" data-navigate="/blog">← Volver al blog</a>
-                        </footer>
+                    </div>
+                    <article class="article-sheet">
+                        <h1>${post.title}</h1>
+                        <p style="color: var(--text-muted);">Error al cargar el contenido del artículo.</p>
                     </article>
-                </div>
+                </main>
             `;
         }
 
-        // Convert markdown content to HTML
+        // Convert markdown content to HTML using updated single-sheet parser
         const content = this.parseMarkdown(markdownContent);
+        const tagsHTML = (post.tags || []).map(tag => `<span class="post-tag">#${tag}</span>`).join('');
 
         return `
-            <div class="prompt">
-                <span class="cursor">$</span>
-                <span class="command-text">cat posts/${post.slug}.md</span>
-            </div>
-            <div class="output blog-post">
-                <article class="post-content">
-                    <header class="post-header-single">
+            <main class="blog-post-view">
+                <!-- Barra de control de utilidades -->
+                <div class="post-control-bar">
+                    <a href="/blog" class="btn-back" data-navigate="/blog">← VOLVER AL BLOG</a>
+                    <div class="meta-right">
+                        <span class="badge badge-accent">${(post.category || 'ARTÍCULO').toUpperCase()}</span>
+                        <span style="color: var(--text-muted); margin-left: 0.5rem;">${day} ${monthYear}</span>
+                    </div>
+                </div>
+
+                <!-- Hoja única de lectura continua (780px) -->
+                <article class="article-sheet">
+                    <header class="article-header">
+                        <div class="hero-badge">// ARTÍCULO TÉCNICO // por ${post.author || '@pixelead0'}</div>
                         <h1>${post.title}</h1>
-                        <div class="post-meta">
-                            <span class="post-date">${this.formatDate(post.date)}</span>
-                            <span class="post-author">por ${post.author}</span>
-                            <span class="post-category">${post.category}</span>
-                        </div>
-                        <div class="post-tags">
-                            ${post.tags.map(tag => `<span class="tag">#${tag}</span>`).join('')}
+                        ${post.excerpt ? `<p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-top: 0.2rem;">${post.excerpt}</p>` : ''}
+                        <div class="post-tags-row" style="margin-top: 0.75rem;">
+                            ${tagsHTML}
                         </div>
                     </header>
-                    <div class="post-body">
+
+                    <div class="article-body">
                         ${content}
                     </div>
-                    <footer class="post-footer">
-                        <a href="/blog" class="btn primary-btn" data-navigate="/blog">← Volver al blog</a>
-                    </footer>
                 </article>
-            </div>
+
+                <div class="post-footer-nav" style="margin-top: 1.25rem;">
+                    <a href="/blog" class="btn btn-outline" data-navigate="/blog">← Volver al Blog</a>
+                </div>
+            </main>
         `;
     }
 
-    /**
-     * Parse simple markdown-like syntax to HTML
-     */
     /**
      * Parse simple markdown-like syntax to HTML using shared utility
      */
@@ -515,17 +543,47 @@ export class BlogManager {
         // Only setup navigation listener once
         if (!this.navigationSetup) {
             // Use event delegation on the document
-            // This way we don't need to remove/add listeners each time
             document.addEventListener('click', (e) => {
-                const link = e.target.closest('[data-navigate]');
-                if (link) {
-                    e.preventDefault();
-                    const path = link.getAttribute('data-navigate') || link.getAttribute('href');
+                const link = e.target.closest('a');
+                if (!link) return;
+
+                const href = link.getAttribute('href');
+                const navigatePath = link.getAttribute('data-navigate');
+
+                // Si es un hash link (#proyectos, #manifiesto)
+                if (href && href.startsWith('#')) {
+                    const targetId = href.substring(1);
+                    const targetEl = document.getElementById(targetId);
+                    
+                    // Si estamos en la vista de blog y se clica un hash, volver al home primero
+                    if (this.currentView !== 'home') {
+                        e.preventDefault();
+                        this.navigate('/');
+                        setTimeout(() => {
+                            const el = document.getElementById(targetId);
+                            if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }, 100);
+                        return;
+                    }
+
+                    if (targetEl) {
+                        e.preventDefault();
+                        targetEl.scrollIntoView({ behavior: 'smooth' });
+                        // Actualizar hash en URL sin recarga
+                        history.pushState(null, '', href);
+                    }
+                    return;
+                }
+
+                // Si tiene data-navigate o es una ruta interna (/ o /blog)
+                if (navigatePath || (href && (href === '/' || href.startsWith('/blog')))) {
+                    const path = navigatePath || href;
                     if (path) {
+                        e.preventDefault();
                         this.navigate(path);
                     }
                 }
-            }, true); // Use capture phase to catch events early
+            }, true); // Use capture phase
             this.navigationSetup = true;
         }
 

@@ -1,17 +1,19 @@
 /**
  * Animations and Keyframes
  * All CSS animations and effects
+ * Unificado con el Design System de Cron-Quiles
  */
 
-/* Cursor Animation */
+/* Cursor Animation (terminal blinking) */
 .cursor {
-    animation: blink 1s infinite;
+    animation: blink-cursor 1s step-end infinite;
     font-weight: bold;
+    color: var(--matrix-bright);
 }
 
-@keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+@keyframes blink-cursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 /* Typewriter Effect */
@@ -26,11 +28,11 @@
     }
 }
 
-/* Fade In Animation */
+/* Fade In - Micro-animación sutil (estilo cron-quiles) */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
@@ -41,7 +43,7 @@
 /* Slide In Animation */
 @keyframes slideIn {
     from {
-        transform: translateX(-100%);
+        transform: translateX(-20px);
         opacity: 0;
     }
     to {
@@ -64,33 +66,39 @@
 
 /* Reveal Animation for Scroll Effects */
 .revealed {
-    animation: slideIn 0.6s ease-out forwards;
+    animation: slideIn 0.5s ease-out forwards;
 }
 
 /* Animation Classes for JavaScript */
 .fade-in {
-    animation: fadeIn 0.5s ease-in forwards;
+    animation: fadeIn 0.4s ease-in forwards;
 }
 
 .slide-in-left {
-    animation: slideIn 0.5s ease-out forwards;
+    animation: slideIn 0.4s ease-out forwards;
 }
 
-/* Animation States */
+/* Animation States - más suaves que antes */
 .nodo, .proyecto, .section {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
+    transform: translateY(16px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .prompt {
     opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.6s ease;
+    transform: translateX(-16px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .output {
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Matrix scan line effect (sutil, non-distracting) */
+@keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
 }

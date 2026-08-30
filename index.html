@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shellaquiles.org | Open Source, Colaboración y Comunidad Tech en México</title>
-    <meta name="description" content="Shellaquiles: El ecosistema definitivo de Open Source y colaboración en México liderado por @pixelead0. Talleres, cursos y meetups de Python CDMX y Python México para impulsar el talento mediante la sabiduría colectiva.">
+    <title>Shellaquiles.org | Ecosistema Open Source y Comunidad Tech en México</title>
+    <meta name="description" content="Shellaquiles: Ecosistema open source y comunidad técnica en México. Proyectos colaborativos, talleres de Python y soberanía tecnológica liderados por @pixelead0.">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shellaquiles.org/">
-    <meta property="og:title" content="Shellaquiles.org | Python México, Python CDMX y Open Source liderado por @pixelead0">
-    <meta property="og:description" content="Ecosistema de Open Source y colaboración en México liderado por @pixelead0. Hogar de Python CDMX y Python México. Talleres, cursos y meetups técnicos.">
+    <meta property="og:title" content="Shellaquiles.org | Ecosistema Open Source en México">
+    <meta property="og:description" content="Ecosistema open source, colaboración y comunidad técnica en México. Proyectos como Cron-Quiles, Pyquiles y talleres técnicos.">
     <meta property="og:image" content="https://shellaquiles.org/assets/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://shellaquiles.org/">
-    <meta property="twitter:title" content="Shellaquiles.org | Python México, Python CDMX y Open Source liderado por @pixelead0">
-    <meta property="twitter:description" content="Ecosistema de Open Source y colaboración en México liderado por @pixelead0. Hogar de Python CDMX y Python México.">
+    <meta property="twitter:title" content="Shellaquiles.org | Ecosistema Open Source en México">
+    <meta property="twitter:description" content="Ecosistema open source y comunidad técnica en México. Proyectos, talleres y colaboración abierta.">
     <meta property="twitter:image" content="https://shellaquiles.org/assets/og-image.png">
 
     <!-- Canonical -->
@@ -31,12 +31,11 @@
       "name": "Shellaquiles",
       "url": "https://shellaquiles.org",
       "logo": "https://shellaquiles.org/assets/logo.png",
-      "description": "El ecosistema definitivo de Open Source y colaboración en México liderado por @pixelead0. Punto de encuentro para Python CDMX y Python México.",
+      "description": "El ecosistema definitivo de Open Source y colaboración en México liderado por @pixelead0.",
       "founder": {
         "@type": "Person",
         "name": "@pixelead0"
       },
-      "keywords": "Open Source México, Python México, Python CDMX, @pixelead0, Colaboración Técnica, Meetups Tech",
       "sameAs": [
         "https://github.com/shellaquiles",
         "https://t.me/shellaquiles"
@@ -46,147 +45,266 @@
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
+    <!-- Google Fonts: Geist & Geist Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600;700&family=Geist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Anti-flicker: inicializa html.dark antes del primer render -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('sq-theme');
+            var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved === 'light') {
+                document.documentElement.classList.add('light');
+            } else {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
 <body>
-    <div class="terminal">
-        <!-- Terminal Header -->
-        <div class="terminal-header">
-            <div class="logo-container">
-                <div class="logo">
-                    <div class="logo-card">
-                        <div class="logo-arrows">«««</div>
-                        <div class="logo-text">
-                            <span class="logo-brace">{{</span>
-                            <span class="logo-shell">shell</span><span class="logo-aquiles">aquiles</span><span class="logo-tld">.org</span>
-                            <span class="logo-brace">}}</span>
-                        </div>
-                        <div class="logo-arrows">»»»</div>
-                    </div>
-                </div>
+    <div class="container">
+        <!-- Header Horizontal de 1 sola línea -->
+        <header class="site-header">
+            <div class="header-left">
+                <a href="/" class="brand-title" data-navigate="/">
+                    <svg class="brand-logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="4 17 10 11 4 5"></polyline>
+                        <line x1="12" y1="19" x2="20" y2="19" class="prompt-cursor"></line>
+                    </svg>
+                    <span class="shellaquiles-brand">
+                        <span class="sq-bracket">{{</span>
+                        <span class="sq-shell">shell</span><span class="sq-aquiles">aquiles</span><span class="sq-dot">.</span><span class="sq-org">org</span>
+                        <span class="sq-bracket">}}</span>
+                    </span>
+                </a>
+                <nav class="main-nav" aria-label="Navegación principal">
+                    <a href="/" class="nav-link active" data-navigate="/">Inicio</a>
+                    <a href="#proyectos" class="nav-link">Proyectos</a>
+                    <a href="/blog/manifiesto" class="nav-link" data-navigate="/blog/manifiesto">Manifiesto</a>
+                    <a href="/blog" class="nav-link" data-navigate="/blog">Blog</a>
+                </nav>
             </div>
-            <div class="terminal-subtitle">Open Source, Colaboración y Comunidad: Talleres, cursos y meetups tech en México</div>
-        <nav class="terminal-nav">
-            <a href="/" class="nav-link" data-navigate="/">Inicio</a>
-            <a href="/blog" class="nav-link" data-navigate="/blog">Blog</a>
-        </nav>
-        </div>
+
+            <div class="header-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span id="themeIcon">◐</span>
+                    <span id="themeLabel">MODO CLARO</span>
+                </button>
+            </div>
+        </header>
 
         <!-- Home Content -->
         <div class="home-content">
-        <!-- Comando 1: Qué es Shellaquiles -->
-        <div class="prompt">
-            <span class="cursor">$</span>
-            <span class="command-text">cat manifiesto.txt</span>
-        </div>
-        <div class="output" id="section-manifiesto">
-            <!-- Content loaded from manifiesto.txt -->
-        </div>
-
-        <!-- Comando 2: Proyectos -->
-        <div class="prompt">
-            <span class="cursor">$</span>
-            <span class="command-text">ls proyectos/</span>
-        </div>
-        <div class="output" id="section-proyectos">
-            <!-- Content loaded from proyectos.txt -->
-        </div>
-
-        <!-- Comando 3: Blog -->
-        <div class="prompt">
-            <span class="cursor">$</span>
-            <span class="command-text">ls blog/</span>
-        </div>
-        <div class="output" id="section-blog">
-            <!-- Content loaded from blog.txt -->
-        </div>
-
-        <!-- Comando 4: Filosofía -->
-        <div class="prompt">
-            <span class="cursor">$</span>
-            <span class="command-text">cat filosofia.txt</span>
-        </div>
-        <div class="output" id="section-filosofia">
-            <!-- Content loaded from filosofia.txt -->
-        </div>
-
-        <!-- Comando 5: Organización -->
-        <div class="prompt">
-            <span class="cursor">$</span>
-            <span class="command-text">ls organizacion/</span>
-        </div>
-        <div class="output" id="section-organizacion">
-            <!-- Content loaded from organizacion.txt -->
-        </div>
-
-        <!-- Comando 6: Alianzas y Sustentabilidad -->
-        <div class="prompt">
-            <span class="cursor">$</span>
-            <span class="command-text">ls aliados/</span>
-        </div>
-        <div class="output" id="section-aliados">
-            <!-- Content loaded from aliados.txt -->
-        </div>
-
-        <!-- Comando 7: El Líder Supremo -->
-        <div class="prompt">
-            <span class="cursor">$</span>
-            <span class="command-text">finger pixelead0</span>
-        </div>
-        <div class="output" id="section-pixelead0">
-            <!-- Content loaded from pixelead0.txt -->
-        </div>
-
-        <!-- Comando 8: Valores -->
-        <div class="prompt">
-            <span class="cursor">$</span>
-            <span class="command-text">cat valores.txt</span>
-        </div>
-        <div class="output" id="section-valores">
-            <!-- Content loaded from valores.txt -->
-        </div>
-
-        <!-- Comando 9: Participar -->
-        <div class="prompt">
-            <span class="cursor">$</span>
-            <span class="command-text">./participar.sh</span>
-        </div>
-        <div class="output" id="section-participar">
-            <!-- Content loaded from participar.txt -->
-        </div>
-
-        <!-- Comando 10: Reliquias y Ofrendas -->
-        <div class="prompt">
-            <span class="cursor">$</span>
-            <span class="command-text">ls /ofrendas</span>
-        </div>
-        <div class="output" id="section-ofrendas">
-            <!-- Content loaded from ofrendas.txt -->
-        </div>
-
-
-        <!-- CTA Final -->
-        <div class="cta">
-            <h2>Súmate a nuestra misión</h2>
-            <p>Si eres una persona interesada en aprender tecnología para mejorar tu futuro profesional, o representas a una empresa que busca apoyar el desarrollo técnico en México, este es tu lugar.</p>
-
-            <p><strong>Shellaquiles: impulsando el talento tecnológico nacional.</strong></p>
-            <p><em>Construyendo juntos un futuro más innovador.</em></p>
-        </div>
-     <div class="contact-info">
-                <div class="email">comunidad@shellaquiles.org</div>
-                <div class="social-links">
-                    <a href="https://t.me/shellaquiles" class="btn social-btn" target="_blank" rel="noopener noreferrer">Telegram</a>
-                    <a href="https://github.com/shellaquiles/shellaquiles-org" class="btn social-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <!-- 1. Hero Principal -->
+            <section class="hero-section">
+                <div class="hero-badge">// ECOSISTEMA OPEN SOURCE MÉXICO</div>
+                <h1 class="hero-title">Ecosistema open source y comunidad tecnológica en México.</h1>
+                <p class="hero-desc">
+                    Forjamos herramientas abiertas, cátedras de sabiduría técnica y espacios de vinculación real para desarrolladores e ingenieros en todo el país. Menos burocracia, más ejecución de hierro.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://t.me/shellaquiles" target="_blank" rel="noopener noreferrer" class="btn btn-main">Unirse a Telegram ↗</a>
+                    <a href="https://github.com/shellaquiles" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Explorar en GitHub ↗</a>
+                    <a href="https://cron-quiles.shellaquiles.org" target="_blank" rel="noopener" class="btn btn-outline">Cron-Quiles ↗</a>
                 </div>
-                <a href="#contact" class="btn primary-btn">¡Conectemos!</a>
+            </section>
+
+            <!-- 2. Grid Editorial de 4 Bloques Modulares -->
+            <div class="editorial-grid">
+                <!-- Bloque 01: Proyectos Activos -->
+                <article class="editorial-card" id="proyectos">
+                    <div class="card-header">
+                        <span class="card-badge">// 01. PROYECTOS ACTIVOS</span>
+                        <h2 class="card-title">Iniciativas del Ecosistema</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Software y recursos creados para fortalecer la soberanía tecnológica nacional:</p>
+                        <ul class="project-list">
+                            <li class="project-item">
+                                <a href="https://shellaquiles.github.io/cron-quiles/" target="_blank" rel="noopener" class="project-link">
+                                    Cron-Quiles ↗
+                                </a>
+                                <span class="project-desc">Calendario unificado y agregador nacional de eventos de tecnología en México.</span>
+                            </li>
+                            <li class="project-item">
+                                <a href="https://pixelead0.github.io/pyquiles-al-pastor/" target="_blank" rel="noopener" class="project-link">
+                                    Pyquiles al Pastor ↗
+                                </a>
+                                <span class="project-desc">Cátedra de sabiduría sobre Python moderno y arquitectura de alto nivel.</span>
+                            </li>
+                            <li class="project-item">
+                                <a href="https://shellaquiles.github.io/frases-chingonas/" target="_blank" rel="noopener" class="project-link">
+                                    Frases Chingonas ↗
+                                </a>
+                                <span class="project-desc">Sabiduría técnica en cápsulas de ejecución para desarrolladores.</span>
+                            </li>
+                            <li class="project-item">
+                                <a href="/blog" data-navigate="/blog" class="project-link">
+                                    Bits de Conocimiento →
+                                </a>
+                                <span class="project-desc">Artículos de absorción acelerada y lecciones de arquitectura colectiva.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/shellaquiles" target="_blank" rel="noopener noreferrer" class="btn btn-subtle">Ver todos en GitHub ↗</a>
+                    </div>
+                </article>
+
+                <!-- Bloque 02: Manifiesto & Valores -->
+                <article class="editorial-card" id="manifiesto">
+                    <div class="card-header">
+                        <span class="card-badge">// 02. MANIFIESTO & FILOSOFÍA</span>
+                        <h2 class="card-title">Ejecución de Hierro</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Shellaquiles no es burocracia corporativa: es <strong>La Gran Obra</strong> orientada a elevar el estándar técnico nacional mediante colaboración genuina y código abierto.
+                        </p>
+                        <p>
+                            <strong>• Pragmatismo Absoluto:</strong> Nos orientamos exclusivamente a lo que escala y funciona en producción.
+                        </p>
+                        <p>
+                            <strong>• Reducción de la Brecha:</strong> Combatimos la desigualdad tecnológica compartiendo conocimiento práctico sin barreras.
+                        </p>
+                        <p>
+                            <strong>• Apoyo Mutuo:</strong> El crecimiento individual solo cobra sentido cuando fortalece a toda la comunidad técnica.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/blog/manifiesto" data-navigate="/blog/manifiesto" class="btn btn-main">Leer Manifiesto Completo ↗</a>
+                    </div>
+                </article>
+
+                <!-- Bloque 03: Comunidades & Alianzas -->
+                <article class="editorial-card" id="alianzas">
+                    <div class="card-header">
+                        <span class="card-badge">// 03. COMUNIDADES & ALIANZAS</span>
+                        <h2 class="card-title">Vinculación y Red Nacional</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Un punto de encuentro para gremios de desarrollo, meetups regionales y organizadores de eventos en México.
+                        </p>
+                        <p>
+                            <strong>• Sinergia de Gremios:</strong> Conectamos colectivos técnicos (Python CDMX, Rust MX, IA CDMX, etc.) en un solo tejido colaborativo.
+                        </p>
+                        <p>
+                            <strong>• Vinculación Industrial:</strong> Fomentamos alianzas con empresas y patrocinadores que invierten en talento de ingeniería real.
+                        </p>
+                        <p>
+                            <strong>• Cátedras y Dojos:</strong> Espacios de práctica y resolución de problemas de arquitectura de software.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://shellaquiles.github.io/cron-quiles/comunidades.html" target="_blank" rel="noopener" class="btn btn-subtle">Ver Directorio de Comunidades ↗</a>
+                    </div>
+                </article>
+
+                <!-- Bloque 04: Participar & Soporte -->
+                <article class="editorial-card" id="participar">
+                    <div class="card-header">
+                        <span class="card-badge">// 04. PARTICIPAR // OFRENDAS</span>
+                        <h2 class="card-title">Súmate a la Misión</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Todo aquel que busque forjar software y compartir conocimiento puede sumarse a las actividades del ecosistema:
+                        </p>
+                        <p>
+                            <strong>• Difunde Sabiduría:</strong> Propón una cátedra técnica o workshop para la comunidad.
+                        </p>
+                        <p>
+                            <strong>• Forja el Código:</strong> Envía pull requests a nuestros repositorios públicos y herramientas abiertas.
+                        </p>
+                        <p>
+                            <strong>• Tributos & Reliquias:</strong> Apoya la infraestructura de servidores y obtén swag exclusivo (stickers, vestimentas y pines).
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://t.me/shellaquiles" target="_blank" rel="noopener noreferrer" class="btn btn-main">Entrar a la Comunidad ↗</a>
+                        <a href="mailto:comunidad@shellaquiles.org" class="btn btn-subtle">Contacto Directo</a>
+                    </div>
+                </article>
             </div>
         </div>
         <!-- End Home Content -->
 
-        <!-- Blog Content (dynamically generated) -->
+        <!-- Blog Content (renderizado dinámicamente) -->
         <div class="blog-content" style="display: none;"></div>
+
+        <!-- Footer Justificado -->
+        <footer class="footer">
+            <div class="footer-left">
+                <div class="footer-credits">
+                    <span class="brand-sep">//</span>
+                    <span>un ecosistema impulsado por</span>
+                    <a href="https://shellaquiles.org" class="footer-link"><strong>shellaquiles.org</strong></a>
+                    <span class="sep">•</span>
+                    <span>liderado por</span>
+                    <a href="https://github.com/pixelead0" target="_blank" rel="noopener" class="footer-link"><strong>@pixelead0</strong></a>
+                </div>
+                <div class="footer-nav">
+                    <a href="https://github.com/shellaquiles" target="_blank" rel="noopener" class="footer-sublink">GitHub</a>
+                    <span class="sep">•</span>
+                    <a href="https://t.me/shellaquiles" target="_blank" rel="noopener" class="footer-sublink">Telegram</a>
+                    <span class="sep">•</span>
+                    <a href="https://shellaquiles.github.io/cron-quiles/" target="_blank" rel="noopener" class="footer-sublink">Cron-Quiles</a>
+                    <span class="sep">•</span>
+                    <a href="/blog" data-navigate="/blog" class="footer-sublink">Blog</a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="sync-status">
+                    <span class="sync-label">ESTADO:</span>
+                    <span class="sync-badge">ONLINE // v2.0</span>
+                </div>
+                <div class="sync-status">
+                    <span class="sync-label">LICENCIA:</span>
+                    <span class="sync-badge">MIT / OPEN SOURCE</span>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script src="/js/script.js"></script>
+    <script>
+        // Theme Toggle - Dark/Light (Design System compartido con cron-quiles)
+        (function() {
+            var btn = document.getElementById('themeToggle');
+            var icon = document.getElementById('themeIcon');
+            var label = document.getElementById('themeLabel');
+            var html = document.documentElement;
+
+            function applyTheme(theme) {
+                if (theme === 'light') {
+                    html.classList.remove('dark');
+                    html.classList.add('light');
+                    if (icon) icon.textContent = '◑';
+                    if (label) label.textContent = 'MODO OSCURO';
+                } else {
+                    html.classList.remove('light');
+                    html.classList.add('dark');
+                    if (icon) icon.textContent = '◐';
+                    if (label) label.textContent = 'MODO CLARO';
+                }
+                localStorage.setItem('sq-theme', theme);
+            }
+
+            var current = localStorage.getItem('sq-theme') || 'dark';
+            applyTheme(current);
+
+            if (btn) {
+                btn.addEventListener('click', function() {
+                    var next = html.classList.contains('dark') ? 'light' : 'dark';
+                    applyTheme(next);
+                });
+            }
+        })();
+    </script>
 </body>
 </html>

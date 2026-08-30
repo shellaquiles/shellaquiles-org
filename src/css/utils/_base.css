@@ -1,5 +1,6 @@
 /**
  * Base CSS - Reset and basic element styles
+ * Unificado con el Design System de Cron-Quiles
  */
 
 /* CSS Reset */
@@ -15,12 +16,16 @@ html {
 }
 
 body {
-    background: var(--terminal-black);
-    color: var(--terminal-green);
-    font-family: var(--font-family-mono);
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
     line-height: var(--line-height-normal);
     overflow-x: hidden;
     font-size: var(--font-size-base);
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
 }
 
 /* Typography */
@@ -28,21 +33,23 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     line-height: var(--line-height-tight);
     margin-bottom: var(--spacing-md);
+    color: var(--text);
 }
 
 p {
     margin-bottom: var(--spacing-md);
+    color: var(--text-muted);
 }
 
 /* Links */
 a {
-    color: var(--terminal-green);
+    color: var(--matrix-bright);
     text-decoration: none;
-    transition: color var(--transition-normal);
+    transition: color var(--transition-fast);
 }
 
 a:hover {
-    color: var(--terminal-white);
+    color: var(--text);
 }
 
 /* Lists */
@@ -53,6 +60,7 @@ ul, ol {
 
 li {
     margin-bottom: var(--spacing-sm);
+    color: var(--text-muted);
 }
 
 /* Images */
@@ -60,6 +68,17 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* Code */
+code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    color: var(--matrix-bright);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
 }
 
 /* Form elements */
@@ -71,35 +90,35 @@ button, input, textarea, select {
 
 /* Focus states */
 :focus {
-    outline: 2px solid var(--terminal-green);
+    outline: 2px solid var(--matrix-bright);
     outline-offset: 2px;
 }
 
 /* Selection */
 ::selection {
-    background: var(--terminal-green);
-    color: var(--terminal-black);
+    background: var(--matrix-bright);
+    color: var(--bg);
 }
 
 ::-moz-selection {
-    background: var(--terminal-green);
-    color: var(--terminal-black);
+    background: var(--matrix-bright);
+    color: var(--bg);
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--terminal-dark);
+    background: var(--bg-surface);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--terminal-green);
+    background: var(--border);
     border-radius: var(--radius-sm);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #00cc00;
+    background: var(--matrix-accent);
 }

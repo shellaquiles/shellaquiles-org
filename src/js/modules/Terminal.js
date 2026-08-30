@@ -44,7 +44,7 @@ export class Terminal {
     }
 
     /**
-     * Preload command content from external files
+     * Preload command content from external files for console API
      */
     async preloadContent() {
         const files = {
@@ -68,13 +68,13 @@ export class Terminal {
                     this.contentCache[key] = await response.text();
                 }
             } catch (e) {
-                console.warn(`Could not load content for ${filename}`);
+                // Silently handle if files are accessed via direct routes
             }
         }
     }
 
     /**
-     * Inject loaded content into the DOM sections
+     * Inject loaded content into the DOM sections (if present in DOM)
      */
     injectContentToDOM() {
         const mapping = {
@@ -98,7 +98,7 @@ export class Terminal {
             }
         }
 
-        // Re-setup navigation links if necessary (since we might have added new links)
+        // Setup navigation links if blog manager is available
         if (window.shellaquilesBlog) {
             window.shellaquilesBlog.setupNavigationLinks();
         }
@@ -133,14 +133,14 @@ export class Terminal {
      * Execute a terminal command
      */
     executeCommand(command) {
-        console.log(`%cExecuting: ${command}`, 'color: #00ff00; font-style: italic;');
+        console.log(`%cExecuting: ${command}`, 'color: #00ff66; font-style: italic;');
         this.notificationSystem.showNotification(`Comando ejecutado: ${command}`, 'success');
         
         // Find content in cache
         const key = Object.keys(this.contentCache).find(k => command.includes(k));
         const content = this.contentCache[key] || `Ejecutado con éxito.`;
         
-        console.log(`%c${content}`, 'color: #aaa;');
+        console.log(`%c${content}`, 'color: #c8ffd4;');
         
         return content;
     }
@@ -195,7 +195,7 @@ export class Terminal {
             comando: cmd,
             estado: index < this.currentCommand ? '✓ ejecutado' : (index === this.currentCommand ? '→ siguiente' : ' pendiente')
         }));
-        console.log('%c📋 Lista de comandos:', 'color: #00ff00; font-weight: bold;');
+        console.log('%c📋 Lista de comandos:', 'color: #00ff66; font-weight: bold;');
         console.table(commandList);
         return commandList.map(c => `${c.id}: ${c.comando}`).join('\n');
     }
@@ -208,7 +208,7 @@ export class Terminal {
         const bar = '#'.repeat(Math.floor(progress/10)) + ' '.repeat(10-Math.floor(progress/10));
         
         const output = `📊 Progreso: [${bar}] ${progress}% (${this.currentCommand}/${this.commands.length})`;
-        console.log(`%c${output}`, 'color: #00ff00; font-weight: bold;');
+        console.log(`%c${output}`, 'color: #00ff66; font-weight: bold;');
         
         return output;
     }
@@ -227,9 +227,5 @@ export class Terminal {
         this.animationManager.destroy();
         this.notificationSystem.clearAll();
         this.konamiCode.reset();
-
-        // Clear any remaining event listeners
-        // Note: In a production app, you'd want to store references to event listeners
-        // and remove them properly
     }
 }

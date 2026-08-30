@@ -1,77 +1,78 @@
-# Pyquiles al Pastor: El curso de Python con más sabor de México
+# Pyquiles al Pastor: Arquitectura y Ruta de Aprendizaje
 
-### *Cocinando código de calidad, bocado a bocado*
+Aprende desarrollo en Python moderno mediante proyectos prácticos de producción, patrones de diseño y metodologías de ingeniería de software. 100% abierto y comunitario.
 
----
-
-## ¿Qué es?
-
-**Pyquiles al Pastor** es un curso de Python diseñado por **pixelead0** para el autoaprendizaje, pensado específicamente para la comunidad hispanohablante. No es solo un tutorial más; es una experiencia educativa completa que te lleva desde los fundamentos absolutos hasta el desarrollo profesional de software.
-
-Su nombre es un homenaje doble: **Pyquiles** nace de la fusión entre **Python** y los **Chilaquiles**, rindiendo tributo a la comunidad Shellaquiles. El toque **"al Pastor"** representa ese ingrediente especial: los estándares profesionales y las mejores prácticas que elevan un código básico a uno de nivel senior.
+> [!NOTE]
+> **Versión del Curso:** v2.4.0  
+> **Requisitos Previos:** Conocimientos básicos de terminal y Git.  
+> **Comunidad:** Mantenido por el ecosistema de [shellaquiles.org](https://shellaquiles.org) y liderado por `@pixelead0`.
 
 ---
 
-## La Filosofía: Cocinando Código
+## 01. Metodología de Ejecución
 
-La metodología del curso se basa en una analogía culinaria:
+El programa no se basa en ejercicios sintéticos aislados, sino en la construcción iterativa de herramientas reales:
 
-- **Las tortillas**: Son los conceptos básicos que necesitas dominar.
-- **La salsa**: Son los ejercicios prácticos que le dan consistencia al aprendizaje.
-- **El queso**: Es la aplicación en proyectos reales.
-- **El pastor**: Es el toque final de calidad, herramientas profesionales y optimización.
-
----
-
-## ¿Qué vas a aprender?
-
-El curso está estructurado en 8 módulos evolutivos y ofrece rutas personalizadas según tu experiencia previa:
-
-✅ **Ruta Principiante**: Si nunca has programado, te guiamos desde el Zen de Python hasta tus primeras funciones.
-✅ **Ruta Intermedio**: Para quienes ya conocen otros lenguajes y quieren dominar la "pythonicidad".
-✅ **Ruta Avanzada**: Enfocada en decoradores, context managers, testing y empaquetado profesional.
+- [x] **Entornos Aislados:** Configuración con `uv`, `poetry` y contenedores Docker.
+- [x] **Tipado Estricto:** Validación en tiempo de compilación con `mypy` y `pydantic`.
+- [x] **Pipelines ETL & Concurrencia:** Procesamiento asíncrono con `asyncio` y `multiprocessing`.
+- [ ] **Despliegue Continuo:** GitHub Actions hacia entornos serverless.
 
 ---
 
-## Mapa de Aprendizaje
+## 02. Mapa Curricular y Módulos
 
-| Módulo             | Contenido Destacado                                    |
-| ------------------ | ------------------------------------------------------ |
-| **01: Fundamentos**| Variables, lógica y Git básico.                        |
-| **03: Funciones**  | Organización profesional y módulos.                    |
-| **04: POO**        | Clases, objetos y el uso moderno de Dataclasses.       |
-| **05: Calidad**    | Logging, Type Hints y robustez de código.              |
-| **08: Profesional**| Testing, Entornos virtuales y Seguridad.               |
-
----
-
-## ¿Por qué elegir este curso?
-
-### 100% Abierto y Gratuito
-Fiel al espíritu de Shellaquiles, todo el material es Open Source y está disponible para la comunidad sin costo alguno.
-
-### Enfoque Práctico
-Desde el primer módulo estarás construyendo proyectos reales, como generadores de contraseñas seguros o validadores de datos profesionales.
-
-### Comunidad Primero
-El curso está diseñado para que cualquiera pueda contribuir, proponer mejoras o incluso añadir nuevas lecciones mediante Pull Requests.
+| Nivel | Enfoque Principal | Tecnologías / Herramientas | Salida Esperada |
+| :--- | :--- | :--- | :--- |
+| **01. Fundamentos** | Tipos de datos, OOP y control de flujo | Python 3.12+, Terminal | CLI de automatización |
+| **02. Arquitectura** | Inyección de dependencias, Clean Code | Pydantic, Pytest | API REST modular |
+| **03. Datos & ETL** | Extracción paralela y persistencia | Asyncio, DuckDB, SQLite | Agregador de feeds |
+| **04. Despliegue** | Containerización y pipelines | Docker, GitHub Actions | Contenedor en prod |
 
 ---
 
-## Cómo empezar hoy mismo
+## 03. Ejemplo Práctico: Extracción Asíncrona
 
-No necesitas instalar nada complicado para comenzar a leer. El curso tiene una versión web interactiva y el repositorio está listo para que le hagas un fork:
+A continuación se muestra el patrón estándar utilizado en el módulo de sincronización:
 
-1. **Visita la web**: [pixelead0.github.io/pyquiles-al-pastor/](https://pixelead0.github.io/pyquiles-al-pastor/)
-2. **Explora el repo**: [github.com/pixelead0/pyquiles-al-pastor](https://github.com/pixelead0/pyquiles-al-pastor)
-3. **Empieza a cocinar**: Sigue la ruta que mejor se adapte a tu nivel.
+```python
+import asyncio
+import httpx
+
+async def fetch_feed(endpoint: str) -> dict:
+    """Consume endpoints comunitarios de forma no bloqueante."""
+    async with httpx.AsyncClient(timeout=10.0) as client:
+        response = await client.get(endpoint)
+        response.raise_for_status()
+        return response.json()
+
+async def main():
+    endpoints = [
+        "https://cron-quiles.org/data/mexico.json",
+        "https://api.shellaquiles.org/v1/status"
+    ]
+    results = await asyncio.gather(*(fetch_feed(url) for url in endpoints))
+    print(f"Feeds procesados: {len(results)}")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
 
 ---
 
-## Conclusión
+## 04. Reglas de Contribución
 
-**Pyquiles al Pastor** demuestra que aprender tecnología no tiene por qué ser insípido. Con la combinación correcta de fundamentos y sabor profesional, cualquiera puede dominar Python.
+> [!TIP]
+> Antes de abrir un Pull Request, ejecuta los linters locales para verificar formato y tipado:
+> `ruff check . && mypy .`
 
-**¡Sincroniza tu entorno y a programar!**
+- **Rigor Técnico:** Código documentado siguiendo especificaciones PEP 8 y PEP 257.
+- **Pruebas Automatizadas:** Cobertura mínima del 85% en módulos de lógica de negocio.
+- **Colaboración Abierta:** Discusión de features en los canales de Telegram y GitHub Issues.
 
-**¡Cada bit cuenta!**
+---
+
+## 05. Conclusión y Recursos
+
+- **Repositorio Central:** [github.com/shellaquiles/pyquiles-al-pastor](https://github.com/shellaquiles)
+- **Canal Comunitario:** [t.me/shellaquiles](https://t.me/shellaquiles)
