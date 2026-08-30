@@ -5,24 +5,22 @@
  */
 
 :root {
-    /* Por defecto: MODO MATRIX OSCURO (Gradación de Fósforo Verde - Zero Fatigue) */
-    --bg: #040805;              /* Negro carbón con tinte verde mínimo */
-    --bg-surface: #0a110c;      /* Fondo de tarjetas y paneles */
-    --bg-subtle: #0f1c12;       /* Fondo de tags y hover */
-    --border: #16331e;          /* Líneas de 1px definidas pero atenuadas */
+    /* Por defecto: MODO MATRIX OSCURO (Azabache Profundo + Verde Fósforo) */
+    --bg: #040805;              /* Azabache profundo */
+    --bg-surface: #0a110c;      /* Superficie sutil de tarjetas y paneles */
+    --bg-subtle: #0f1c12;       /* Fondo de elementos interactivos / hover */
+    --border: #1a3320;          /* Bordes finos de 1px */
 
-    /* Capas de texto (gradación de fósforo) */
-    --text: #c8ffd4;            /* Verde menta casi blanco: Títulos legibles */
-    --text-muted: #4e8c5d;      /* Verde medio opaco: Metadatos y descripciones */
-
-    /* Fósforo Activo (Brillo alto para interactividad) */
-    --accent: #00ff66;
-    --matrix-bright: #00ff66;   /* Fósforo puro: Días activos y botones */
-    --matrix-accent: #22c55e;   /* Acento medio */
+    /* Capas de texto y acento */
+    --text: #c8ffd4;            /* Verde menta claro: Legibilidad máxima */
+    --text-muted: #4e8c5d;      /* Verde fósforo atenuado para metadatos */
+    --accent: #00ff66;          /* Acento verde fósforo Matrix */
+    --matrix-bright: #00ff66;   /* Fósforo activo puro */
+    --matrix-accent: #22c55e;
     --matrix-glow: 0 0 10px rgba(0, 255, 102, 0.35);
-    --matrix-tag-text: #7ee89d; /* Verde intermedio */
+    --matrix-tag-text: #7ee89d;
 
-    /* Terminal legacy aliases (compatibilidad con componentes existentes) */
+    /* Terminal legacy aliases */
     --terminal-green: #00ff66;
     --terminal-red: #ff4d6d;
     --terminal-white: #c8ffd4;
@@ -30,20 +28,20 @@
     --terminal-dark: #0a110c;
     --terminal-gray: #4e8c5d;
 
-    /* Logo Colors (únicos de shellaquiles.org - no modificar) */
+    /* Logo Colors (Branding oficial shellaquiles.org) */
     --logo-bg: #0F1217;
     --logo-arrows: #19F38E;
     --logo-brace: #9CA3AF;
-    --logo-shell: #22C55E;
+    --logo-shell: #00ff66;
     --logo-aquiles: #E5E7EB;
     --logo-tld: #F43F5E;
     --logo-shrug: #F59E0B;
 
-    /* Typography */
+    /* Typography Dual Estratégica */
     --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-mono: 'Geist Mono', 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
     --font-family-mono: var(--font-mono);
-    --font-family-logo: 'Geist Mono', "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+    --font-family-logo: 'Geist Mono', "JetBrains Mono", "Fira Code", monospace;
 
     /* Font Sizes */
     --font-size-xs: 12px;
@@ -109,7 +107,7 @@ html.dark {
     --bg: #040805;
     --bg-surface: #0a110c;
     --bg-subtle: #0f1c12;
-    --border: #16331e;
+    --border: #1a3320;
     --text: #c8ffd4;
     --text-muted: #4e8c5d;
     --accent: #00ff66;
@@ -127,25 +125,25 @@ html.dark {
     --terminal-gray: #4e8c5d;
 }
 
-/* MODO CLARO (Editorial Minimalista) */
+/* MODO CLARO (Editorial Minimalista Suizo) */
 html.light {
-    --bg: #fafafa;
+    --bg: #f8faf9;
     --bg-surface: #ffffff;
-    --bg-subtle: #f4f4f5;
-    --border: #e4e4e7;
+    --bg-subtle: #f0f4f1;
+    --border: #d0ded3;
     --text: #09090b;
-    --text-muted: #71717a;
-    --accent: #16a34a;
-    --matrix-bright: #16a34a;
-    --matrix-accent: #22c55e;
+    --text-muted: #526356;
+    --accent: #0f8a3c;
+    --matrix-bright: #0f8a3c;
+    --matrix-accent: #16a34a;
     --matrix-glow: none;
-    --matrix-tag-text: #166534;
+    --matrix-tag-text: #14532d;
 
     /* Terminal aliases en light */
-    --terminal-green: #16a34a;
+    --terminal-green: #0f8a3c;
     --terminal-red: #dc2626;
     --terminal-white: #09090b;
-    --terminal-black: #fafafa;
-    --terminal-dark: #f4f4f5;
-    --terminal-gray: #71717a;
+    --terminal-black: #f8faf9;
+    --terminal-dark: #f0f4f1;
+    --terminal-gray: #526356;
 }

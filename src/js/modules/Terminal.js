@@ -219,8 +219,7 @@ export class Terminal {
      * Cleanup and destroy the terminal
      */
     destroy() {
-        this.animationManager.destroy();
-        this.notificationSystem.clearAll();
-        this.konamiCode.reset();
+        if (this.notificationSystem) this.notificationSystem.clearAll();
+        if (this.konamiCode) this.konamiCode.reset();
     }
 }
