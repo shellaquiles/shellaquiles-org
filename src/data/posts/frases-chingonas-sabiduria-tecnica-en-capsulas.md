@@ -12,6 +12,10 @@ lang: "es"
 > [!NOTE]
 > **Definición de Sistema:** **Frases Chingonas** es una base de conocimiento y herramienta web que condensa principios clave de libros clásicos de computación, arquitectura de software e ingeniería de sistemas en cápsulas concisas para consulta rápida.
 
+<div class="post-preview-image">
+  <img src="/assets/previews/frases-chingonas.png" alt="Interfaz de Frases Chingonas" class="post-preview-img">
+</div>
+
 > [!TIP]
 > **Acciones del Proyecto:**  
 > <a href="https://shellaquiles.github.io/frases-chingonas/" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Proyecto ↗</a> &nbsp;

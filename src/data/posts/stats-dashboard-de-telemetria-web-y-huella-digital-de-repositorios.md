@@ -12,6 +12,10 @@ lang: "es"
 > [!NOTE]
 > **Definición de Sistema:** **Stats** es un dashboard web estático y automático que recolecta, consolida y visualiza la **Huella Digital** de tus repositorios en GitHub (stars, clones, visitas, commits y colaboradores) sin costo de servidores.
 
+<div class="post-preview-image">
+  <img src="/assets/previews/stats.png" alt="Dashboard de Stats GitHub" class="post-preview-img">
+</div>
+
 > [!TIP]
 > **Acciones del Proyecto:**  
 > <a href="https://shellaquiles.github.io/stats/" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Proyecto ↗</a> &nbsp;

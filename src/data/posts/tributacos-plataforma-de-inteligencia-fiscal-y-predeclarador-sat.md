@@ -12,6 +12,10 @@ lang: "es"
 > [!NOTE]
 > **Definición de Sistema:** **tribuTACOS** es una plataforma Open Source de análisis, proyección y simulación fiscal que procesa comprobantes XML (**CFDI 3.3 y 4.0**) y declaraciones en PDF del SAT, calculando por anticipado y bajo el principio de **flujo de efectivo** los Pagos Provisionales Mensuales (ISR/IVA) y la Declaración Anual.
 
+<div class="post-preview-image">
+  <img src="/assets/previews/tributacos.png" alt="Dashboard de tribuTACOS" class="post-preview-img">
+</div>
+
 > [!TIP]
 > **Acciones del Proyecto:**  
 > <a href="https://shellaquiles.org" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Proyecto ↗</a> &nbsp;

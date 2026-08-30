@@ -12,6 +12,10 @@ lang: "es"
 > [!NOTE]
 > **Definición de Sistema:** **Cron-Quiles** es un agregador ETL de código abierto que consolida eventos tecnológicos en México, normalizando fuentes heterogéneas en calendarios estáticos (`.ics`), feeds `WebCal` y endpoints `JSON`.
 
+<div class="post-preview-image">
+  <img src="/assets/previews/cronquiles.png" alt="Interfaz de Cron-Quiles" class="post-preview-img">
+</div>
+
 > [!TIP]
 > **Acciones del Proyecto:**  
 > <a href="https://shellaquiles.github.io/cron-quiles/" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Proyecto ↗</a> &nbsp;

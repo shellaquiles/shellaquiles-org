@@ -15,6 +15,10 @@ lang: "es"
 > * **Requisitos:** Manejo básico de terminal y Git.
 > * **Infraestructura:** Mantenido por el ecosistema [shellaquiles.org](https://shellaquiles.org) y coordinado por `@pixelead0`.
 
+<div class="post-preview-image">
+  <img src="/assets/previews/pyquiles.png" alt="Pyquiles al Pastor - Curso de Python" class="post-preview-img">
+</div>
+
 > [!TIP]
 > **Acciones del Proyecto:**  
 > <a href="https://pixelead0.github.io/pyquiles-al-pastor/" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Curso ↗</a> &nbsp;
