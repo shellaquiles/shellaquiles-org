@@ -126,7 +126,7 @@ function setupConsoleCommands() {
         console.log(`
         %c💻 Contacto Shellaquiles:
 
-        Email:    comunidad@shellaquiles.org
+        Email:    participar@shellaquiles.org
         Telegram: https://t.me/shellaquiles
         GitHub:   https://github.com/shellaquiles
 
