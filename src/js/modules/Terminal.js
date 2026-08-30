@@ -1,4 +1,3 @@
-import { AnimationManager } from './AnimationManager.js';
 import { EventManager } from './EventManager.js';
 import { KonamiCode } from './KonamiCode.js';
 import { NotificationSystem } from './NotificationSystem.js';
@@ -23,7 +22,6 @@ export class Terminal {
         this.contentCache = {};
 
         // Initialize modules
-        this.animationManager = new AnimationManager();
         this.notificationSystem = new NotificationSystem();
         this.eventManager = new EventManager(this);
         this.konamiCode = new KonamiCode(this);
@@ -36,9 +34,6 @@ export class Terminal {
      */
     async init() {
         this.eventManager.setupEventListeners();
-        this.animationManager.startTerminalAnimation();
-        this.animationManager.setupScrollEffects();
-        this.animationManager.setupTerminalCursor();
         await this.preloadContent();
         this.injectContentToDOM();
     }

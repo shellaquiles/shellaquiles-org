@@ -16,23 +16,11 @@
     50% { opacity: 0; }
 }
 
-/* Typewriter Effect */
-@keyframes typewriter {
-    from {
-        width: 0;
-        overflow: hidden;
-    }
-    to {
-        width: 100%;
-        overflow: visible;
-    }
-}
-
 /* Fade In - Micro-animación sutil (estilo cron-quiles) */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(8px);
     }
     to {
         opacity: 1;
@@ -40,65 +28,11 @@
     }
 }
 
-/* Slide In Animation */
-@keyframes slideIn {
-    from {
-        transform: translateX(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Rotate Animation for CTA */
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-/* Rainbow Effect for Konami Code */
-@keyframes rainbow {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
-}
-
-/* Reveal Animation for Scroll Effects */
-.revealed {
-    animation: slideIn 0.5s ease-out forwards;
-}
-
-/* Animation Classes for JavaScript */
 .fade-in {
-    animation: fadeIn 0.4s ease-in forwards;
+    animation: fadeIn 0.3s ease-out forwards;
 }
 
-.slide-in-left {
-    animation: slideIn 0.4s ease-out forwards;
+.editorial-card {
+    animation: fadeIn 0.3s ease-out forwards;
 }
 
-/* Animation States - más suaves que antes */
-.nodo, .proyecto, .section {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.prompt {
-    opacity: 0;
-    transform: translateX(-16px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.output {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-/* Matrix scan line effect (sutil, non-distracting) */
-@keyframes scanline {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(100vh); }
-}

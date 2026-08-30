@@ -774,23 +774,48 @@ html.dark .post-day {
     border: none;
 }
 
-/* Tokens de Resaltado Sintáctico Estilo Matrix / Cron-Quiles */
-.article-body .token-keyword {
+/* Tokens de Resaltado Sintáctico Estilo Matrix / Cron-Quiles (PrismJS + Custom Tokens) */
+.article-body .token-keyword,
+.article-body .token.keyword,
+.article-body .token.builtin,
+.article-body .token.boolean {
     color: var(--matrix-bright);
     font-weight: 700;
 }
 
-.article-body .token-string {
+.article-body .token-string,
+.article-body .token.string,
+.article-body .token.attr-value {
     color: #38bdf8; /* Azul cyan sutil */
 }
 
-.article-body .token-comment {
+.article-body .token-comment,
+.article-body .token.comment,
+.article-body .token.prolog,
+.article-body .token.doctype {
     color: #64748b; /* Gris pizarra apagado */
     font-style: italic;
 }
 
-.article-body .token-function {
+.article-body .token-function,
+.article-body .token.function,
+.article-body .token.class-name {
     color: #facc15; /* Amarillo dorado sutil */
+}
+
+.article-body .token.number,
+.article-body .token.symbol {
+    color: #f472b6; /* Rosa suave */
+}
+
+.article-body .token.operator,
+.article-body .token.punctuation {
+    color: var(--text-muted);
+}
+
+.article-body .token.property,
+.article-body .token.attr-name {
+    color: var(--matrix-bright);
 }
 
 @media (max-width: 768px) {

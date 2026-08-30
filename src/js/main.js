@@ -5,7 +5,6 @@
 
 import { BlogManager } from './modules/BlogManager.js';
 import { Terminal } from './modules/Terminal.js';
-import { addCSSAnimations } from './utils/AnimationUtils.js';
 
 // Global terminal instance
 let terminal;
@@ -15,9 +14,6 @@ let blogManager;
  * Initialize the terminal when DOM is loaded
  */
 document.addEventListener('DOMContentLoaded', () => {
-    // Add CSS animations
-    addCSSAnimations();
-
     // Initialize terminal
     terminal = new Terminal();
 
