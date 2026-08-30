@@ -41,57 +41,57 @@
   },
   {
     "id": "cronquiles-el-agregador-de-la-comunidad",
-    "title": "Cron-Quiles: El Latido de la Comunidad Tech en México",
+    "title": "Cron-Quiles: Agregador Unificado de Eventos Tech en México",
     "slug": "cronquiles-el-agregador-de-la-comunidad",
     "date": "2025-12-29",
     "author": "pixelead0 & Shellaquiles.org",
     "category": "Proyectos",
     "tags": ["cronquiles", "comunidad", "eventos", "mexico", "agregador"],
-    "excerpt": "Descubre Cron-Quiles, el agregador de eventos tech que centraliza el pulso de la comunidad en México. Un proyecto abierto, agentic y diseñado para conectarnos a todos."
+    "excerpt": "Descubre Cron-Quiles, el agregador de eventos tech que unifica meetups, conferencias y talleres en México con feeds iCal, WebCal y endpoints JSON."
   },
   {
     "id": "frases-chingonas-sabiduria-tecnica-en-capsulas",
-    "title": "Frases Chingonas: Sabiduría Técnica en Cápsulas",
+    "title": "Frases Chingonas: Principios y Lecciones de Arquitectura de Software",
     "slug": "frases-chingonas-sabiduria-tecnica-en-capsulas",
     "date": "2025-11-10",
     "author": "Comunidad Shellaquiles",
     "category": "Proyectos",
     "tags": ["open-source", "frases", "libros", "comunidad", "sabiduría"],
-    "excerpt": "Una colección de frases inspiradas en los libros más emblemáticos del desarrollo de software. Un proyecto para compartir, aprender e inspirar a través de la sabiduría técnica condensada."
+    "excerpt": "Catálogo interactivo de principios y lecciones clave de arquitectura de software extraídas de libros clásicos de programación e ingeniería de sistemas."
   },
   {
     "id": "pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano",
-    "title": "Pyquiles al Pastor: El curso de Python con más sabor de México",
+    "title": "Pyquiles al Pastor: Programa Abierto de Python Moderno y Arquitectura",
     "slug": "pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano",
     "date": "2026-04-21",
     "author": "Comunidad Shellaquiles",
     "category": "Tutorial",
     "tags": ["python", "curso", "mexico", "pyquiles", "tuto"],
-    "excerpt": "Aprende Python desde cero hasta nivel profesional con Pyquiles al Pastor. Un curso 100% gratuito, abierto y con el toque especial de la comunidad Shellaquiles."
+    "excerpt": "Programa abierto de desarrollo en Python moderno enfocado en entornos de producción, tipado estricto con Pydantic, mypy y concurrencia asíncrona con asyncio."
   },
   {
     "id": "manifiesto-shellaquiles",
-    "title": "El Manifiesto de Shellaquiles: La Gran Obra",
+    "title": "El Manifiesto de Shellaquiles: Principios de Ingeniería y Comunidad Abierta",
     "slug": "manifiesto",
     "date": "2025-08-28",
     "author": "@pixelead0 & Comunidad Shellaquiles",
     "category": "Manifiesto",
-    "tags": ["manifiesto", "filosofia", "valores", "ejecución-de-hierro", "open-source"],
-    "excerpt": "Shellaquiles no es simplemente una plataforma; es La Gran Obra destinada a alcanzar la iluminación digital y la soberanía tecnológica mediante la ejecución de hierro."
+    "tags": ["manifiesto", "filosofia", "valores", "codigo-en-produccion", "open-source"],
+    "excerpt": "Directrices de arquitectura, desarrollo de software libre, pragmatismo técnico y colaboración horizontal para la comunidad tecnológica en México."
   },
   {
     "id": "bienvenida-shellaquiles",
-    "title": "Bienvenida a Shellaquiles",
+    "title": "Bienvenida a Shellaquiles: Ecosistema Open Source & Proyectos Tech",
     "slug": "bienvenida-shellaquiles",
     "date": "2025-08-28",
     "author": "Comunidad Shellaquiles",
     "category": "Comunidad",
     "tags": ["comunidad", "bienvenida", "tech"],
-    "excerpt": "Te damos la bienvenida a la comunidad tech más inclusiva de México. Un espacio donde todas las tecnologías y todos los roles tienen cabida."
+    "excerpt": "Te damos la bienvenida al ecosistema de desarrollo open source en México. Construimos herramientas abiertas, mantenemos infraestructura y compartimos conocimiento."
   },
   {
     "id": "pep8-python",
-    "title": "PEP 8: Guía de Estilo para Python",
+    "title": "PEP 8: Estándar de Estilo y Convenciones en Python",
     "slug": "pep8-python",
     "date": "2024-12-10",
     "author": "Comunidad Shellaquiles",
@@ -101,13 +101,13 @@
   },
   {
     "id": "bits-de-conocimiento",
-    "title": "Bits de Conocimiento",
+    "title": "Bits de Conocimiento: Protocolo de Sesiones Técnicas Relámpago",
     "slug": "bits-de-conocimiento",
     "date": "2024-11-03",
     "author": "Comunidad Shellaquiles",
     "category": "Iniciativa",
     "tags": ["aprendizaje", "colaboración", "comunidad", "conocimiento", "bits"],
-    "excerpt": "Pequeñas ideas, gran impacto. Una iniciativa de aprendizaje colaborativo donde cada bit cuenta. Sesiones breves y prácticas para compartir conocimiento."
+    "excerpt": "Formato de micro-charlas de 10 minutos, demostraciones funcionales en vivo y documentación abierta para la resolución de incidencias reales de producción."
   },
   {
     "id": "kitchen-sink-demostracion-integral-de-sintaxis-markdown",
