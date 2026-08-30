@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><polyline points='4 17 10 11 4 5' stroke='%2300ff66' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><line x1='12' y1='19' x2='20' y2='19' stroke='%2300ff66' stroke-width='2.5' stroke-linecap='round'/></svg>">
+    
+    <title>Proyectos & Infraestructura Abierta • SHELLAQUILES</title>
+    <meta name="description" content="Catálogo de herramientas, pipelines de datos y proyectos de software libre desarrollados por shellaquiles.org bajo la coordinación de pixelead0.">
+    <meta name="author" content="pixelead0, Shellaquiles">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://shellaquiles.org/proyectos.html">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Shellaquiles.org">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shellaquiles.org/proyectos.html">
+    <meta property="og:title" content="Proyectos Open Source • SHELLAQUILES // pixelead0">
+    <meta property="og:description" content="Herramientas públicas, automatización y desarrollo comunitario en México.">
+    <meta property="og:image" content="https://shellaquiles.org/assets/og-image.png">
+
+    <!-- Google Fonts: Geist & Geist Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600;700&family=Geist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Anti-flicker Theme Init -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('sq-theme');
+            var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved === 'dark' || (saved === null && systemDark) || saved === null) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Horizontal de 1 sola línea -->
+        <header class="site-header site-header-compact">
+            <div class="header-left">
+                <a href="/" class="brand-title">
+                    <svg class="brand-logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="4 17 10 11 4 5"></polyline>
+                        <line x1="12" y1="19" x2="20" y2="19" class="prompt-cursor"></line>
+                    </svg>
+                    <span class="shellaquiles-brand">
+                        <span class="sq-bracket">{{</span>
+                        <span class="sq-shell">shell</span><span class="sq-aquiles">aquiles</span><span class="sq-dot">.</span><span class="sq-org">org</span>
+                        <span class="sq-bracket">}}</span>
+                    </span>
+                </a>
+                <nav class="main-nav" aria-label="Navegación principal">
+                    <a href="/" class="nav-link">Inicio</a>
+                    <a href="/proyectos.html" class="nav-link active">Proyectos</a>
+                    <a href="/blog/manifiesto" class="nav-link">Manifiesto</a>
+                    <a href="/blog" class="nav-link">Blog</a>
+                </nav>
+            </div>
+
+            <div class="header-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span id="themeIcon">◐</span>
+                    <span id="themeLabel">MODO CLARO</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="home-container">
+            <!-- Header de Sección -->
+            <section class="section-hero">
+                <div class="hero-badge">CATÁLOGO OPEN SOURCE // MÉXICO</div>
+                <h1 class="hero-title">Herramientas en Producción</h1>
+                <p class="hero-desc">
+                    Software libre, pipelines de datos y utilidades públicas diseñadas para el ecosistema tecnológico en México. Todo el código es auditable y libre bajo licencias comunitarias.
+                </p>
+            </section>
+
+            <!-- Grid de Tarjetas de Proyectos -->
+            <div class="projects-cards-grid">
+                
+                <!-- Tarjeta 01: Cron-Quiles -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span class="status-text">v2.0.0 • PRODUCCIÓN</span>
+                        </div>
+                        <h2 class="project-card-title">Cron-Quiles</h2>
+                    </div>
+                    <p class="project-card-desc">
+                        Agregador y calendario unificado de eventos tech en México. Monitorea comunidades en CDMX, Guadalajara, Puebla, Monterrey y remoto, exponiendo feeds iCal, WebCal y API JSON.
+                    </p>
+                    <div class="project-tags">
+                        <span class="p-tag">Python</span>
+                        <span class="p-tag">ETL</span>
+                        <span class="p-tag">Vanilla JS</span>
+                        <span class="p-tag">iCal</span>
+                        <span class="p-tag">SEO Schema</span>
+                    </div>
+                    <div class="project-card-actions">
+                        <a href="https://shellaquiles.github.io/cron-quiles/" target="_blank" rel="noopener" class="btn btn-main">Abrir App ↗</a>
+                        <a href="/blog/cronquiles-el-agregador-de-la-comunidad" class="btn btn-outline">Ver Detalle ↗</a>
+                        <a href="https://github.com/shellaquiles/cron-quiles" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 02: Pyquiles al Pastor -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span class="status-text">ACTIVO • CURSO ABIERTO</span>
+                        </div>
+                        <h2 class="project-card-title">Pyquiles al Pastor</h2>
+                    </div>
+                    <p class="project-card-desc">
+                        Ruta técnica comunitaria para el dominio de Python moderno: estructuración de módulos, tipado estricto, tooling profesional (`uv`, `ruff`), concurrencia y despliegue real.
+                    </p>
+                    <div class="project-tags">
+                        <span class="p-tag">Python 3.12+</span>
+                        <span class="p-tag">Asyncio</span>
+                        <span class="p-tag">Tipado</span>
+                        <span class="p-tag">Testing</span>
+                    </div>
+                    <div class="project-card-actions">
+                        <a href="/blog/pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano" class="btn btn-main">Ver Detalle ↗</a>
+                        <a href="https://github.com/shellaquiles/pyquiles-al-pastor" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 03: Frases Chingonas -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span class="status-text">v1.2.0 • WEB APP</span>
+                        </div>
+                        <h2 class="project-card-title">Frases Chingonas</h2>
+                    </div>
+                    <p class="project-card-desc">
+                        Catálogo interactivo con lecciones de vida, axiomas de ingeniería y frases de arquitectura de software para desarrolladores pragmáticos.
+                    </p>
+                    <div class="project-tags">
+                        <span class="p-tag">Axiomas</span>
+                        <span class="p-tag">CLI / Web</span>
+                        <span class="p-tag">JSON API</span>
+                    </div>
+                    <div class="project-card-actions">
+                        <a href="https://shellaquiles.github.io/frases-chingonas/" target="_blank" rel="noopener" class="btn btn-main">Explorar ↗</a>
+                        <a href="/blog/frases-chingonas-sabiduria-tecnica-en-capsulas" class="btn btn-outline">Ver Detalle ↗</a>
+                        <a href="https://github.com/shellaquiles/frases-chingonas" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 04: tribuTACOS -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span class="status-text">v1.0.1 • PRODUCCIÓN</span>
+                        </div>
+                        <h2 class="project-card-title">tribuTACOS</h2>
+                    </div>
+                    <p class="project-card-desc">
+                        Plataforma de inteligencia fiscal, conciliación de comprobantes digitales (CFDI 3.3/4.0) y simulación analítica de pre-declaración mensual y anual ante el SAT en México.
+                    </p>
+                    <div class="project-tags">
+                        <span class="p-tag">FastAPI</span>
+                        <span class="p-tag">Next.js</span>
+                        <span class="p-tag">SAT</span>
+                        <span class="p-tag">CFDI 4.0</span>
+                    </div>
+                    <div class="project-card-actions">
+                        <a href="/blog/tributacos-plataforma-de-inteligencia-fiscal-y-predeclarador-sat" class="btn btn-main">Ver Detalle ↗</a>
+                        <a href="https://github.com/shellaquiles/tribuTACOS" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 05: KARNITAS -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span class="status-text">v1.0.2 • ESTÁNDAR</span>
+                        </div>
+                        <h2 class="project-card-title">KARNITAS</h2>
+                    </div>
+                    <p class="project-card-desc">
+                        Estándar abierto y convención de directorio (`.agents/`) para la gestión de contexto, memoria, reglas de Cursor/Copilot y gobernanza de agentes de IA en repositorios Git.
+                    </p>
+                    <div class="project-tags">
+                        <span class="p-tag">Shell</span>
+                        <span class="p-tag">Cursor Rules</span>
+                        <span class="p-tag">SDD</span>
+                        <span class="p-tag">AI Governance</span>
+                    </div>
+                    <div class="project-card-actions">
+                        <a href="/blog/karnitas-estandar-abierto-de-gobernanza-y-contexto-para-agentes-de-ia" class="btn btn-main">Ver Detalle ↗</a>
+                        <a href="https://github.com/shellaquiles/KARNITAS" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 06: Stats GitHub -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span class="status-text">v1.5.0 • PRODUCCIÓN</span>
+                        </div>
+                        <h2 class="project-card-title">Stats GitHub</h2>
+                    </div>
+                    <p class="project-card-desc">
+                        Dashboard de analíticas, impacto y métricas globales de repositorios. Persiste el historial de clones y visitas que GitHub elimina tras 14 días sin costo de servidor.
+                    </p>
+                    <div class="project-tags">
+                        <span class="p-tag">Playwright</span>
+                        <span class="p-tag">Chart.js</span>
+                        <span class="p-tag">GitHub API</span>
+                        <span class="p-tag">Python</span>
+                    </div>
+                    <div class="project-card-actions">
+                        <a href="https://shellaquiles.github.io/stats/" target="_blank" rel="noopener" class="btn btn-main">Abrir App ↗</a>
+                        <a href="/blog/stats-dashboard-de-telemetria-web-y-huella-digital-de-repositorios" class="btn btn-outline">Ver Detalle ↗</a>
+                        <a href="https://github.com/shellaquiles/stats" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 07: PanDocquiles -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-indicator build"></span>
+                            <span class="status-text">EN DESARROLLO</span>
+                        </div>
+                        <h2 class="project-card-title">PanDocquiles</h2>
+                    </div>
+                    <p class="project-card-desc">
+                        Plantillas y filtros de Pandoc con diseño suizo/técnico para generar documentación técnica, manifiestos y reportes en Markdown sin depender de software privativo.
+                    </p>
+                    <div class="project-tags">
+                        <span class="p-tag">Pandoc</span>
+                        <span class="p-tag">Markdown</span>
+                        <span class="p-tag">LaTeX</span>
+                        <span class="p-tag">CLI</span>
+                    </div>
+                    <div class="project-card-actions">
+                        <a href="/blog/pandocquiles-motor-automatico-de-conversion-y-publicacion-de-documentacion" class="btn btn-main">Ver Detalle ↗</a>
+                        <a href="https://github.com/shellaquiles/pandocquiles" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+                    </div>
+                </article>
+
+            </div>
+        </main>
+
+        <!-- Footer Justificado -->
+        <footer class="footer">
+            <div class="footer-left">
+                <div class="footer-credits">
+                    <span class="brand-sep">//</span>
+                    <span>un proyecto de</span>
+                    <a href="https://shellaquiles.org" class="footer-link"><strong>shellaquiles.org</strong></a>
+                    <span class="sep">•</span>
+                    <span>coordinado por</span>
+                    <a href="https://github.com/pixelead0" target="_blank" rel="noopener" class="footer-link"><strong>pixelead0</strong></a>
+                </div>
+                <div class="footer-nav">
+                    <a href="https://github.com/shellaquiles" target="_blank" rel="noopener" class="footer-sublink">GitHub</a>
+                    <span class="sep">•</span>
+                    <a href="https://t.me/shellaquiles" target="_blank" rel="noopener" class="footer-sublink">Telegram</a>
+                    <span class="sep">•</span>
+                    <a href="https://shellaquiles.github.io/cron-quiles/" target="_blank" rel="noopener" class="footer-sublink">Cron-Quiles</a>
+                    <span class="sep">•</span>
+                    <a href="/blog" class="footer-sublink">Blog</a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="sync-status">
+                    <span class="sync-badge">STATUS: 200 OK // SYS: SHELLAQUILES.ORG</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Theme Toggle - Standalone para proyectos.html
+        (function() {
+            var btn = document.getElementById('themeToggle');
+            var icon = document.getElementById('themeIcon');
+            var label = document.getElementById('themeLabel');
+            var html = document.documentElement;
+
+            function applyTheme(theme) {
+                if (theme === 'light') {
+                    html.classList.remove('dark');
+                    html.classList.add('light');
+                    if (icon) icon.textContent = '◑';
+                    if (label) label.textContent = 'MODO OSCURO';
+                } else {
+                    html.classList.remove('light');
+                    html.classList.add('dark');
+                    if (icon) icon.textContent = '◐';
+                    if (label) label.textContent = 'MODO CLARO';
+                }
+                localStorage.setItem('sq-theme', theme);
+            }
+
+            var current = localStorage.getItem('sq-theme') || 'dark';
+            applyTheme(current);
+
+            if (btn) {
+                btn.addEventListener('click', function() {
+                    var next = html.classList.contains('dark') ? 'light' : 'dark';
+                    applyTheme(next);
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

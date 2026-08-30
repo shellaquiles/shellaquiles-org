@@ -131,6 +131,9 @@ export class BlogManager {
                 case 'home':
                     this.showHome();
                     break;
+                case 'proyectos':
+                    this.showProyectos();
+                    break;
                 case 'blog':
                     this.showBlogList();
                     break;
@@ -212,6 +215,21 @@ export class BlogManager {
     }
 
     /**
+     * Show proyectos page (catálogo independiente)
+     */
+    showProyectos() {
+        this.updateSEO('Proyectos & Infraestructura Abierta • SHELLAQUILES', 'Catálogo de herramientas, pipelines de datos y proyectos de software libre desarrollados por shellaquiles.org bajo la coordinación de pixelead0.', '/proyectos.html');
+        const homeContainer = document.querySelector('.home-container');
+        if (homeContainer) {
+            homeContainer.style.display = 'block';
+        }
+        const blogContent = document.querySelector('.blog-content');
+        if (blogContent) {
+            blogContent.style.display = 'none';
+        }
+    }
+
+    /**
      * Show blog list
      */
     showBlogList() {
@@ -288,9 +306,13 @@ export class BlogManager {
         const terminal = document.querySelector('.container, .terminal');
         if (!terminal) return;
 
-        // Hide home content
+        // Hide home content (index.html)
         const homeContent = document.querySelector('.home-content');
         if (homeContent) homeContent.style.display = 'none';
+
+        // Keep home-container (proyectos.html) visible
+        const homeContainer = document.querySelector('.home-container');
+        if (homeContainer) homeContainer.style.display = 'block';
 
         // Get or create blog container
         let blogContainer = document.querySelector('.blog-content');
@@ -353,6 +375,9 @@ export class BlogManager {
             if (container) {
                 container.style.display = 'block';
                 container.style.visibility = 'visible';
+                if (homeContainer) {
+                    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             }
         });
     }
@@ -622,6 +647,11 @@ export class BlogManager {
                     return;
                 }
 
+                // Si es navegación a proyectos.html, dejar que el navegador cargue la página de forma nativa
+                if (href && (href === '/proyectos.html' || href === '/proyectos' || href.startsWith('/proyectos.html'))) {
+                    return;
+                }
+
                 // Si tiene data-navigate o es una ruta interna (/ o /blog)
                 if (navigatePath || (href && (href === '/' || href.startsWith('/blog')))) {
                     const path = navigatePath || href;
@@ -648,6 +678,8 @@ export class BlogManager {
             if ((currentPath === '/' || currentPath === '/index.html' || currentPath === '') && (linkPath === '/' || linkPath === '')) {
                 link.classList.add('active');
             } else if (currentPath.startsWith('/blog') && linkPath === '/blog') {
+                link.classList.add('active');
+            } else if ((currentPath.startsWith('/proyectos') || currentPath === '/proyectos.html') && (linkPath === '/proyectos' || linkPath === '/proyectos.html')) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
