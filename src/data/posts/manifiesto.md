@@ -2,7 +2,7 @@
 title: "El Manifiesto de Shellaquiles: Principios de Ingeniería y Comunidad Abierta"
 subtitle: "Directrices de arquitectura, desarrollo de software libre y colaboración técnica en México."
 author: "pixelead0 & Comunidad Shellaquiles"
-date: "2026-08-29"
+date: "2025-08-28"
 category: "MANIFIESTO"
 tags: ["manifiesto", "open-source", "ingenieria", "cultura-dev", "infraestructura"]
 version: "v2.0.0"

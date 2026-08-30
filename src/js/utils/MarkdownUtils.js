@@ -12,18 +12,65 @@ import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-css';
 import 'prismjs/components/prism-markup'; // HTML
 
+import mermaid from 'mermaid';
+import { createIcons, icons } from 'lucide';
+
 // Configure marked options
 marked.setOptions({
     gfm: true,
     breaks: true,
 });
 
+mermaid.initialize({
+    startOnLoad: false,
+    theme: 'dark',
+    securityLevel: 'loose',
+    fontFamily: 'inherit'
+});
+
+export async function renderMermaid(containerElement) {
+    const root = containerElement || document;
+    const elements = root.querySelectorAll('.mermaid');
+    if (elements.length > 0) {
+        try {
+            await mermaid.run({
+                nodes: Array.from(elements)
+            });
+        } catch (e) {
+            console.error('Error rendering Mermaid diagram:', e);
+        }
+    }
+}
+
+export function renderLucideIcons(containerElement) {
+    const root = containerElement || document;
+    try {
+        createIcons({
+            icons,
+            nameAttr: 'data-lucide',
+            attrs: {
+                class: 'lucide-icon inline-icon',
+                width: '16',
+                height: '16',
+                'stroke-width': '2'
+            }
+        });
+    } catch (e) {
+        console.error('Error rendering Lucide icons:', e);
+    }
+}
+
 // Custom renderer for GFM Callouts and Code blocks with syntax highlighting
 const renderer = new marked.Renderer();
 
-// Custom code block renderer with PrismJS
+// Custom code block renderer with PrismJS & Mermaid support
 renderer.code = function({ text, lang }) {
     const language = lang || 'text';
+
+    if (language === 'mermaid') {
+        return `<div class="mermaid-container" style="display:flex; justify-content:center; margin: 1.5rem 0; overflow-x:auto; background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 6px; border: 1px solid var(--border-color, #333);"><div class="mermaid">${text}</div></div>`;
+    }
+
     let highlighted = text;
 
     if (Prism.languages[language]) {

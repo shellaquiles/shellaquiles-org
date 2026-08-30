@@ -1,4 +1,4 @@
-import { parseMarkdown as utilParseMarkdown } from '../utils/MarkdownUtils.js';
+import { parseMarkdown as utilParseMarkdown, renderMermaid, renderLucideIcons } from '../utils/MarkdownUtils.js';
 
 export class BlogManager {
     constructor() {
@@ -203,6 +203,7 @@ export class BlogManager {
         // Render blog list
         const html = this.renderBlogListHTML();
         blogContainer.innerHTML = html;
+        renderLucideIcons(blogContainer);
 
         // Force opacity on all output elements inside blog-content
         const outputs = blogContainer.querySelectorAll('.output');
@@ -275,6 +276,8 @@ export class BlogManager {
         try {
             const html = await this.renderPostHTML(post);
             blogContainer.innerHTML = html;
+            await renderMermaid(blogContainer);
+            renderLucideIcons(blogContainer);
         } catch (error) {
             console.error('Error loading post content:', error);
             blogContainer.innerHTML = `
@@ -398,7 +401,7 @@ export class BlogManager {
 
                     <!-- Botón de Acción Técnico -->
                     <div class="post-action">
-                        <a href="/blog/${post.slug}" class="btn btn-outline" data-navigate="/blog/${post.slug}">Leer artículo ↗</a>
+                        <a href="/blog/${post.slug}" class="btn btn-outline" data-navigate="/blog/${post.slug}">Leer artículo <i data-lucide="arrow-up-right"></i></a>
                     </div>
                 </article>
             `;
@@ -467,7 +470,7 @@ export class BlogManager {
             return `
                 <main class="blog-post-view">
                     <div class="post-control-bar">
-                        <a href="/blog" class="btn-back" data-navigate="/blog">← VOLVER AL BLOG</a>
+                        <a href="/blog" class="btn-back" data-navigate="/blog"><i data-lucide="arrow-left"></i> VOLVER AL BLOG</a>
                         <div class="meta-right">
                             <span class="badge badge-accent">${(post.category || 'ARTÍCULO').toUpperCase()}</span>
                             <span style="color: var(--text-muted); margin-left: 0.5rem;">${day} ${monthYear}</span>
@@ -489,7 +492,7 @@ export class BlogManager {
             <main class="blog-post-view">
                 <!-- Barra de control de utilidades -->
                 <div class="post-control-bar">
-                    <a href="/blog" class="btn-back" data-navigate="/blog">← VOLVER AL BLOG</a>
+                    <a href="/blog" class="btn-back" data-navigate="/blog"><i data-lucide="arrow-left"></i> VOLVER AL BLOG</a>
                     <div class="meta-right">
                         <span class="badge badge-accent">${(post.category || 'ARTÍCULO').toUpperCase()}</span>
                         <span style="color: var(--text-muted); margin-left: 0.5rem;">${day} ${monthYear}</span>
@@ -513,7 +516,7 @@ export class BlogManager {
                 </article>
 
                 <div class="post-footer-nav" style="margin-top: 1.25rem;">
-                    <a href="/blog" class="btn btn-outline" data-navigate="/blog">← Volver al Blog</a>
+                    <a href="/blog" class="btn btn-outline" data-navigate="/blog"><i data-lucide="arrow-left"></i> Volver al Blog</a>
                 </div>
             </main>
         `;

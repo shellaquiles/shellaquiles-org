@@ -2,7 +2,7 @@
 title: "Bits de Conocimiento: Protocolo de Sesiones Técnicas Relámpago"
 subtitle: "Formato de micro-charlas de 10 minutos, demos en vivo y documentación abierta para comunidades tech."
 author: "pixelead0 & Comunidad Shellaquiles"
-date: "2026-08-29"
+date: "2024-11-03"
 category: "INICIATIVAS"
 tags: ["lightning-talks", "open-source", "documentacion", "comunidad", "bit-logs"]
 version: "v2.0.0"
@@ -11,6 +11,10 @@ lang: "es"
 
 > [!NOTE]
 > **Especificación del Formato:** **Bits de Conocimiento** es un protocolo estructurado de charlas técnicas de 10 minutos enfocado en resolver problemas reales, compartir herramientas prácticas y generar documentación técnica indexable.
+
+> [!TIP]
+> <i data-lucide="globe"></i> **Sitio Web:** [shellaquiles.org](https://shellaquiles.org)  
+> <i data-lucide="github"></i> **Ecosistema GitHub:** [github.com/shellaquiles](https://github.com/shellaquiles)
 
 ---
 

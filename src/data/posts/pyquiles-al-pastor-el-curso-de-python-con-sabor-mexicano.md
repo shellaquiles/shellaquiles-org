@@ -2,7 +2,7 @@
 title: "Pyquiles al Pastor: Arquitectura y Ruta de Aprendizaje"
 subtitle: "Programa abierto de desarrollo en Python moderno enfocado en entornos de producción, tipado estricto y concurrencia."
 author: "pixelead0 & Shellaquiles.org"
-date: "2026-08-29"
+date: "2026-04-21"
 category: "TUTORIAL"
 tags: ["python", "educacion", "open-source", "asyncio", "arquitectura"]
 version: "v2.4.0"
@@ -14,6 +14,10 @@ lang: "es"
 > * **Versión:** v2.4.0
 > * **Requisitos:** Manejo básico de terminal y Git.
 > * **Infraestructura:** Mantenido por el ecosistema [shellaquiles.org](https://shellaquiles.org) y coordinado por `@pixelead0`.
+
+> [!TIP]
+> <i data-lucide="globe"></i> **Sitio Web / Curso:** [shellaquiles.org](https://shellaquiles.org)  
+> <i data-lucide="github"></i> **Ecosistema GitHub:** [github.com/shellaquiles](https://github.com/shellaquiles)
 
 ---
 
