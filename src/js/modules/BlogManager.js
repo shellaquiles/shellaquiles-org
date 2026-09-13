@@ -679,7 +679,7 @@ export class BlogManager {
                 link.classList.add('active');
             } else if (currentPath.startsWith('/blog') && linkPath === '/blog') {
                 link.classList.add('active');
-            } else if ((currentPath.startsWith('/proyectos') || currentPath === '/proyectos.html') && (linkPath === '/proyectos' || linkPath === '/proyectos.html')) {
+            } else if ((currentPath.includes('proyectos') || currentPath === '/proyectos.html') && linkPath && linkPath.includes('proyectos')) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');

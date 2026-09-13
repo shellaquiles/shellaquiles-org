@@ -14,8 +14,8 @@ lang: "es"
 
 > [!TIP]
 > **Acciones del Proyecto:**  
-> <a href="https://github.com/shellaquiles/KARNITAS" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Estándar ↗</a> &nbsp;
-> <a href="https://github.com/shellaquiles/KARNITAS" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github"></i> Repositorio GitHub ↗</a>
+> <a href="https://github.com/shellaquiles/KARNITAS" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="github"></i> Repositorio GitHub ↗</a> &nbsp;
+> <a href="/proyectos.html" class="btn btn-outline">Ver en Proyectos ↗</a>
 
 ---
 
@@ -120,6 +120,16 @@ cp -r archetype /ruta/a/tu-proyecto/.agents
 > [!NOTE]
 > **¿Se debe incluir `.agents/` en el control de versiones (Git)?**  
 > **Sí, totalmente.** El objetivo de KARNITAS es que todo el equipo (y los agentes que use cada quien) compartan la misma fuente de verdad versionada en el repositorio.
+
+---
+
+## 07. Caso de Estudio Vivo: Shellaquiles.org
+
+No promovemos estándares teóricos sin validarlos en nuestras propias bases de código:
+
+* **[shellaquiles-org](https://github.com/shellaquiles/shellaquiles-org):** El propio repositorio donde vive este sitio web implementa la arquitectura de KARNITAS en su carpeta [.agents/](https://github.com/shellaquiles/shellaquiles-org/tree/main/.agents), definiendo las reglas de estilo CSS, políticas de pre-vuelo y perfiles de escritor.
+* **[Catálogo de Proyectos](/proyectos.html):** Conoce las herramientas construidas por el colectivo bajo esta gobernanza unificada de IA.
+* **[PanDocquiles](/blog/pandocquiles-motor-automatico-de-conversion-y-publicacion-de-documentacion):** Genera reportes de arquitectura automáticos compilando las notas de `.agents/memory/adrs/` directamente a PDF.
 
 ---
 

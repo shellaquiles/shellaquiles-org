@@ -1,33 +1,34 @@
 ---
-title: "Cron-Quiles: Nunca más te pierdas un evento tech en México (ICS, WebCal y JSON API)"
-subtitle: "Un agregador abierto y automatizado que reúne los eventos y meetups de comunidades tecnológicas en un solo calendario sincronizado."
+title: "Cron-Quiles: Motor Abierto y Agregador de Eventos Tech en México"
+subtitle: "Arquitectura serverless desacoplada para la sincronización continua de eventos tecnológicos (Meetup, Luma e ICS) mediante feeds declarativos."
 author: "pixelead0 & Shellaquiles.org"
-date: "2025-12-29"
+date: "2026-08-29"
 category: "PROYECTOS"
-tags: ["cron-quiles", "eventos tech mexico", "calendario meetup", "webcal", "ical-mexico", "python-etl", "open-source"]
-version: "v2.0.0"
+tags: ["cron-quiles", "python", "asyncio", "github-actions", "eventos-tech", "open-source", "calendario-tech", "etl"]
+version: "v2.1.0"
 lang: "es"
 ---
 
+# $ cat proyectos/cron_quiles.txt
+
 > [!NOTE]
-> **Definición de Sistema:** **Cron-Quiles** es un agregador ETL de código abierto que consolida eventos tecnológicos en México, normalizando fuentes heterogéneas en calendarios estáticos (`.ics`), feeds `WebCal` y endpoints `JSON`.
+> **Definición de Sistema:** **Cron-Quiles** es un agregador ETL de código abierto y calendario unificado que centraliza el pulso de la comunidad tecnológica en México. Monitorea comunidades en CDMX, Guadalajara, Puebla, Monterrey y remoto, normalizando fuentes heterogéneas en calendarios estáticos (`.ics`), suscripciones `WebCal` y endpoints `JSON` consumibles por cualquier cliente o bot.
 
 <div class="post-preview-image">
-  <img src="/assets/previews/cronquiles.png" alt="Interfaz de Cron-Quiles" class="post-preview-img">
+  <img src="/assets/previews/cronquiles.png" alt="Cron-Quiles — Calendario Unificado de la Comunidad Tech en México" class="post-preview-img">
 </div>
 
 > [!TIP]
 > **Acciones del Proyecto:**  
-> <a href="https://shellaquiles.github.io/cron-quiles/" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Proyecto ↗</a> &nbsp;
-> <a href="https://github.com/shellaquiles/cron-quiles" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github"></i> Repositorio GitHub ↗</a>
+> <a href="https://shellaquiles.github.io/cron-quiles/" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="play"></i> Abrir Calendario (Web) ↗</a> &nbsp;
+> <a href="https://github.com/shellaquiles/cron-quiles" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github"></i> Repositorio GitHub ↗</a> &nbsp;
+> <a href="/proyectos.html" class="btn btn-outline">Ver en Proyectos ↗</a>
 
 ---
 
-## 01. El Problema: Eventos tech dispersos por todos lados
+## 01. El Problema: Fragmentación del Ecosistema Tech
 
-Si formas parte de la comunidad de desarrolladores en México, seguro te ha pasado: la información sobre meetups, conferencias y talleres está completamente fragmentada. Un grupo publica en Luma, otro en Meetup, algunos en Eventbrite y otros tantos en sitios independientes o redes sociales.
-
-Seguirle la pista a cada comunidad requiere revisar decenas de sitios manualmente, lo que provoca que te enteres de eventos increíbles cuando ya pasaron.
+En los ecosistemas de desarrollo de software en México y Latinoamérica, los meetups, talleres y conferencias suelen dispersarse en múltiples plataformas: Luma, Meetup.com, Eventbrite y sitios independientes con calendarios iCal/ICS. Mantener una base de datos centralizada con servidores dedicados o APIs de pago resulta costoso, frágil y poco colaborativo.
 
 Para resolver esa dispersión creamos **Cron-Quiles**.
 
@@ -48,7 +49,7 @@ graph TD;
 
 ### Directrices y Capacidades del Sistema
 
-* `// MOTOR ETL` — **Pipeline Asíncrono en Python:** Extracción concurrente de eventos y validación estricta de esquemas con Pydantic.
+* `// MOTOR ETL` — **Pipeline Asíncrono en Python:** Extracción concurrente de eventos y validación estricta de esquemas con Pydantic (`asyncio` + `httpx`).
 * `// GEOLOCALIZACIÓN` — **Segmentación Regional:** Generación automática de calendarios específicos para CDMX, Jalisco (JAL), Puebla (PUE) y Nuevo León (NLE).
 * `// DATOS ABIERTOS` — **Feeds Estáticos:** Exportación en estándar RFC 5545 (`.ics`), suscripciones `webcal://` y endpoints `.json` optimizados.
 * `// UI/UX TIPO TERMINAL` — **Dashboard Ligero:** Interfaz estática de alto rendimiento y bajo consumo de datos para consulta rápida.
@@ -102,7 +103,17 @@ tags: ["python", "backend", "data"]
 
 ---
 
-## 06. Preguntas Frecuentes
+## 06. Conexión con el Ecosistema Shellaquiles
+
+El desarrollo de Cron-Quiles no es un caso aislado; se nutre e impulsa a los demás proyectos de la comunidad:
+
+* **[Pyquiles al Pastor](/blog/pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano):** El pipeline asíncrono de Cron-Quiles es el proyecto de estudio real en el módulo de Concurrencia y Datos (`asyncio` + `httpx`).
+* **[Bits de Conocimiento](/blog/bits-de-conocimiento):** Las charlas técnicas relámpago de la comunidad se agendan y sincronizan a través de este calendario.
+* **[Stats GitHub](/blog/stats-dashboard-de-telemetria-web-y-huella-digital-de-repositorios):** Cron-Quiles monitorea su propia telemetría y adopción comunitaria a través del dashboard de analíticas abiertas.
+
+---
+
+## 07. Preguntas Frecuentes
 
 > [!IMPORTANT]
 > **¿Tiene algún costo registrar mi comunidad en Cron-Quiles?**  
@@ -111,5 +122,5 @@ tags: ["python", "backend", "data"]
 ---
 
 ```text
-STATUS: 200 OK // REVISION: v2.0.0 // PIPELINE: CI_AUTOMATED // SYS: CRON-QUILES.ORG
+STATUS: 200 OK // REVISION: v2.1.0 // PIPELINE: CI_AUTOMATED // SYS: CRON-QUILES.ORG
 ```

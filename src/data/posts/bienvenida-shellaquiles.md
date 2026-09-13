@@ -50,7 +50,8 @@ El ecosistema centraliza proyectos públicos como el calendario [Cron-Quiles](ht
 
 1. **Comunidad:** Únete a la conversación en el grupo abierto de [Telegram](https://t.me/shellaquiles).
 2. **Repositorios:** Revisa los proyectos en [GitHub](https://github.com/shellaquiles) y busca issues etiquetados como `help wanted` o `good first issue`.
-3. **Contribuciones:** Abre un Pull Request con correcciones, nuevas funcionalidades o documentación técnica.
+3. **Proyectos:** Explora todas las herramientas en producción en nuestro [Catálogo de Proyectos](/proyectos.html).
+4. **Contribuciones:** Abre un Pull Request con correcciones, nuevas funcionalidades o documentación técnica.
 
 ```bash
 # Clonar y explorar el repositorio principal

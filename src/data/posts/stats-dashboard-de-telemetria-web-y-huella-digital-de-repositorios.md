@@ -18,8 +18,9 @@ lang: "es"
 
 > [!TIP]
 > **Acciones del Proyecto:**  
-> <a href="https://shellaquiles.github.io/stats/" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Proyecto ↗</a> &nbsp;
-> <a href="https://github.com/shellaquiles/stats" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github"></i> Repositorio GitHub ↗</a>
+> <a href="https://shellaquiles.github.io/stats/" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="play"></i> Abrir Dashboard (Web) ↗</a> &nbsp;
+> <a href="https://github.com/shellaquiles/stats" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github"></i> Repositorio GitHub ↗</a> &nbsp;
+> <a href="/proyectos.html" class="btn btn-outline">Ver en Proyectos ↗</a>
 
 ---
 
@@ -109,6 +110,17 @@ make preview
 > [!NOTE]
 > **¿Tiene algún costo o requiere API Keys pagadas?**  
 > Ninguno. Utiliza la autenticación automática de `GITHUB_TOKEN` provista por GitHub Actions y se aloja gratis en GitHub Pages.
+
+---
+
+## 07. Integración con el Ecosistema Shellaquiles
+
+Stats es el panel que visibiliza el crecimiento y la adopción real de todo el ecosistema de software libre:
+
+* **[Cron-Quiles](/blog/cronquiles-el-agregador-de-la-comunidad):** Monitorea la actividad del agregador de eventos en México.
+* **[tribuTACOS](/blog/tributacos-plataforma-de-inteligencia-fiscal-y-predeclarador-sat):** Revisa el interés comunitario en herramientas fiscales locales.
+* **[Hit-Tazos Tech](/blog/hit-tazos-tech-trivia-cronologica-para-programadores):** Mide la respuesta ante nuevos volúmenes y descargas del juego de sobremesa.
+* **[Catálogo de Proyectos](/proyectos.html):** Conoce todas las iniciativas en producción activas de Shellaquiles.
 
 ---
 

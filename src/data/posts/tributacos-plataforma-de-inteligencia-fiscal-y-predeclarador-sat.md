@@ -1,6 +1,6 @@
 ---
-title: "tribuTACOS: Toma el Control de tus Impuestos y Pre-Declara ante el SAT sin Sorpresas"
-subtitle: "Una plataforma Open Source para procesar tus facturas XML (CFDI 3.3/4.0), simular pagos de ISR e IVA y calcular tu saldo a favor en la Declaración Anual."
+title: "tribuTACOS: Inteligencia Fiscal y Pre-Declarador SAT sin Sorpresas"
+subtitle: "Una plataforma Open Source y local para conciliar comprobantes CFDI 3.3/4.0, proyectar flujo de efectivo, simular pagos provisionales y auditar deducciones personales."
 author: "pixelead0 & Shellaquiles.org"
 date: "2026-08-26"
 category: "PROYECTOS"
@@ -9,116 +9,128 @@ version: "v1.0.1"
 lang: "es"
 ---
 
+# $ cat proyectos/tributacos.txt
+
 > [!NOTE]
-> **Definición de Sistema:** **tribuTACOS** es una plataforma Open Source de análisis, proyección y simulación fiscal que procesa comprobantes XML (**CFDI 3.3 y 4.0**) y declaraciones en PDF del SAT, calculando por anticipado y bajo el principio de **flujo de efectivo** los Pagos Provisionales Mensuales (ISR/IVA) y la Declaración Anual.
+> **Definición de Sistema:** **tribuTACOS** es una plataforma de software libre y ejecución 100% local concebida para que desarrolladores, consultores y profesionistas independientes en México tomen el control de sus impuestos. Procesa comprobantes XML (**CFDI 3.3 y 4.0**) y declaraciones oficiales en PDF del SAT, calculando por anticipado y bajo el principio de **flujo de efectivo** los Pagos Provisionales Mensuales (ISR/IVA) y la Declaración Anual.
 
 <div class="post-preview-image">
-  <img src="/assets/previews/tributacos.png" alt="Dashboard de tribuTACOS" class="post-preview-img">
+  <img src="/assets/previews/tributacos.png" alt="Dashboard de tribuTACOS — Simulación Fiscal y Auditoría SAT" class="post-preview-img">
 </div>
 
 > [!TIP]
 > **Acciones del Proyecto:**  
-> <a href="https://shellaquiles.org" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Proyecto ↗</a> &nbsp;
-> <a href="https://github.com/shellaquiles/tribuTACOS" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github"></i> Repositorio GitHub ↗</a>
+> <a href="https://github.com/shellaquiles/tribuTACOS" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="github"></i> Repositorio GitHub ↗</a> &nbsp;
+> <a href="/proyectos.html" class="btn btn-outline">Ver en Proyectos ↗</a>
 
 ---
 
-## 01. El Problema: La incertidumbre de los impuestos y las sorpresas del SAT
+## 01. El Problema: La Incertidumbre Fiscal ante el SAT
 
-Para cualquier profesionista independiente, consultor por honorarios o empleado en México (Régimen de Servicios Profesionales, Actividad Empresarial o Sueldos y Salarios), la relación con el SAT suele estar llena de incertidumbre:
+Para cualquier profesionista independiente, consultor por honorarios o empleado en México (Régimen de Servicios Profesionales, Actividad Empresarial o Sueldos y Salarios), la relación con el SAT suele generar fricción e incertidumbre:
 
-1. **Incertidumbre mensual:** ¿Cuánto me toca pagar de ISR e IVA este mes?
-2. **Retenciones desalineadas:** ¿Mis clientes me hicieron bien las retenciones del 10% de ISR?
-3. **Saldo a favor incierto:** ¿Llegaré a abril con un saldo a favor en la Declaración Anual o con una deuda inesperada?
-4. **Suboptimización de deducciones:** ¿Estoy aprovechando correctamente mis gastos médicos y facturas deducibles o se me están pasando los límites en UMAs (Art. 151 LISR)?
+1. **Incertidumbre mensual:** ¿Cuánto dinero exactamente debo reservar para pagar ISR e IVA este mes?
+2. **Retenciones desalineadas:** ¿Mis clientes aplicaron correctamente las retenciones del 10% de ISR y las dos terceras partes de IVA?
+3. **Saldo a favor impredecible:** ¿Llegaré al mes de abril con un saldo a favor en la Declaración Anual o con un saldo a cargo imprevisto?
+4. **Suboptimización de deducciones:** ¿Estoy aprovechando al máximo mis gastos médicos, colegiaturas y aportaciones complementarias antes de topar el límite legal de 5 UMAs anuales (Art. 151 LISR)?
 
-Para resolver estas dudas con transparencia y matemáticas claras creamos **tribuTACOS**.
-
----
-
-## 02. La Solución: Simulación Fiscal Determinista
-
-tribuTACOS es una plataforma web de código abierto que analiza tus facturas electrónicas (**CFDI 3.3 y 4.0 en XML**) y las declaraciones oficiales del SAT en PDF. El sistema simula tu contabilidad en tiempo real bajo el principio de **flujo de efectivo** (lo efectivamente cobrado y pagado), calculando tus Pagos Provisionales Mensuales y tu Declaración Anual de forma determinista.
-
-![Tablero de Control Global](manual_usuario/img/01_dashboard_global.png)
-*Figura 1: Tablero principal con la visión consolidada de ingresos, gastos y proyección de impuestos.*
-
-### Directrices y Módulos Clave
-
-* `// FLUJO DE EFECTIVO` — **Pre-Declaración Mensual:** Simula pagos provisionales de ISR e IVA basándose en facturas cobradas (PUE) y complementos de pago (PPD), con control automático del **arrastre de saldos a favor de IVA** (Art. 5 y 6 LIVA).
-* `// CASCADA FISCAL` — **Declaración Anual (Art. 152 LISR):** Proyecta el impuesto anual en 5 pasos: `Ingresos Acumulables` ➔ `Deducciones Personales` ➔ `Base Gravable` ➔ `ISR Determinado` ➔ `Saldo a Favor / A Cargo`.
-* `// CLASIFICACIÓN SAT` — **c_ClaveProdServ Mapping:** Mapea automáticamente más de 52,000 claves oficiales del catálogo SAT para clasificar gastos en 8 rubros operativos.
-* `// OPTIMIZADOR LEGAL` — **Deducciones Personales (Art. 151 LISR):** Audita medios de pago bancarizados obligatorios y aplica el tope legal (menor entre 15% de ingresos o 5 UMAs anuales).
-* `// AUDITORÍA PUNTO A PUNTO` — **XML vs PDF Oficial:** Concilia los comprobantes XML cargados contra las declaraciones en PDF presentadas ante el SAT.
+**tribuTACOS** fue diseñado para sustituir la incertidumbre con matemáticas transparentes, código auditable y privacidad absoluta.
 
 ---
 
-## 03. Matriz de Módulos del Sistema
+## 02. La Solución: Simulación Fiscal Determinista y Local
+
+tribuTACOS no envía jamás tu información financiera a la nube de terceros. Se ejecuta localmente en tu propia máquina mediante un stack moderno en **Python (FastAPI)** y **Next.js 15**, procesando tus comprobantes XML directamente contra una base de datos local SQLite o PostgreSQL.
+
+```mermaid
+flowchart TD
+    XML["Facturas XML (CFDI 3.3 / 4.0)"] --> PARSER["Parser Determinista (lxml + Pydantic)"]
+    PDF["Declaraciones SAT en PDF"] --> OCR["Extracción de Acuses (pdfplumber)"]
+    
+    PARSER --> CASHFLOW["Motor de Flujo de Efectivo (PUE + PPD)"]
+    OCR --> AUDIT["Matriz de Conciliación XML vs PDF"]
+    
+    CASHFLOW --> M_TAX["Pagos Provisionales Mensuales (ISR / IVA)"]
+    CASHFLOW --> A_TAX["Cascada Fiscal Anual (Art. 152 LISR)"]
+    
+    M_TAX --> UI["Dashboard Interactivo en Next.js"]
+    A_TAX --> UI
+    AUDIT --> UI
+```
+
+---
+
+## 03. Directrices y Módulos de Cálculo
+
+* `// FLUJO DE EFECTIVO` — **Pre-Declaración Mensual:** Simula pagos provisionales basándose únicamente en facturas efectivamente cobradas (PUE) y complementos de recepción de pagos (PPD), con cálculo automático del **arrastre de saldos a favor de IVA** (Art. 5 y 6 LIVA).
+* `// CASCADA FISCAL` — **Declaración Anual (Art. 152 LISR):** Aplica la tarifa anual progresiva en 5 pasos deterministas:
+  $$\text{Ingresos Acumulables} \longrightarrow \text{Deducciones Personales} \longrightarrow \text{Base Gravable} \longrightarrow \text{ISR Determinado} \longrightarrow \text{Saldo Neto}$$
+* `// TAXONOMÍA SAT` — **Mapeo de Claves c_ClaveProdServ:** Clasifica de forma automática más de 52,000 claves del catálogo del SAT en 8 rubros operativos para identificar gastos deducibles.
+* `// OPTIMIZADOR LEGAL` — **Deducciones Personales (Art. 151 LISR):** Audita que los pagos médicos y dentales cumplan con medios bancarizados obligatorios y aplica el tope legal estricto (el menor entre el 15% de los ingresos o 5 UMAs anuales).
+* `// AUDITORÍA PUNTO A PUNTO` — **XML vs PDF Oficial:** Compara los montos de tus facturas locales contra lo que el SAT declaró en sus acuses oficiales en PDF, detectando discrepancias al centavo.
+
+---
+
+## 04. Matriz Comparativa de Módulos
 
 | Módulo | Enfoque Operativo | Regla / Estándar SAT |
 | :--- | :--- | :--- |
-| **Tablero Global** | KPIs ejecutivos, saldo a favor proyectado e impuesto a cargo | Visión holística multirregimen |
-| **Pre-Declaración Mensual** | Flujo de efectivo, pagos provisionales ISR e IVA | Art. 106 LISR / Art. 5-6 LIVA |
-| **Declaración Anual** | Cascada fiscal de 5 pasos, tasa efectiva y marginal | Tarifa Art. 152 LISR |
-| **Gastos y Egresos** | Clasificación taxonómica en 8 rubros y auditoría de pago | Catálogo `c_ClaveProdServ` |
-| **Deducciones Personales** | Optimización de gastos médicos, colegiaturas y PPR | Art. 151 LISR / Topes UMA |
-| **Auditoría y Conciliación** | Matriz comparativa XML vs PDF oficial | Control de acuses y líneas de captura |
-
----
-
-## 04. Vistas de la Interfaz
-
-### Pre-Declaración Mensual e IVA
-![Pre-Declaración Mensual e IVA](manual_usuario/img/03_predeclaracion_mensual.png)
-*Figura 2: Simulación de pagos provisionales mensuales con desglose de IVA a favor y retenciones.*
-
-### Cascadas para la Declaración Anual
-![Pre-Declaración Anual](manual_usuario/img/05_predeclaracion_anual.png)
-*Figura 3: Desglose de la cascada fiscal para conocer tu tasa efectiva y proyección anual.*
-
-### Optimizador de Deducciones Personales
-![Deducciones Personales](manual_usuario/img/07_deducciones_personales.png)
-*Figura 4: Control de gastos deducibles personales y topes en UMA.*
+| **Tablero Global** | KPIs consolidados de ingresos brutos, gastos y proyección neta | Visión holística multirregimen |
+| **Pre-Declaración Mensual** | Flujo de efectivo, cálculo de ISR provisional e IVA trasladado vs acreditable | Art. 106 LISR / Art. 5 y 6 LIVA |
+| **Declaración Anual** | Cascada fiscal de 5 pasos, cálculo de tasa efectiva y tasa marginal | Tarifa Progresiva Art. 152 LISR |
+| **Auditoría de Gastos** | Clasificación taxonómica en 8 rubros y validación de métodos de pago | Catálogo `c_ClaveProdServ` SAT |
+| **Deducciones Personales** | Optimización de honorarios médicos, seguros de gastos médicos y PPR | Art. 151 LISR / Topes UMA |
+| **Conciliación PDF vs XML** | Cruce de facturas vivas contra declaraciones y acuses oficiales | Líneas de captura y folios SAT |
 
 ---
 
 ## 05. Stack Tecnológico de Grado Industrial
 
-* **Backend:** Python 3.11+, FastAPI 0.141, SQLAlchemy 2.0, Pydantic v2, `lxml`, `pdfplumber`.
+* **Backend:** Python 3.11+, FastAPI 0.141, SQLAlchemy 2.0, Pydantic v2, `lxml` y `pdfplumber`.
 * **Frontend:** Next.js 15 (App Router), React 19, Tailwind CSS.
-* **Base de datos:** SQLite local (`tributacos.db`) o PostgreSQL.
+* **Base de datos:** SQLite local (`tributacos.db`) o PostgreSQL para instalaciones multiusuario.
+* **Seguridad:** Cero telemetría externa, datos aislados en la máquina del contribuyente.
 
 ---
 
-## 06. Guía de Inicio Rápido
+## 06. Guía de Inicio Rápido en 3 Comandos
 
-> [!TIP]
-> El proyecto cuenta con un `Makefile` integral para levantar la plataforma en pocos segundos.
+El proyecto cuenta con un `Makefile` integral para desplegar la plataforma localmente:
 
 ```bash
 # 1. Clonar el repositorio
 git clone https://github.com/shellaquiles/tributacos.git
 cd tributacos
 
-# 2. Instalar dependencias y crear la base de datos de prueba
+# 2. Configurar el entorno virtual y base de datos
 make setup
 
-# 3. Iniciar el servidor (Backend en puerto 8000, Frontend en 3000)
+# 3. Iniciar Backend (puerto 8000) y Frontend (puerto 3000)
 make dev
 ```
 
-Entra a `http://localhost:3000` en tu navegador para cargar tus facturas XML y comenzar a auditar tu información fiscal.
+Abre `http://localhost:3000` en tu navegador, arrastra tu carpeta de comprobantes XML y comienza a proyectar tus impuestos con certeza absoluta.
 
 ---
 
-## 07. Preguntas Frecuentes
+## 07. Integración con la Comunidad Shellaquiles
+
+tribuTACOS es un pilar de la soberanía técnica comunitaria promovida en [Shellaquiles.org](/):
+
+* **[Catálogo de Proyectos](/proyectos.html):** Consulta el estado de producción de tribuTACOS y explora otras herramientas de software libre de nuestra comunidad.
+* **[Stats GitHub](/blog/stats-dashboard-de-telemetria-web-y-huella-digital-de-repositorios):** Sigue la evolución de clones, estrellas e issues en el repositorio de tribuTACOS.
+* **[Pyquiles al Pastor](/blog/pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano):** tribuTACOS es un ejemplo avanzado de arquitectura limpia con FastAPI y Pydantic estudiado en nuestro curso de Python.
+
+---
+
+## 08. Preguntas Frecuentes
 
 > [!IMPORTANT]
 > **¿Mis facturas XML se envían a algún servidor externo?**  
-> No. tribuTACOS está pensado para correr localmente en tu propia máquina. Toda la información de tus CFDIs se procesa en tu base de datos local de manera privada.
+> No. tribuTACOS está diseñado bajo una arquitectura *local-first*. Toda la información de tus comprobantes fiscales y CFDIs se procesa exclusivamente en tu propia máquina mediante tu base de datos local SQLite, garantizando total privacidad financiera.
 
 ---
 
 ```text
-STATUS: 200 OK // ENGINE: FASTAPI+NEXTJS15 // TAX_YEAR: 2026 // SYS: SHELLAQUILES.ORG
+STATUS: 200 OK // STACK: FASTAPI+NEXTJS15 // TAX_YEAR: 2026 // PRIVACY: LOCAL_FIRST
 ```

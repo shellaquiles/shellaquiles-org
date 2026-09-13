@@ -25,7 +25,12 @@ The blog data lives in two places:
    }
    ```
    *CRITICAL*: The `slug` value must EXACTLY match the filename without the `.md` extension.
-4. **Compile**: Run `npm run copy` to sync data to the `dist/` folder.
+4. **Validación SEO 360° & Difusión Orgánica**:
+   - Asegurar que el post funcione como complemento SEO del proyecto correspondiente.
+   - Enlaces orgánicos bidireccionales: app en vivo / demo, repo en GitHub, descargas/releases o docs.
+   - Difusión de valor (ingeniería, retos, arquitectura, estándares) sin sonar a publicidad forzada.
+   - Metadatos con palabras clave reales y extracto conciso.
+5. **Compile**: Run `npm run copy` to sync data to the `dist/` folder.
 
 ## Workflow: Editing a Post
 1. Edit the markdown file in `src/data/posts/[slug].md`.

@@ -14,8 +14,8 @@ lang: "es"
 
 > [!TIP]
 > **Acciones del Proyecto:**  
-> <a href="https://github.com/shellaquiles/pandocquiles" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Proyecto ↗</a> &nbsp;
-> <a href="https://github.com/shellaquiles/pandocquiles" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github"></i> Repositorio GitHub ↗</a>
+> <a href="https://github.com/shellaquiles/pandocquiles" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="github"></i> Repositorio GitHub ↗</a> &nbsp;
+> <a href="/proyectos.html" class="btn btn-outline">Ver en Proyectos ↗</a>
 
 ---
 
@@ -136,6 +136,16 @@ git submodule add https://github.com/shellaquiles/pandocquiles.git tools/pandocq
 > [!NOTE]
 > **¿Qué pasa si no configuro el Webhook de Google Drive?**  
 > PanDocquiles seguirá funcionando perfectamente. Compilará todos los archivos en tu carpeta local `documentacion/` o `dist_docs/` para que los uses como prefieras.
+
+---
+
+## 07. Integración con el Ecosistema Shellaquiles
+
+PanDocquiles es la herramienta que utilizamos para generar la documentación técnica de nuestros proyectos:
+
+* **[KARNITAS](/blog/karnitas-estandar-abierto-de-gobernanza-y-contexto-para-agentes-de-ia):** Convierte las especificaciones funcionales y ADRs de `.agents/` en reportes ejecutivos para clientes y stakeholders.
+* **[Catálogo de Proyectos](/proyectos.html):** Explora el software libre y pipelines mantenidos por la comunidad en México.
+* **[Hit-Tazos Tech](/blog/hit-tazos-tech-trivia-cronologica-para-programadores):** Conoce cómo aplicamos estándares de calidad tipográfica y diseño suizo tanto en el código como en sobremesa.
 
 ---
 
