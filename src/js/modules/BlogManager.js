@@ -602,6 +602,8 @@ export class BlogManager {
                 link.classList.add('active');
             } else if (currentPath.startsWith('/blog') && linkPath === '/blog') {
                 link.classList.add('active');
+            } else if (currentPath.includes('proyectos') && linkPath && linkPath.includes('proyectos')) {
+                link.classList.add('active');
             } else {
                 link.classList.remove('active');
             }

@@ -35,6 +35,11 @@ class SPAHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             # File exists, serve it directly
             return super().do_GET()
 
+        # Check if corresponding .html file exists (e.g., /proyectos -> proyectos.html)
+        if file_path and os.path.isfile(file_path + '.html'):
+            self.path = '/' + file_path + '.html'
+            return super().do_GET()
+
         # Check for static file extensions
         static_extensions = ('.css', '.js', '.json', '.md', '.png', '.jpg', '.jpeg', '.gif', '.svg',
                            '.ico', '.woff', '.woff2', '.ttf', '.eot', '.pdf', '.zip', '.txt')
