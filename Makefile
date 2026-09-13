@@ -49,70 +49,70 @@ help:
 
 # ── ENTORNO & DESARROLLO ──────────────────────────────────────────────────────
 install:
-	@printf "  $(BLUE)📦 Instalando dependencias npm...$(RESET)\n"
+	@printf "  $(BLUE)[NPM] Instalando dependencias npm...$(RESET)\n"
 	@$(NPM) install
-	@printf "  $(EMERALD)✔ Dependencias instaladas correctamente.$(RESET)\n"
+	@printf "  $(EMERALD)[OK] Dependencias instaladas correctamente.$(RESET)\n"
 
 dev: clean copy
-	@printf "  $(BLUE)🔍 Validando disponibilidad del puerto $(PORT)...$(RESET)\n"
+	@printf "  $(BLUE)[PORT] Validando disponibilidad del puerto $(PORT)...$(RESET)\n"
 	@lsof -ti:$(PORT) | xargs kill -9 2>/dev/null || true
-	@printf "  $(EMERALD)🚀 Iniciando entorno de desarrollo en http://localhost:$(PORT)$(RESET)\n"
+	@printf "  $(EMERALD)[DEV] Iniciando entorno de desarrollo en http://localhost:$(PORT)$(RESET)\n"
 	@$(NPM) run dev
 
 copy:
-	@printf "  $(BLUE)📋 Copiando archivos estáticos a dist/...$(RESET)\n"
+	@printf "  $(BLUE)[COPY] Copiando archivos estáticos a dist/...$(RESET)\n"
 	@$(NPM) run copy
-	@printf "  $(EMERALD)✔ Archivos estáticos copiados.$(RESET)\n"
+	@printf "  $(EMERALD)[OK] Archivos estáticos copiados.$(RESET)\n"
 
 clean:
-	@printf "  $(AMBER)🗑️  Limpiando directorio dist/...$(RESET)\n"
+	@printf "  $(AMBER)[CLEAN] Limpiando directorio dist/...$(RESET)\n"
 	@$(NPM) run clean
-	@printf "  $(EMERALD)✔ Directorio limpiado.$(RESET)\n"
+	@printf "  $(EMERALD)[OK] Directorio limpiado.$(RESET)\n"
 
 # ── BUILD ─────────────────────────────────────────────────────────────────────
 build:
-	@printf "  $(BLUE)🏗️  Construyendo assets de producción...$(RESET)\n"
+	@printf "  $(BLUE)[BUILD] Construyendo assets de producción...$(RESET)\n"
 	@$(NPM) run build:prod
-	@printf "  $(EMERALD)✔ Build completado — archivos listos en dist/$(RESET)\n"
+	@printf "  $(EMERALD)[OK] Build completado — archivos listos en dist/$(RESET)\n"
 
 build-dev:
-	@printf "  $(BLUE)🏗️  Construyendo assets en modo desarrollo...$(RESET)\n"
+	@printf "  $(BLUE)[BUILD] Construyendo assets en modo desarrollo...$(RESET)\n"
 	@$(NPM) run build:dev
-	@printf "  $(EMERALD)✔ Build dev completado.$(RESET)\n"
+	@printf "  $(EMERALD)[OK] Build dev completado.$(RESET)\n"
 
 serve:
-	@printf "\n  $(BOLD)$(EMERALD)🌐 Servidor de producción activo:$(RESET) $(CYAN)http://localhost:8001$(RESET)\n"
+	@printf "\n  $(BOLD)$(EMERALD)[SERVE] Servidor de producción activo:$(RESET) $(CYAN)http://localhost:8001$(RESET)\n"
 	@printf "  $(DIM)   Presiona Ctrl+C para detener el servidor.$(RESET)\n\n"
 	@$(NPM) run serve:prod
 
 # ── CALIDAD DE CÓDIGO ─────────────────────────────────────────────────────────
 check:
-	@printf "  $(BLUE)🕵️  Ejecutando Pre-Flight Check...$(RESET)\n"
+	@printf "  $(BLUE)[CHECK] Ejecutando Pre-Flight Check...$(RESET)\n"
 	@$(BASH) .agents/hooks/pre-flight-check.sh
 
 lint:
-	@printf "  $(BLUE)🧹 Analizando código JavaScript con ESLint...$(RESET)\n"
+	@printf "  $(BLUE)[LINT] Analizando código JavaScript con ESLint...$(RESET)\n"
 	@$(NPM) run lint
 
 # ── DESPLIEGUE ────────────────────────────────────────────────────────────────
 deploy: check
-	@printf "  $(BLUE)🚢 Iniciando despliegue seguro a producción...$(RESET)\n"
+	@printf "  $(BLUE)[DEPLOY] Iniciando despliegue seguro a producción...$(RESET)\n"
 	@$(NPM) run prepare-production
-	@printf "  $(EMERALD)✔ Despliegue completado exitosamente.$(RESET)\n"
+	@printf "  $(EMERALD)[OK] Despliegue completado exitosamente.$(RESET)\n"
 
 # ── AGENT WORKFLOWS ───────────────────────────────────────────────────────────
 agent-deploy:
-	@printf "\n  $(BOLD)$(CYAN)🤖 Workflow: Deployment Protocol$(RESET)\n"
+	@printf "\n  $(BOLD)$(CYAN)[AGENT] Workflow: Deployment Protocol$(RESET)\n"
 	@printf "  $(GRAY)━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$(RESET)\n"
 	@$(MAKE) --no-print-directory check
 	@$(MAKE) --no-print-directory build
 	@$(MAKE) --no-print-directory copy
 	@printf "  $(GRAY)━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$(RESET)\n"
-	@printf "  $(EMERALD)✔ Assets listos en dist/. Revisa antes de hacer commit.$(RESET)\n"
+	@printf "  $(EMERALD)[OK] Assets listos en dist/. Revisa antes de hacer commit.$(RESET)\n"
 	@printf "  $(DIM)   Tip: ejecuta 'make serve' para previsualizar en :8001$(RESET)\n\n"
 
 agent-maintain:
-	@printf "\n  $(BOLD)$(CYAN)🤖 Workflow: Workspace Maintenance$(RESET)\n"
+	@printf "\n  $(BOLD)$(CYAN)[AGENT] Workflow: Workspace Maintenance$(RESET)\n"
 	@printf "  $(GRAY)━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$(RESET)\n"
 	@printf "  $(BLUE)  [1/3] Analizando código JavaScript...$(RESET)\n"
 	@$(MAKE) --no-print-directory lint
@@ -121,4 +121,4 @@ agent-maintain:
 	@printf "  $(BLUE)  [3/3] Validando build de producción...$(RESET)\n"
 	@$(MAKE) --no-print-directory build
 	@printf "  $(GRAY)━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$(RESET)\n"
-	@printf "  $(EMERALD)✔ Mantenimiento completado. Workspace en buen estado.$(RESET)\n\n"
+	@printf "  $(EMERALD)[OK] Mantenimiento completado. Workspace en buen estado.$(RESET)\n\n"

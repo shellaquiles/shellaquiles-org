@@ -5,14 +5,14 @@ author: "pixelead0 & Shellaquiles.org"
 date: "2026-08-29"
 category: "TOOLING"
 tags: ["frases-de-programadores", "python", "cli", "terminal", "open-source", "cultura-dev", "axiomas"]
-version: "v1.3.0"
+version: "v2.0.0"
 lang: "es"
 ---
 
 # $ cat proyectos/frases_chingonas.txt
 
 > [!NOTE]
-> **Definición de Sistema:** **Frases Chingonas** es un paquete CLI y aplicación web interactiva desarrollada en Python y Vanilla JS que cura y expone los mejores axiomas de ingeniería de software, arquitectura de sistemas y cultura hacker. Diseñado para ejecutarse en milisegundos al abrir sesiones en Zsh, Bash o Fish sin penalizar el rendimiento del prompt.
+> **Definición de Sistema:** **Frases Chingonas** es una base de conocimiento, utilidad CLI y visualizador interactivo desarrollado en Python y Vanilla JS que condensa principios de libros clásicos de computación, arquitectura de software e ingeniería de sistemas en cápsulas concisas. Diseñado para consumirse vía web, imprimir tarjetas o ejecutarse en milisegundos en la terminal al abrir Zsh o Bash.
 
 <div class="post-preview-image">
   <img src="/assets/previews/frases-chingonas.png" alt="Frases Chingonas — Axiomas de Programación y Cultura Dev" class="post-preview-img">
@@ -26,20 +26,39 @@ lang: "es"
 
 ---
 
-## 01. Por qué Necesitas Sabiduría Técnica en tu Terminal
+## 01. El Problema: Lecciones Fundamentales Diluidas
 
-Todo desarrollador pasa horas frente a la consola. Herramientas históricas como `fortune` o `cowsay` marcaron una época nostálgica en los sistemas Unix, pero carecen de una curaduría moderna enfocada en los retos reales del software contemporáneo: deuda técnica, arquitecturas distribuidas, buenas prácticas de código limpio y lecciones de depuración en producción.
+Los fundamentos del buen desarrollo de software —las lecciones sobre Clean Code, diseño de sistemas, refactorización y arquitectura— suelen encontrarse dispersos en extensos libros de cientos de páginas.
 
-**`frases-chingonas`** resuelve esta necesidad mediante un dataset estructurado y un ejecutable ultra-ligero:
+Durante revisiones de código (*Code Reviews*), sesiones de arquitectura o debates técnicos en el equipo, recordar el principio exacto o la frase canónica de autores clásicos puede marcar la diferencia entre una discusión teórica estéril y un criterio de ingeniería claro.
 
-* `// INYECCIÓN_SHELL` — **Carga Instantánea:** Optimizado para ejecutarse en menos de 15 milisegundos, ideal para integrarse en `.zshrc` o `.bashrc`.
-* `// CURADURÍA_TÉCNICA` — **Axiomas Reales:** Citas icónicas y reflexiones de referentes de la computación (Linus Torvalds, Martin Fowler, Edsger Dijkstra, Rob Pike, Grace Hopper).
-* `// FILTRADO_DINÁMICO` — **Segmentación por Tags:** Extracción aleatoria filtrada por categorías como `architecture`, `debugging`, `git`, `devops`, `clean-code` y `culture`.
-* `// ZERO_OVERHEAD` — **Sin Dependencias Pesadas:** Funciona con la biblioteca estándar de Python o esquemas validados con Pydantic.
+Para rescatar y condensar esa sabiduría práctica creamos **Frases Chingonas**.
 
 ---
 
-## 02. Colección Destacada: Axiomas de Ingeniería y Programación
+## 02. La Solución: Catálogo Atómico, CLI y Visualizador Web
+
+Frases Chingonas estructura esos principios en declaraciones concisas, atómicas y ejecutables. El proyecto funciona como una aplicación web estática ultraligera que permite consultar citas por autor, libro o categoría, e inyectarlas en la terminal o imprimir fichas físicas para espacios de trabajo.
+
+```mermaid
+graph TD;
+    A["Base de Datos CSV/JSONL (Libros & Citas)"] -->|server.py / Scripts| B(Motor de Extracción & Validación);
+    B --> C[Fichero Consolidado quotes.json];
+    C --> D[Visualizador Web Reactivo];
+    C --> E[CLI para Shell ~/.bashrc];
+    C --> F[Generador de Tarjetas Imprimibles @media print];
+```
+
+### Directrices y Filosofía del Catálogo
+
+* `// PRESERVACIÓN` — **Fundamentos Vigentes:** Rescate de patrones arquitectónicos de libros canónicos del software (Linus Torvalds, Martin Fowler, Edsger Dijkstra, Rob Pike, Grace Hopper).
+* `// SÍNTESIS ATÓMICA` — **Sin Rodeos:** Ideas complejas reducidas a reglas directas aplicables al código en producción.
+* `// DUALIDAD DIGITAL/FÍSICA` — **Consumo Flexible:** Diseñado tanto para consulta en navegador como para exportar e imprimir tarjetas de 3x3 cm.
+* `// CERO OVERHEAD` — **Motor Local:** Selección aleatoria y filtrado sin dependencias externas pesadas, ejecutándose en menos de 15 ms.
+
+---
+
+## 03. Colección Destacada: Axiomas de Ingeniería y Programación
 
 Una muestra del dataset categorizado que indexa la herramienta:
 
@@ -54,23 +73,34 @@ Una muestra del dataset categorizado que indexa la herramienta:
 
 ---
 
-## 03. Instalación Rápida en 1 Minuto
+## 04. Matriz de Componentes del Proyecto
 
-Puedes instalar y configurar el CLI directamente en tu entorno local:
+| Componente | Archivo / Tecnología | Función Principal |
+| :--- | :--- | :--- |
+| **Data Registry** | `frases.csv` / `libros.jsonl` | Catálogo estructurado de libros, capítulos, autores y citas oficiales. |
+| **Visualizador Web** | HTML5 / JavaScript Vanilla | Dashboard estático interactivo con cambio dinámico de temas visuales. |
+| **Motor de Servidor Local**| `server.py` (Python) | Servidor ligero de desarrollo para pruebas locales e inspección. |
+| **Print Layout Engine** | CSS `@media print` | Hoja de estilos optimizada para impresión y corte de fichas físicas. |
+
+---
+
+## 05. Cómo Explorar y Contribuir
+
+Puedes consultar el catálogo en línea o ejecutarlo en tu máquina:
+
+* **Sitio Web Oficial:** [shellaquiles.github.io/frases-chingonas/](https://shellaquiles.github.io/frases-chingonas/)
+* **Repositorio en GitHub:** [github.com/shellaquiles/frases-chingonas](https://github.com/shellaquiles/frases-chingonas)
 
 ```bash
-# 1. Clonar el repositorio oficial
+# 1. Clonar el repositorio
 git clone https://github.com/shellaquiles/frases-chingonas.git
 cd frases-chingonas
 
-# 2. Instalar el paquete en modo editable o en tu entorno global
-pip install -e .
-
-# 3. Probar la salida directa en terminal filtrando por arquitectura
-frases-chingonas --tag architecture
+# 2. Iniciar el servidor local de pruebas
+python server.py
 ```
 
-### Inyección automática al abrir la terminal
+### Inyección en la terminal
 
 Agrega la siguiente línea al final de tu archivo de configuración de shell (`~/.zshrc` o `~/.bashrc`):
 
@@ -83,16 +113,24 @@ fi
 
 ---
 
-## 04. Sinergia con el Ecosistema Shellaquiles
+## 06. Sinergia con el Ecosistema Shellaquiles
 
 Frases Chingonas condensa la filosofía técnica que permea todos los proyectos de nuestra comunidad:
 
 * **[PEP 8: Guía de Estilo](/blog/pep8-python):** Consulta las bases del código limpio y el célebre Zen de Python de Tim Peters (`import this`).
 * **[Hit-Tazos Tech](/blog/hit-tazos-tech-trivia-cronologica-para-programadores):** Pon a prueba tu conocimiento sobre los pioneros de la computación citados en este catálogo jugando a la trivia cronológica de 576 cartas.
-* **[Pyquiles al Pastor](/blog/pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano):** Aprende a construir utilidades de línea de comandos modulares como Frases Chingonas desde cero.
+* **[Pyquiles al Pastor](/blog/pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano):** Aprende a construir utilidades modulares como Frases Chingonas desde cero.
+
+---
+
+## 07. Preguntas Frecuentes
+
+> [!IMPORTANT]
+> **¿Puedo imprimir las tarjetas para mi oficina o espacio de trabajo?**  
+> Sí, la aplicación web incluye estilos CSS optimizados para impresión (`Ctrl + P`). Puedes exportar e imprimir directamente fichas en formato 3x3 cm.
 
 ---
 
 ```text
-STATUS: 200 OK // ENGINE: PYTHON_CLI // DATASET: OPEN_SOURCE // SYS: SHELLAQUILES.ORG
+STATUS: 200 OK // ENGINE: READY // DATASET: OPEN_SOURCE // SYS: SHELLAQUILES.ORG
 ```

@@ -1112,6 +1112,15 @@ html.dark .manifesto-quote {
     margin-bottom: 2rem;
 }
 
+.section-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.5rem 0 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
 .projects-cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1123,22 +1132,22 @@ html.dark .manifesto-quote {
 .project-card {
     background: var(--bg-surface);
     border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-md, 6px);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
-    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    gap: 1.25rem;
+    transition: transform var(--transition-fast, 0.2s ease), border-color var(--transition-fast, 0.2s ease), box-shadow var(--transition-fast, 0.2s ease);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
 }
 
 .project-card:hover {
-    border-color: var(--matrix-bright);
+    border-color: var(--matrix-bright, #00ff66);
     transform: translateY(-2px);
-    box-shadow: var(--matrix-glow);
+    box-shadow: var(--matrix-glow, 0 0 10px rgba(0, 255, 102, 0.35));
 }
 
 .project-card-header {
@@ -1148,9 +1157,13 @@ html.dark .manifesto-quote {
 }
 
 .project-status {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.45rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-muted);
 }
 
 .status-indicator {
@@ -1162,12 +1175,12 @@ html.dark .manifesto-quote {
 }
 
 .status-indicator.live {
-    background-color: var(--matrix-bright);
-    box-shadow: 0 0 8px var(--matrix-bright);
+    background: var(--matrix-bright, #00ff66);
+    box-shadow: 0 0 8px var(--matrix-bright, #00ff66);
 }
 
 .status-indicator.build {
-    background-color: #f59e0b;
+    background: #f59e0b;
     box-shadow: 0 0 8px #f59e0b;
 }
 
@@ -1181,19 +1194,19 @@ html.dark .manifesto-quote {
 }
 
 .project-card-title {
+    font-family: var(--font-sans);
     font-size: 1.35rem;
     font-weight: 800;
+    letter-spacing: -0.025em;
     color: var(--text);
-    font-family: var(--font-sans);
+    line-height: 1.2;
     margin: 0;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
 }
 
 .project-card-image {
     width: 100%;
     height: 180px;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-sm, 4px);
     overflow: hidden;
     border: 1px solid var(--border);
     background: var(--bg-subtle);
@@ -1206,9 +1219,9 @@ html.dark .manifesto-quote {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: top center;
     display: block;
-    transition: transform var(--transition-fast);
+    transition: transform var(--transition-fast, 0.2s ease);
 }
 
 .project-card:hover .project-img {
@@ -1220,8 +1233,8 @@ html.dark .manifesto-quote {
     font-size: 0.9rem;
     line-height: 1.6;
     color: var(--text-muted);
-    margin: 0;
     flex-grow: 1;
+    margin: 0;
 }
 
 .project-tags {
@@ -1236,10 +1249,10 @@ html.dark .manifesto-quote {
     font-size: 0.72rem;
     font-weight: 600;
     padding: 0.2rem 0.55rem;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-sm, 4px);
     background: rgba(0, 255, 102, 0.05);
     border: 1px solid var(--border);
-    color: var(--matrix-tag-text);
+    color: var(--matrix-tag-text, #7ee89d);
     letter-spacing: 0.02em;
 }
 
@@ -1276,6 +1289,29 @@ html.light .p-tag {
 .footer-sublink:hover {
     color: var(--matrix-bright);
     text-decoration: underline;
+}
+
+/* Post Preview Image in Blog Articles */
+.post-preview-image {
+    width: 100%;
+    border-radius: var(--radius-sm, 4px);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin: 1.25rem 0;
+}
+
+.post-preview-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.post-preview-image:hover .post-preview-img {
+    transform: scale(1.02);
 }
 
 @media (max-width: 768px) {

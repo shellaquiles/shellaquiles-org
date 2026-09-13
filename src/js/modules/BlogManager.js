@@ -1,4 +1,4 @@
-import { parseMarkdown as utilParseMarkdown } from '../utils/MarkdownUtils.js';
+import { parseMarkdown as utilParseMarkdown, renderMermaid, renderLucideIcons } from '../utils/MarkdownUtils.js';
 
 export class BlogManager {
     constructor() {
@@ -131,6 +131,9 @@ export class BlogManager {
                 case 'home':
                     this.showHome();
                     break;
+                case 'proyectos':
+                    this.showProyectos();
+                    break;
                 case 'blog':
                     this.showBlogList();
                     break;
@@ -150,9 +153,50 @@ export class BlogManager {
     }
 
     /**
+     * Update page title, meta description, OpenGraph tags, and canonical link
+     */
+    updateSEO(title, description, path = '') {
+        const fullTitle = title.includes('Shellaquiles') ? title : `${title} | Shellaquiles.org`;
+        document.title = fullTitle;
+
+        // Meta Description
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (!metaDesc) {
+            metaDesc = document.createElement('meta');
+            metaDesc.name = 'description';
+            document.head.appendChild(metaDesc);
+        }
+        if (description) metaDesc.content = description;
+
+        // Canonical Link
+        const canonicalUrl = `https://shellaquiles.org${path}`;
+        let canonical = document.querySelector('link[rel="canonical"]');
+        if (!canonical) {
+            canonical = document.createElement('link');
+            canonical.rel = 'canonical';
+            document.head.appendChild(canonical);
+        }
+        canonical.href = canonicalUrl;
+
+        // OpenGraph & Twitter tags
+        const ogTitle = document.getElementById('og-title') || document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.content = fullTitle;
+
+        const ogDesc = document.getElementById('og-desc') || document.querySelector('meta[property="og:description"]');
+        if (ogDesc && description) ogDesc.content = description;
+
+        const twTitle = document.getElementById('twitter-title') || document.querySelector('meta[name="twitter:title"]');
+        if (twTitle) twTitle.content = fullTitle;
+
+        const twDesc = document.getElementById('twitter-desc') || document.querySelector('meta[name="twitter:description"]');
+        if (twDesc && description) twDesc.content = description;
+    }
+
+    /**
      * Show home page (original content)
      */
     showHome() {
+        this.updateSEO('Shellaquiles.org | Ecosistema Open Source y Comunidad Tech en México', 'Shellaquiles: Ecosistema open source y comunidad técnica en México. Proyectos colaborativos, talleres de Python y soberanía tecnológica.', '/');
         const terminal = document.querySelector('.container, .terminal');
         if (!terminal) return;
 
@@ -171,9 +215,25 @@ export class BlogManager {
     }
 
     /**
+     * Show proyectos page (catálogo independiente)
+     */
+    showProyectos() {
+        this.updateSEO('Proyectos & Infraestructura Abierta • SHELLAQUILES', 'Catálogo de herramientas, pipelines de datos y proyectos de software libre desarrollados por shellaquiles.org bajo la coordinación de pixelead0.', '/proyectos.html');
+        const homeContainer = document.querySelector('.home-container');
+        if (homeContainer) {
+            homeContainer.style.display = 'block';
+        }
+        const blogContent = document.querySelector('.blog-content');
+        if (blogContent) {
+            blogContent.style.display = 'none';
+        }
+    }
+
+    /**
      * Show blog list
      */
     showBlogList() {
+        this.updateSEO('Blog & Artículos Técnicos', 'Artículos, cátedras y guías del ecosistema de tecnología y software libre en México.', '/blog');
         const terminal = document.querySelector('.container, .terminal');
         if (!terminal) {
             return;
@@ -203,6 +263,7 @@ export class BlogManager {
         // Render blog list
         const html = this.renderBlogListHTML();
         blogContainer.innerHTML = html;
+        renderLucideIcons(blogContainer);
 
         // Force opacity on all output elements inside blog-content
         const outputs = blogContainer.querySelectorAll('.output');
@@ -240,12 +301,18 @@ export class BlogManager {
             return;
         }
 
+        this.updateSEO(post.title, post.excerpt || post.title, `/blog/${post.slug}`);
+
         const terminal = document.querySelector('.container, .terminal');
         if (!terminal) return;
 
-        // Hide home content
+        // Hide home content (index.html)
         const homeContent = document.querySelector('.home-content');
         if (homeContent) homeContent.style.display = 'none';
+
+        // Keep home-container (proyectos.html) visible
+        const homeContainer = document.querySelector('.home-container');
+        if (homeContainer) homeContainer.style.display = 'block';
 
         // Get or create blog container
         let blogContainer = document.querySelector('.blog-content');
@@ -275,6 +342,8 @@ export class BlogManager {
         try {
             const html = await this.renderPostHTML(post);
             blogContainer.innerHTML = html;
+            await renderMermaid(blogContainer);
+            renderLucideIcons(blogContainer);
         } catch (error) {
             console.error('Error loading post content:', error);
             blogContainer.innerHTML = `
@@ -306,6 +375,9 @@ export class BlogManager {
             if (container) {
                 container.style.display = 'block';
                 container.style.visibility = 'visible';
+                if (homeContainer) {
+                    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             }
         });
     }
@@ -398,7 +470,7 @@ export class BlogManager {
 
                     <!-- Botón de Acción Técnico -->
                     <div class="post-action">
-                        <a href="/blog/${post.slug}" class="btn btn-outline" data-navigate="/blog/${post.slug}">Leer artículo ↗</a>
+                        <a href="/blog/${post.slug}" class="btn btn-outline" data-navigate="/blog/${post.slug}">Leer artículo <i data-lucide="arrow-up-right"></i></a>
                     </div>
                 </article>
             `;
@@ -467,7 +539,7 @@ export class BlogManager {
             return `
                 <main class="blog-post-view">
                     <div class="post-control-bar">
-                        <a href="/blog" class="btn-back" data-navigate="/blog">← VOLVER AL BLOG</a>
+                        <a href="/blog" class="btn-back" data-navigate="/blog"><i data-lucide="arrow-left"></i> VOLVER AL BLOG</a>
                         <div class="meta-right">
                             <span class="badge badge-accent">${(post.category || 'ARTÍCULO').toUpperCase()}</span>
                             <span style="color: var(--text-muted); margin-left: 0.5rem;">${day} ${monthYear}</span>
@@ -489,7 +561,7 @@ export class BlogManager {
             <main class="blog-post-view">
                 <!-- Barra de control de utilidades -->
                 <div class="post-control-bar">
-                    <a href="/blog" class="btn-back" data-navigate="/blog">← VOLVER AL BLOG</a>
+                    <a href="/blog" class="btn-back" data-navigate="/blog"><i data-lucide="arrow-left"></i> VOLVER AL BLOG</a>
                     <div class="meta-right">
                         <span class="badge badge-accent">${(post.category || 'ARTÍCULO').toUpperCase()}</span>
                         <span style="color: var(--text-muted); margin-left: 0.5rem;">${day} ${monthYear}</span>
@@ -513,7 +585,7 @@ export class BlogManager {
                 </article>
 
                 <div class="post-footer-nav" style="margin-top: 1.25rem;">
-                    <a href="/blog" class="btn btn-outline" data-navigate="/blog">← Volver al Blog</a>
+                    <a href="/blog" class="btn btn-outline" data-navigate="/blog"><i data-lucide="arrow-left"></i> Volver al Blog</a>
                 </div>
             </main>
         `;
@@ -575,6 +647,11 @@ export class BlogManager {
                     return;
                 }
 
+                // Si es navegación a proyectos.html, dejar que el navegador cargue la página de forma nativa
+                if (href && (href === '/proyectos.html' || href === '/proyectos' || href.startsWith('/proyectos.html'))) {
+                    return;
+                }
+
                 // Si tiene data-navigate o es una ruta interna (/ o /blog)
                 if (navigatePath || (href && (href === '/' || href.startsWith('/blog')))) {
                     const path = navigatePath || href;
@@ -602,7 +679,7 @@ export class BlogManager {
                 link.classList.add('active');
             } else if (currentPath.startsWith('/blog') && linkPath === '/blog') {
                 link.classList.add('active');
-            } else if (currentPath.includes('proyectos') && linkPath && linkPath.includes('proyectos')) {
+            } else if ((currentPath.includes('proyectos') || currentPath === '/proyectos.html') && linkPath && linkPath.includes('proyectos')) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');

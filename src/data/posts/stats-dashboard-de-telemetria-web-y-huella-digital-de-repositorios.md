@@ -127,4 +127,3 @@ Stats es el panel que visibiliza el crecimiento y la adopción real de todo el e
 ```text
 STATUS: 200 OK // ENGINE: GITHUB_ACTIONS+PLAYWRIGHT // SYS: SHELLAQUILES.ORG
 ```
-

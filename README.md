@@ -55,7 +55,7 @@ Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 
 ## 📞 Contacto
 
-- **Email**: comunidad@shellaquiles.org
+- **Email**: participar@shellaquiles.org
 - **Telegram**: [@shellaquiles](https://t.me/shellaquiles)
 - **GitHub**: [shellaquiles/shellaquiles-org](https://github.com/shellaquiles/shellaquiles-org)
 

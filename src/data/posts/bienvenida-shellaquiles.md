@@ -2,7 +2,7 @@
 title: "Bienvenida a Shellaquiles: Ecosistema Open Source & Proyectos Tech"
 subtitle: "Hub de desarrollo, infraestructura comunitaria y colaboración técnica en México."
 author: "pixelead0 & Shellaquiles.org"
-date: "2026-08-29"
+date: "2025-08-28"
 category: "COMUNIDAD"
 tags: ["open-source", "mexico", "desarrollo", "infraestructura"]
 version: "v2.0.0"

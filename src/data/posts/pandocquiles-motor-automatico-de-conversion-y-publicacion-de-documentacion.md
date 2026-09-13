@@ -152,4 +152,3 @@ PanDocquiles es la herramienta que utilizamos para generar la documentación té
 ```text
 STATUS: 200 OK // ENGINE: PANDOC+MERMAID // REPO: READY // SYS: SHELLAQUILES.ORG
 ```
-

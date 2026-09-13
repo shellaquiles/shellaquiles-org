@@ -123,6 +123,14 @@ tribuTACOS es un pilar de la soberanía técnica comunitaria promovida en [Shell
 
 ---
 
+## 08. Preguntas Frecuentes
+
+> [!IMPORTANT]
+> **¿Mis facturas XML se envían a algún servidor externo?**  
+> No. tribuTACOS está diseñado bajo una arquitectura *local-first*. Toda la información de tus comprobantes fiscales y CFDIs se procesa exclusivamente en tu propia máquina mediante tu base de datos local SQLite, garantizando total privacidad financiera.
+
+---
+
 ```text
 STATUS: 200 OK // STACK: FASTAPI+NEXTJS15 // TAX_YEAR: 2026 // PRIVACY: LOCAL_FIRST
 ```

@@ -2,7 +2,7 @@
 title: "Pyquiles al Pastor: La Ruta Comunitaria para Dominar Python Moderno"
 subtitle: "Programa técnico abierto enfocado en tipado estricto, tooling profesional (uv, ruff), concurrencia no bloqueante y desarrollo de software real en producción."
 author: "pixelead0 & Shellaquiles.org"
-date: "2026-08-29"
+date: "2026-04-21"
 category: "TUTORIAL"
 tags: ["python", "curso", "mexico", "pyquiles", "asyncio", "open-source", "clean-code"]
 version: "v2.4.0"
@@ -23,6 +23,15 @@ lang: "es"
 > <a href="https://github.com/shellaquiles/pyquiles-al-pastor" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="github"></i> Temario en GitHub ↗</a> &nbsp;
 > <a href="https://t.me/shellaquiles" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="send"></i> Comunidad Telegram ↗</a> &nbsp;
 > <a href="/proyectos.html" class="btn btn-outline">Ver en Proyectos ↗</a>
+
+<div class="post-preview-image">
+  <img src="/assets/previews/pyquiles.png" alt="Pyquiles al Pastor - Curso de Python" class="post-preview-img">
+</div>
+
+> [!TIP]
+> **Acciones del Proyecto:**  
+> <a href="https://pixelead0.github.io/pyquiles-al-pastor/" target="_blank" rel="noopener" class="btn btn-main"><i data-lucide="globe"></i> Explorar Curso ↗</a> &nbsp;
+> <a href="https://github.com/shellaquiles/pyquiles-al-pastor" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github"></i> Repositorio GitHub ↗</a>
 
 ---
 

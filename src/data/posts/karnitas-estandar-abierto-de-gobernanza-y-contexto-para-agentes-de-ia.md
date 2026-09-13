@@ -136,4 +136,3 @@ No promovemos estándares teóricos sin validarlos en nuestras propias bases de 
 ```text
 STATUS: 200 OK // RFC: v1.0.2 // ARCHITECTURE: .AGENTS/ // SYS: SHELLAQUILES.ORG
 ```
-

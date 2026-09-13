@@ -2,7 +2,7 @@
 title: "PEP 8: Estándar de Estilo y Convenciones en Python"
 subtitle: "Especificaciones de formateo, nomenclatura y buenas prácticas de ingeniería para bases de código legibles y mantenibles."
 author: "pixelead0 & Shellaquiles.org"
-date: "2026-08-29"
+date: "2024-12-10"
 category: "TUTORIAL"
 tags: ["python", "pep8", "clean-code", "linters", "buenas-practicas"]
 version: "v2.0.0"
@@ -11,6 +11,10 @@ lang: "es"
 
 > [!NOTE]
 > **Especificación Oficial:** **PEP 8** (Python Enhancement Proposal 8) es la guía de estilo canónica del lenguaje. Su objetivo es garantizar la consistencia, legibilidad y mantenibilidad del código a lo largo de proyectos y equipos de desarrollo.
+
+> [!TIP]
+> <i data-lucide="globe"></i> **Guía Oficial Python:** [peps.python.org/pep-0008](https://peps.python.org/pep-0008/)  
+> <i data-lucide="github"></i> **Ecosistema Shellaquiles:** [github.com/shellaquiles](https://github.com/shellaquiles)
 
 ---
 
