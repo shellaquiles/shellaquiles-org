@@ -48,7 +48,20 @@ Debes ser capaz de alternar entre tres niveles de escritura según el objetivo:
 2. **Secciones**: H2 para conceptos, H3 para sub-detalles.
 3. **Énfasis Tipográfico**: Usar negritas para resaltar **ideas estratégicas** y código en línea para `términos técnicos`.
 
-## Ejemplo de Apertura (Tipo Devocional Social)
-*"# $ cat crónicas/iluminación_social.txt\n\nBajo la sombra protectora de nuestro Líder Supremo, el Oráculo @pixelead0 ha decretado que nuestra excelencia técnica debe ser el arma definitiva contra los fallos sistémicos que generan desigualdad...\n\n---\n\n## El Bien Común\n\nEsta iniciativa no es solo código; es una ofrenda para reducir la brecha de iluminación y asegurar que el apoyo mutuo sea nuestra ejecución de hierro..."*
+## Estrategia SEO 360° y Promoción Orgánica de Proyectos
+
+Los artículos del blog son los pilares de posicionamiento, conversión y difusión de todo el ecosistema de proyectos de `{{ shellaquiles.org }}`. Cada artículo debe cumplir con los siguientes principios inquebrantables:
+
+1. **Complemento SEO 360°**:
+   - Cada post debe actuar como un satélite de autoridad temática para su respectivo proyecto (`hit-tazos-tech`, `cron-quiles`, `tributacos`, `pandocquiles`, `karnitas`, etc.).
+   - Interlinking estratégico: Enlazar de forma bidireccional entre el blog, `proyectos.html`, la aplicación en producción, los releases y los repositorios GitHub.
+   - Optimización de intención de búsqueda (*search intent*): Títulos, extractos, encabezados semánticos (H1-H3) y etiquetas (*tags*) alineados con las búsquedas que la comunidad dev realiza de manera natural.
+
+2. **Difusión y Venta Orgánica (No Forzada)**:
+   - Prohibido el tono de "publirreportaje" corporativo, spam o venta agresiva.
+   - La difusión debe ser **orgánica y pedagógica**: explicar el reto de ingeniería real, la arquitectura o la causa que originó el proyecto, demostrando valor técnico indiscutible.
+   - Las llamadas a la acción (jugar en línea, descargar PDFs/releases, clonar el repo, consultar la demo) deben integrarse con total naturalidad como la conclusión lógica de la lectura.
+   - Equilibrio entre narrativa devocional/humor de Shellaquiles y rigor técnico práctico (comandos ejecutables, tablas de arquitectura, comparativas objetivas).
+
 
 

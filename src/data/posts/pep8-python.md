@@ -127,13 +127,23 @@ mypy .
 
 ---
 
-## 07. Referencias
+## 07. Aplicación Práctica en la Comunidad
+
+El cumplimiento de PEP 8 es un estándar vivo que aplicamos en todos los proyectos de software libre de nuestra comunidad:
+
+* **[Pyquiles al Pastor](/blog/pyquiles-al-pastor-el-curso-de-python-con-sabor-mexicano):** Nuestro curso abierto de Python moderno donde auditamos PEP 8 y tipado estricto automáticamente con `ruff` y `mypy` en cada Pull Request.
+* **[Hit-Tazos Tech](/blog/hit-tazos-tech-trivia-cronologica-para-programadores):** ¿Recuerdas en qué año se publicó formalmente PEP 8 por Guido van Rossum y Barry Warsaw? Pon a prueba tu memoria histórica jugando la baraja de 576 cartas en el volumen *Python Track*.
+* **[Frases Chingonas](/blog/frases-chingonas-sabiduria-tecnica-en-capsulas):** Descubre las mejores citas sobre legibilidad y el Zen de Python integradas directamente en tu terminal.
+* **[Catálogo de Proyectos](/proyectos.html):** Explora repositorios en producción que siguen rigurosamente estos principios de ingeniería limpia.
+
+---
+
+## 08. Referencias
 
 * **PEP 8 Specification:** [peps.python.org/pep-0008](https://peps.python.org/pep-0008/)
-
 * **PEP 257 (Docstring Conventions):** [peps.python.org/pep-0257](https://peps.python.org/pep-0257/)
 
 ```text
 STATUS: 200 OK // COMPLIANCE: PEP8 // LINTER: RUFF // SYS: SHELLAQUILES.ORG
-
 ```
+

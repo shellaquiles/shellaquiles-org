@@ -52,7 +52,7 @@ Nuestras decisiones de diseño, infraestructura y comunidad se rigen por cuatro 
 El trabajo de la comunidad se organiza en tres pilares interconectados:
 
 ### A. Infraestructura y Proyectos Públicos
-Diseño y mantenimiento de herramientas de uso libre para la comunidad tecnológica en México, tales como el calendario unificado [Cron-Quiles](https://cron-quiles.org), scrapers de datos públicos y servicios de automatización.
+Diseño y mantenimiento de herramientas de uso libre para la comunidad tecnológica en México, tales como el calendario unificado [Cron-Quiles](/blog/cronquiles-el-agregador-de-la-comunidad), la trivia histórica [Hit-Tazos Tech](/blog/hit-tazos-tech-trivia-cronologica-para-programadores), el pre-declarador [tribuTACOS](/blog/tributacos-plataforma-de-inteligencia-fiscal-y-predeclarador-sat) y todo nuestro [Catálogo de Proyectos en Producción](/proyectos.html).
 
 ### B. Talleres y Transferencia Técnica
 Espacios prácticos de formación continua enfocados en backend, Python moderno, entornos Linux, sistemas distribuidos, optimización de pipelines y modelos locales de inteligencia artificial.

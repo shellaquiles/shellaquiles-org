@@ -10,10 +10,13 @@ npm run build:prod
 echo "📋 Copiando archivos..."
 npm run copy
 
-echo "📝 Actualizando index.html para producción..."
+echo "📝 Actualizando index.html y proyectos.html para producción..."
 cd dist
 sed -i 's/styles\.css/styles.min.css/g' index.html
 sed -i 's/script\.js/script.min.js/g' index.html
+if [ -f proyectos.html ]; then
+    sed -i 's/styles\.css/styles.min.css/g' proyectos.html
+fi
 cd ..
 
 echo "📄 Creando .htaccess si no existe..."

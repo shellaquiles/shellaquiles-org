@@ -1104,3 +1104,184 @@ html.dark .manifesto-quote {
         padding: 0.5rem 0 2rem 0;
     }
 }
+
+/* ==========================================================================
+   CATÁLOGO DE PROYECTOS (.projects-cards-grid & .project-card)
+   ========================================================================== */
+.site-header-compact {
+    margin-bottom: 2rem;
+}
+
+.projects-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.project-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    border-color: var(--matrix-bright);
+    transform: translateY(-2px);
+    box-shadow: var(--matrix-glow);
+}
+
+.project-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.project-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.status-indicator.live {
+    background-color: var(--matrix-bright);
+    box-shadow: 0 0 8px var(--matrix-bright);
+}
+
+.status-indicator.build {
+    background-color: #f59e0b;
+    box-shadow: 0 0 8px #f59e0b;
+}
+
+.status-text {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--matrix-bright);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.project-card-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text);
+    font-family: var(--font-sans);
+    margin: 0;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+.project-card-image {
+    width: 100%;
+    height: 180px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform var(--transition-fast);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.02);
+}
+
+.project-card-desc {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+}
+
+.p-tag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-sm);
+    background: rgba(0, 255, 102, 0.05);
+    border: 1px solid var(--border);
+    color: var(--matrix-tag-text);
+    letter-spacing: 0.02em;
+}
+
+html.light .p-tag {
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--text-muted);
+}
+
+.project-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    padding-top: 0.85rem;
+    border-top: 1px dashed var(--border);
+}
+
+.project-card-actions .btn {
+    font-size: 0.82rem;
+    padding: 0.45rem 0.85rem;
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+
+.footer-sublink {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-sublink:hover {
+    color: var(--matrix-bright);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .projects-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+}
+
